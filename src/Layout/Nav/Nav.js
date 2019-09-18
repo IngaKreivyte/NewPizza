@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Bag from '../../Pages/Bag/Bag';
 import React, { Component } from 'react';
 import * as actions from '../../actions/auth';
+import ButtonHover from '../ButtonHover/ButtonHover';
 import {withRouter} from 'react-router-dom';
 class Nav extends Component {
   state={
@@ -56,8 +57,10 @@ class Nav extends Component {
             <NavLink className={style.link} activeClassName={style.active} to='/kontaktai'> Kontaktai </NavLink>
             <NavLink className={[style.link, style.rightSide, style.bagbtn ].join(' ')} to='/bag' 
             // onClick={()=>this.changeBagStatus()}
-            >Krepšelis | {itemsInBag} </NavLink>
-        <div className={style.showBag}> <Bag hideButton/> </div> 
+            >Krepšelis | {itemsInBag} 
+            <div className={style.showBag}><ButtonHover/></div></NavLink>
+        {/* <div className={style.showBag}> <Bag hideButton/> </div>  */}
+        
         </div>
         {/* } */}
        

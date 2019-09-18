@@ -1,0 +1,58 @@
+.container{
+    display:inline-block;
+    width: 1000px;
+    margin: 0 calc((100% - 1000px ) /2 );
+    text-align: center;
+    margin-top: 40px;
+    border: 1px solid black;
+}
+.block{
+    display: block;
+    min-height: 100px;
+    background-color: yellow;
+    img{
+        display: inline-block;
+        width: 30%;
+        height: 35%;
+        float: left;
+    }
+        h3{
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .size{
+            width: 100%;
+        }
+}
+.block *{
+    display: inline-block;
+    line-height: 20px;
+    width: 100px;
+    margin-left: 20px;
+}
+.total{
+    display: inline-block;
+    float: right;
+    width: 100%;
+}
+.total *{
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+    float: left;
+}
+
+.plusMinus{
+ width: 50px;
+ height: 40px;
+ border-radius: 50%;
+ background-color: orange;
+ font-weight: 400;
+ font-size: 40px;
+ cursor: pointer;
+ padding-top: 10px;
+}
+.plusMinus:hover{
+    background-color: orangered;
+}

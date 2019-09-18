@@ -96,6 +96,7 @@ nav{
         color: white;
         width: 220px;
         padding: 10px;
+        position: relative;
     }
     .logOut{
         display: inline-block;
@@ -126,26 +127,42 @@ nav{
         top: 0;
         right: 150px;
     }
+
+    
     .showBag{
-        display:none;
-        top: 60px;
+        // display:none;
         z-index: 3;
-        right: 50px;
-        width: 600px;
-        background-color:white;
-        border: 1px solid black;
-        position: fixed;
-        border-radius: 30px;
+        // // right: 400px;
+        // // top: 195px;
+        // width: 350px;
+        // background-color:white;
+        // border: 1px solid black;
+        // // position: fixed;
+        border-radius: 5px;
+        // background-color: white;
+        color: black;
+        min-height: 50px;
+        width: 350px;
+        border: 2px solid black;
+        right: 0;
+        position: absolute;
+        transition: 1s all;
+        transform: scale(0) ;
+        transform-origin: 100% 0%; 
     }
     .showBag * {
-        max-width: 550px;
+        max-width: 300px;
         position: static;
         margin: 10px 20px 5px 10px;
     }    
-    .rightSide:hover + .showBag, .showBag:hover  {
-        display: block;
-        position: fixed;
-    }
+    
+       
+        
+        .rightSide:hover > .showBag {
+            transform: scale(1);
+          }
+          
+    
     h1{
         display: inline-block;
         position: absolute;
