@@ -1,0 +1,92 @@
+.modal{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    border-radius: 5px;
+    transform:translate(-50%,-50%);
+    padding: 20px 40px;
+    text-align: center;
+    z-index: 3;
+    background-color: white;
+    width:700px;
+    height: 400px;
+}
+
+    .backdrop{
+        width: 100%;
+        height: 100vh;
+        background: rgba(230, 222, 222, 0.4);
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 2;
+    }
+.selectedItem{
+    width: 50%;
+    float: right;
+    display: inline-block;
+}
+    .selectedItem *{
+        width: 100%;
+        display: inline-block;
+        
+    }
+        .selectedItem span{
+            display: inline-block;
+            width: 100%;
+        }
+    .sizes{
+        display: inline-block;
+        width: 100%;
+        height: 100px;
+        float: left;
+        cursor: pointer;
+    }
+    .selectedSize:hover{
+        background-color:grey;
+    }
+    .btn{
+        display: inline-block;
+        background-color: white;
+        line-height: 25px;
+        border-radius: 15px;
+        cursor: pointer;
+        width:100px;
+        text-align: center;
+        border: 1px solid grey;
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+    }
+    .btn:hover{
+        background-color: orange;
+    }
+    .block {
+        display: inline-block;
+        width: 50%;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        h3 {
+            float: left;
+            width: 20%;
+            display: inline-block;
+            padding-left: 10px;
+        }
+        
+    }
+    
+    .imgBlock{
+        width: 50%;
+        height: 400px;
+        float: left;
+        display: inline-block;
+        img{
+            
+        padding: 10px;
+            width: 250px;
+            height: 300px;
+        }
+}
+    
+    

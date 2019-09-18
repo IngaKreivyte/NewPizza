@@ -1,0 +1,38 @@
+.btn{
+    display: inline-block;
+    background-color: white;
+    line-height: 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    width:100px;
+    text-align: center;
+    border: 1px solid grey;
+    position: absolute;
+    bottom: 30px;
+    right: 45%;
+}
+.btn:hover{
+    background-color: orange;
+}
+form{
+    width: 70%;
+    display: inline-block;
+    margin:  0 25% 0 5%;
+}
+.error{
+    color:red;
+    position:absolute;
+    bottom:25px;
+    left:40%;
+}
+input{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    float: left;
+    line-height: 20px;
+    size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+
+}

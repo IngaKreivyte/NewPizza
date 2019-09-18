@@ -1,0 +1,62 @@
+.itemsBlock{
+    display: inline-block;
+    width: 100%;
+    // margin:5px calc(( 100% - 1000px) / 2);
+    
+    .items {
+        display: inline-block;
+        width: 300px;
+        height: 300px;
+        text-align: center;
+        position: relative;
+        margin: 30px 0 30px 30px;
+        border: 1px solid transparent;
+    }
+    h4{
+        font-weight: 500;
+        display: inline-block;
+        float: left;
+        position: absolute;
+        bottom: 10px;
+        left: 10%;
+        margin: 0;
+    }
+    h3{
+        display: inline-block;
+        height: 50px;
+        width: 100%;
+    }
+    span{
+        display: inline-block;
+        float: right;
+        margin: 10px 10px;
+        padding: 0;
+        cursor: pointer;
+
+    }
+    img{
+        width: 70%;
+        height: 50%;
+    }
+    
+    .btn{
+        display: inline-block;
+        background-color: white;
+        line-height: 25px;
+        border-radius: 15px;
+        cursor: pointer;
+        width:100px;
+        text-align: center;
+        border: 1px solid grey;
+        position: absolute;
+        bottom: 5px;
+        right: 10px;
+    }
+    .items:hover{
+        border: 1px solid orange;
+    }
+
+    
+    
+}
+

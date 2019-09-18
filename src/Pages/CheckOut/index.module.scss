@@ -1,0 +1,100 @@
+.container{
+    width: 90%;
+    height: 100vh;
+    display: inline-block;
+    position: relative;
+    margin: 100px 75px;
+    
+    .bothSides{
+        width: 100%;
+        border-bottom: 1px solid grey;
+        position: relative;
+        display: table-cell;
+
+    .toTheRightSide{
+        display: inline-block;
+        float: left;
+        width: 60%;
+        
+         * {
+            width: 100%;
+            display: inline-block;
+            float: left;
+            text-align: center;
+        }
+        span{
+            width: 50%;
+        }
+        h3{
+            margin: 0;
+            padding: 0;
+            width: 30%; 
+            border: 1px solid grey;
+            border-radius: 5px;
+        }
+        h4{
+            width: 100%;
+        }
+        
+         .delivery{
+            display: inline-block;
+            margin: 20px 0;
+        }
+        .deliveryblock{
+            
+            width: 80%;
+            *{
+                float: left;
+                width: 50%;
+                display: inline-block;
+            }
+            
+        }
+        .userBlock{
+            display: inline-block;
+            margin: 20px 0;
+        }
+    }
+    .toTheleftSide{
+        display: inline-block;
+        float: right;
+        width: 39%;
+         * {
+            display: inline-block;
+            text-align: center;
+        }
+        h2{
+            margin: 100px 0 0 0;
+            text-align: center;
+        }
+        h3{
+            float: right;
+            margin-right: 20px;
+        }
+        .h3{
+            float: right;
+            margin-top: 20px;
+        }
+        .item{
+            width: 100%;
+            *{
+                float: left;
+            }
+        } 
+    }
+    
+    }
+    .btn{
+        display: inline-block;
+        background-color: white;
+        line-height: 25px;
+        border-radius: 15px;
+        width:100px;
+        text-align: center;
+        border: 1px solid grey;
+        cursor: pointer;
+        margin-top: 30px;
+        float: right;
+        margin-right: 50px;
+    }
+}

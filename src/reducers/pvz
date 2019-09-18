@@ -1,0 +1,102 @@
+const initialState = [
+    {name:'dsfs', price:12, amount:2},
+    {name:'dsss', price:10, amount:5},
+
+];
+
+
+//f-ja kuri modifikuoja pasirinkimo objekto (pagal name) amount kieki
+
+const changeAmount= (name, amount)=>{
+
+    //darom pridejima, vadinasi masyvo ilgis nesikeis(mmap f-ja, nemodifikuoja masyvo);
+    //jei atimam, sumazinam amount kieki, o jei amount bus maziau ar lygus  0, istrinam objekto//arba map arba filter
+
+
+const arr = initialState.filter(item=>{
+    
+    )};
+
+
+//
+    console.log(changeAmount()) - grazins tuscia arr
+    console.log()
+
+    //const arr = initialState.filter(item=>{
+    return item
+    )};
+
+ console.log(changeAmount()) - grazins visus item i arr
+
+
+
+    const arr = initialState.filter(item=>{
+        if(item.name===name && item.amount+amount <= 0) return false;
+        return true
+        }).map(item=> {//modifikuojame surasto objekto amount
+        if(item.name===name) return {...item, amount:item.amount + amount};
+        return item;
+        })
+    };
+
+console.log(changeAmount('dsss', -4)) // 
+
+//isfiltruojame objekta pagal pavadinima jei jo amount < = 0
+ 
+
+ import * as types from '../actions/types';
+
+    const items=[
+        {
+            name:'Margarita',
+            id:0,
+            size:'small',
+            price:5,
+            description:'Pomidorai, mocarelos sūris, picų padažas, oregano prieskoniai'
+        },
+        {
+            name:'Margarita',
+            id:1,
+            size:'medium',
+            price:7, 
+            description:'Pomidorai, mocarelos sūris, picų padažas, oregano prieskoniai'
+        },
+        {
+            name:'Margarita',
+            id:2,
+            size:'large',
+            price:9,
+            description:'Pomidorai, mocarelos sūris, picų padažas, oregano prieskoniai'
+        },
+        {
+            name:'Peperoni',
+            id:4,
+            description:'Mocarelos sūris, saliamis, picų padažas',
+            size:'small',
+            price:6,
+        },
+        {
+            name:'Peperoni',
+            id:5,
+            description:'Mocarelos sūris, saliamis, picų padažas',
+            size:'medium',
+            price:8,
+        },
+        {
+            name:'Peperoni',
+            id:6,
+            description:'Mocarelos sūris, saliamis, picų padažas',
+            size:'large',
+            price:10,
+        }       
+    ]
+      
+
+    export default (state=items, action)=>{
+        switch (action.type) {
+            case types.CLEAR_SINGLE:
+                return state.filter((pizza,i)=>i!==action.index);
+            default:
+                return state;
+        }
+    }

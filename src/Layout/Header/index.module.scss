@@ -1,0 +1,14 @@
+.headerTop{
+    width:100%;
+    display: inline-block;
+    .headerTopBlock{
+        width: 800px;
+        margin: 0 calc(( 100% - 800px) / 2);
+    }
+    img{
+        width: 35px;
+        height: 40px;
+        float: left;
+        
+    }   
+}
