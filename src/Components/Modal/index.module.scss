@@ -100,15 +100,14 @@
     
     .imgBlock{
         width: 59%;
+        height: 100%;
         margin: 0;
         padding: 0;
         float: left;
         display: inline-block;
-        border: 1px solid black;
+        
         img{
             height: auto;
-            padding: 20px;
-            width: 90%;
             margin: 10px;
         }
 

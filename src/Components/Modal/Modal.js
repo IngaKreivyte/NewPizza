@@ -8,7 +8,7 @@ import * as actions from '../../actions/bag';
 
     class Modal extends Component {
         state={
-            size:[],
+            size:'small',
             price:[],
             name:[],
             // pic:'https://dodopizza-a.akamaihd.net/site-static/dist/269b833ebb31d7e40775.svg',
@@ -27,9 +27,17 @@ import * as actions from '../../actions/bag';
 
         render() {
             if(!this.props.show) return null;
-            
+         let width;
+         var padding;
+         if(this.state.size==='small') width = '200px' ; padding = '50px';
+         if(this.state.size==='medium') width = '300px'; 
+         if(this.state.size==='large') width = '400px' 
+          
+        
+         
                 return (
                     <React.Fragment>
+                          
                     <div onClick={this.props.toggleModal} className={style.backdrop}/>
                     <div className={style.modal}>
                         <div className={style.selectedItem}>
@@ -43,6 +51,7 @@ import * as actions from '../../actions/bag';
                                         this.props.showPic(kaina.pic);
                                 }}> {kaina.size} 
                                 </div>)}
+                                
                                
                             </div>
                                 <div className={style.block} >
@@ -62,8 +71,9 @@ import * as actions from '../../actions/bag';
                                
                                 
                             </div>
+                            
                             <div className={style.imgBlock}>
-                                <img  src={this.props.pic} alt='pic'/>
+                                <img style={{width,padding}} src={this.props.pic} alt='pic'/>
                             </div>
                          </div>
                          

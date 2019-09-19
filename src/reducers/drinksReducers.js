@@ -1,10 +1,14 @@
-const drinksItems =[
-    {name:'Coca-Cola, 0,5 l', price: 1.50 + 'EUR'},
-    {name:'Coca-Cola Zero, 0,5 l', price: 1.50 + 'EUR'},
-    {name: 'Fanta, 0,5 l', price: 1.50 + 'EUR'},
-    {name: 'Sprite, 0,5 l', price: 1.50 + 'EUR'},
-]
+import * as types from '../actions/types';
 
-export default (state=drinksItems)=>{
-    return state;
+
+
+
+export default (state=[], action)=>{
+    switch (action.type) {
+        
+        case types.FETCH_DRINK:
+            return action.data;
+        default:
+            return state;
+    }
 }
