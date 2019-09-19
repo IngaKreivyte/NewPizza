@@ -2,13 +2,83 @@
     width:100%;
     display: inline-block;
     .headerTopBlock{
-        width: 800px;
-        margin: 0 calc(( 100% - 800px) / 2);
+        width: 1200px;
+        margin: 0 calc(( 100% - 1200px) / 2);
+        *{
+            float: left;
+            margin-left:10px;
+            margin-top: 30px;
+        }
+        p{
+            margin-top: 40px;
+            margin-left: 50px;
+        }
     }
     img{
         width: 35px;
         height: 40px;
         float: left;
         
-    }   
+    }  
+    .link{
+        text-decoration: none;
+        padding: 20px;
+        margin: 25px 0 0 0;
+        user-select: none;
+        font-weight: 500;
+        color: black;
+        height: 30px;
+    
+    } 
+    .auth{
+        
+        *{
+            display: inline-block;
+            margin-top: 20px;
+            padding: 5px;
+            line-height: 25px;
+            border-radius: 5px;
+            text-align: center;
+            user-select: none;
+            font-weight: 600;
+            position: absolute;
+            background-color: orange;
+            color: white;
+            line-height: 25px;
+            cursor: pointer;
+            width:100px;
+            user-select: none;
+        }
+        
+        
+        .logOut{
+            top: 0;
+            right: 20px;
+        }
+        .login{
+           
+            top: 0;
+            right: 150px;
+        }
+        *:hover{
+            background-color: rgb(228, 105, 57);   
+        }
+        
+    }
+    
+    .profileName{
+        display: inline-block;
+        width: 80%;
+        margin: 0 calc(20% / 2 );
+        font-size: 25px;
+        *{
+            display: inline-block;
+            margin-left: 40%;
+        }
+        .name{
+            font-weight: 500;
+            margin-left: 20px;
+        }
+    }
 }
+

@@ -2,7 +2,6 @@ import {NavLink} from "react-router-dom";
 import style from './index.module.scss';
 import pizza from '../../assets/images/dodo.png';
 import { connect } from 'react-redux';
-import Bag from '../../Pages/Bag/Bag';
 import React, { Component } from 'react';
 import * as actions from '../../actions/auth';
 import ButtonHover from '../ButtonHover/ButtonHover';
@@ -58,16 +57,13 @@ class Nav extends Component {
             <NavLink className={[style.link, style.rightSide, style.bagbtn ].join(' ')} to='/bag' 
             // onClick={()=>this.changeBagStatus()}
             >Krepšelis | {itemsInBag} 
-            <div className={style.showBag}><ButtonHover/></div></NavLink>
+           </NavLink>
+           <div className={[style.dublicate ].join(' ')}>
+              <div className={style.showBag}><ButtonHover/></div></div>
         {/* <div className={style.showBag}> <Bag hideButton/> </div>  */}
         
         </div>
-        {/* } */}
-       
-        <NavLink className={[style.link, style.login ].join(' ')} activeClassName={style.active} to='/login' > Prisijungti! </NavLink>
-        <span onClick={()=>this.props.logOut(this.props.history)} className={style.logOut}>Log Out</span>
-       
-       <h1>{this.props.profile.name}</h1>      
+        {/* } */}    
       </nav>  
       
       </React.Fragment>

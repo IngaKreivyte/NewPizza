@@ -2,6 +2,10 @@ import Nav from '../Nav/Nav';
 import Sticky from '@wicked_query/react-sticky';
 import style from './index.module.scss';
 import pizza from '../../assets/images/dodo.png';
+import {withRouter} from 'react-router-dom';
+import * as actions from '../../actions/auth';
+import {NavLink} from "react-router-dom";
+import { connect } from 'react-redux';
 
 
 import React, { Component } from 'react';
@@ -16,9 +20,18 @@ class Header extends Component {
             <div className={style.headerTop}>
                 <div className={style.headerTopBlock}>
                     <img src={pizza} alt="logo"></img>
-                    <h1> Dodo Pizza </h1> 
-                    <p>Skambinkite: +370 6** ** ***</p>
+                    <h1> Dodo Pizza Vilnius </h1> 
+                    <p> Pristatymas per 60 minučių arba pica nemokamai. Skambutis telefonu 8 635 11 555</p>
                 </div>
+                <div className={style.auth}>
+                   {!this.props.profile.name && <NavLink className={[style.link, style.login ].join(' ')} to='/login' > Prisijungti! </NavLink>}
+                    {this.props.profile.name && <span onClick={()=>this.props.logOut(this.props.history)} 
+                    className={[style.link, style.logOut ].join(' ')}>Log Out</span>}
+                </div>
+               {this.props.profile.name && <div className={style.profileName}>
+                    <div>Sveiki, atvykę,</div>
+                    <div className={style.name}>{this.props.profile.name} !</div> 
+                </div>}
             </div>
             <Sticky  subscribe={(props) => (this.setState({ offset: props.height}))}>
             <Nav/>
@@ -28,4 +41,11 @@ class Header extends Component {
     }
 }
 
-export default Header;
+const mapStateToProps = state => {
+    return {
+      bag:state.bag,
+      profile:state.profile,
+    };
+  };
+
+export default withRouter ( connect (mapStateToProps, actions ) (Header));

@@ -27,36 +27,39 @@ import * as actions from '../../actions/bag';
 
         render() {
             if(!this.props.show) return null;
+            
                 return (
                     <React.Fragment>
                     <div onClick={this.props.toggleModal} className={style.backdrop}/>
                     <div className={style.modal}>
                         <div className={style.selectedItem}>
                             <h3> {this.props.pizza.name} </h3> 
-                            <span> Pasirinkti dydį: </span>
+                            <p>{this.props.pizza.description}</p>
                             <div  className={style.sizes}>{this.props.pizza.kainos.map((kaina, i) =>
-                                <div  key = {i} className={style.selectedSize} onClick={()=>{
+                                <div  key = {i} className={this.state.size !== kaina.size ?  style.selectSize: style.selectedSize }  onClick={()=>{
                                         this.showSize(kaina.size);
                                         this.showPrice(kaina.price);
                                         this.showName(this.props.pizza.name);
                                         this.props.showPic(kaina.pic);
                                 }}> {kaina.size} 
                                 </div>)}
+                               
                             </div>
                                 <div className={style.block} >
                                      <h3>{this.state.price}</h3> 
                                      <h3> EUR</h3>
-                                </div>
-                               { this.state.price>0 &&  <div onClick= {()=> this.props.addToBag( {
-                                   name:this.state.name, 
-                                   pic:this.props.pic, 
-                                   size:this.state.size,  
-                                   amount:1, 
-                                   price:this.state.price})
-                                }
+                                    { this.state.price>0 &&  <div onClick= {()=> this.props.addToBag( {
+                                        name:this.state.name, 
+                                        pic:this.props.pic, 
+                                        size:this.state.size,  
+                                        amount:1, 
+                                        price:this.state.price})
+                                    }
                                     className={style.btn}>
                                    Pirkti  
                                 </div>}
+                                </div>
+                               
                                 
                             </div>
                             <div className={style.imgBlock}>

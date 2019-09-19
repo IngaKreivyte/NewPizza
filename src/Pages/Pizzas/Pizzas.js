@@ -34,14 +34,16 @@ class Pizzas extends Component {
                         {/* <span onClick = {()=>{this.props.clearSingle(i)}}> X </span> */}
                         <h3>{pizza.name}</h3>
                         <p>{pizza.description}</p>
-                        <div className={style.priceContainer}>{pizza.kainos.filter(pizza=>pizza.size==='small').map((kaina, i) =>
-                             <div key={i}>
-                                 Nuo {kaina.price} EUR
-                             </div>)}
-                        </div>
                         {pizza.kainos.filter(pizza=>pizza.size ==='small').map((pic,i)=>
                         <img  key ={i} src={pic.pic} alt="pic"/>)}
+                        <div className={style.priceContainer}>{pizza.kainos.filter(pizza=>pizza.size==='small').map((kaina, i) =>
+                             <div className={style.price} key={i}>
+                                 Nuo {kaina.price} EUR
+                             </div>)}
+                                
                         <div className={style.btn} data-id={i} onClick={()=>this.toggleModal(pizza)}> Pasirinkti </div>
+                        </div>
+                    
                     </div>     
         })
             return (
@@ -55,9 +57,10 @@ class Pizzas extends Component {
                            sizeName={this.sizeName}
                            showPrice={this.showPrice}
                            />
-                    <div className={style.itemsBlock}>
-                        {showItems}
-                        
+                    <div className={style.Block}>
+                        <div className={style.itemsBlock}>
+                            {showItems}
+                        </div>
                     </div>
                 </div>
             )   

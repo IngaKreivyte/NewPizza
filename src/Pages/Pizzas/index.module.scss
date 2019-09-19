@@ -1,74 +1,83 @@
-.itemsBlock{
+.Block{
     display: inline-block;
-    margin-top: 50px;
     width: 100%;
-    // margin:5px calc(( 100% - 1000px) / 2);
+    .itemsBlock{
+        display: inline-block;
+        margin: 20px calc( 10% / 2 );
+        width: 90%;
+            .items {
+                display: inline-block;
+                width: 300px;
+                height: 500px;
+                text-align: center;
+                position: relative;
+                margin: 30px 0 30px 30px;
+                border: 1px solid transparent;
+            }
+            h3{
+                width: 95%;
+                font-weight: 500;
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 5%;
+                margin: 10px 0 10px 0;
+                text-align:left;
+            }
+                .priceContainer{
+                    display: inline-block;
+                    background-color: white;
+                    line-height: 25px;
+                    width:95%;
+                    text-align: left;
+                    position: absolute;
+                    bottom: 5%;
+                    left: 5%;
+                    *{
+                        display: inline-block;
+                        float: left;
+                        line-height: 40px
+                        
+                    }
+                    .btn{
+                        display: inline-block;
+                        background-color: white;
+                        border-radius: 15px;
+                        cursor: pointer;
+                        width:100px;
+                        color: orange;
+                        text-align: center;
+                        border: 1px solid orange;
+                        float: right;
+                        margin-right: 10px;
+                        padding: 0 5px;
+                        
+                    }
+                }
+            p{
+                text-align:left;
+                width: 95%;
+                display: inline-block;
+                position: absolute;
+                top: 55%;
+                left: 5%;
+                word-break: keep-all;
+                color: rgb(160, 155, 155);
+            }
+            span{
+                display: inline-block;
+                float: right;
+                margin: 5px 10px;
+                padding: 0;
+                cursor: pointer;
+            }
+            img{
+                width: 250px;
+                height: auto;
+                padding: 10px;
+            }
+    }
     
-    .items {
-        display: inline-block;
-        width: 400px;
-        height: 500px;
-        text-align: center;
-        position: relative;
-        margin: 30px 0 30px 30px;
-        border: 1px solid transparent;
-    }
-    h3{
-        width: 95%;
-        font-weight: 500;
-        display: inline-block;
-        position: absolute;
-        top: 50%;
-        left: 5%;
-        margin: 0 0 10px 0;
-        text-align:left;
-    }
-        .priceContainer{
-            display: inline-block;
-            background-color: white;
-            line-height: 25px;
-            width:95%;
-            text-align: left;
-            position: absolute;
-            bottom: 5%;
-            left: 5%;
-        }
-    p{
-        text-align:left;
-        width: 95%;
-        display: inline-block;
-        position: absolute;
-        top: 55%;
-        left: 5%;
-        word-break: keep-all;
-    }
-    span{
-        display: inline-block;
-        float: right;
-        margin: 5px 10px;
-        padding: 0;
-        cursor: pointer;
-    }
-    img{
-        width: 250px;
-        height: 200px;
-        padding: 10px;
-    }
-
-
-    .btn{
-        display: inline-block;
-        background-color: white;
-        line-height: 25px;
-        border-radius: 15px;
-        cursor: pointer;
-        width:100px;
-        text-align: center;
-        border: 1px solid grey;
-        position: absolute;
-        bottom: 5px;
-        right: 5px;
-    }
 }
 .items:hover{
     border: 1px solid orange;

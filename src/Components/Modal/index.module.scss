@@ -8,8 +8,8 @@
     text-align: center;
     z-index: 3;
     background-color: white;
-    width:700px;
-    height: 400px;
+    width:800px;
+    height: 500px;
 }
 
     .backdrop{
@@ -22,71 +22,96 @@
         z-index: 2;
     }
 .selectedItem{
-    width: 50%;
+    width: 40%;
     float: right;
     display: inline-block;
-}
-    .selectedItem *{
-        width: 100%;
-        display: inline-block;
-        
-    }
-        .selectedItem span{
-            display: inline-block;
-            width: 100%;
+    height: 100%;
+    position: relative;
+    p{
+            width:100%;
+            margin:10% 0;
+            word-break: keep-all;
         }
-    .sizes{
-        display: inline-block;
-        width: 100%;
-        height: 100px;
-        float: left;
-        cursor: pointer;
+}
+
+        .sizes{
+            display: inline-block;
+            width: 97%;
+            float: left;
+            cursor: pointer;
+            border-radius: 15px;
+            background-color: rgb(233, 232, 232);
+            height: 42px;
+            padding-right: 1px;
+        *{
+            width: 32.4%;
+            border-radius: 5px;
+            line-height: 20px;
+            margin: 1px 0 0px 2px;
+            padding: 8px 0 12px;
+            display: inline-block;
+            float: left;
+            
+        }
+        
+            .selectSize{
+                background-color: rgb(233, 232, 232);
+            }
+            .selectedSize{
+                background-color: white;
+            }  
     }
-    .selectedSize:hover{
-        background-color:grey;
-    }
-    .btn{
-        display: inline-block;
-        background-color: white;
-        line-height: 25px;
-        border-radius: 15px;
-        cursor: pointer;
-        width:100px;
-        text-align: center;
-        border: 1px solid grey;
-        position: absolute;
-        bottom: 30px;
-        right: 30px;
-    }
-    .btn:hover{
-        background-color: orange;
-    }
+
+        
+    
     .block {
-        display: inline-block;
-        width: 50%;
+        display: block;
+        width: 100%;
+        float: right;
         position: absolute;
-        bottom: 20px;
-        right: 20px;
+        bottom: 0;
+        left: 0;
+        *{
+            margin: 10px 0; 
+            display: inline-block;
+        }
+        
         h3 {
             float: left;
-            width: 20%;
-            display: inline-block;
             padding-left: 10px;
+            width: 20%;
+           
+        }
+        .btn{
+            background-color: white;
+            line-height: 25px;
+            border-radius: 15px;
+            cursor: pointer;
+            width:100px;
+            text-align: center;
+            border: 1px solid grey;
+            float: right;
+        }
+        .btn:hover{
+            background-color: orange;
         }
         
     }
     
     .imgBlock{
-        width: 50%;
-        height: 400px;
+        width: 59%;
+        margin: 0;
+        padding: 0;
         float: left;
         display: inline-block;
+        border: 1px solid black;
         img{
-            
-        padding: 10px;
-            width: 250px;
-            height: 300px;
+            height: auto;
+            padding: 20px;
+            width: 90%;
+            margin: 10px;
         }
+
 }
     
     
