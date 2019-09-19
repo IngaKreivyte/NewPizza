@@ -18,3 +18,11 @@ export const fetchDrink = ()=>{
         }
     }
 }
+export const addToBag = (item, amount, price)=>{
+    return{
+        type:types.ADD_TO_BAG,
+        item,
+        amount ,
+        price,
+    }
+}

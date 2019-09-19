@@ -38,7 +38,7 @@ class Pizzas extends Component {
                         <img  key ={i} src={pic.pic} alt="pic"/>)}
                         <div className={style.priceContainer}>{pizza.kainos.filter(pizza=>pizza.size==='small').map((kaina, i) =>
                              <div className={style.price} key={i}>
-                                 Nuo {kaina.price} EUR
+                                 Nuo {kaina.price} &#8364;
                              </div>)}
                                 
                         <div className={style.btn} data-id={i} onClick={()=>this.toggleModal(pizza)}> Pasirinkti </div>

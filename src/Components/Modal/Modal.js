@@ -26,12 +26,13 @@ import * as actions from '../../actions/bag';
         
 
         render() {
-            if(!this.props.show) return null;
-         let width;
-         var padding;
-         if(this.state.size==='small') width = '200px' ; padding = '50px';
+            if(!this.props.show) return null; 
+         if(this.state.size==='small') var width = '200px';
          if(this.state.size==='medium') width = '300px'; 
-         if(this.state.size==='large') width = '400px' 
+         if(this.state.size==='large') width = '400px' ;
+         if(this.state.size==='small')  var padding = '120px';
+         if(this.state.size==='medium') padding = '100px'
+         if(this.state.size==='large') padding = '30px'
           
         
          
@@ -40,7 +41,9 @@ import * as actions from '../../actions/bag';
                           
                     <div onClick={this.props.toggleModal} className={style.backdrop}/>
                     <div className={style.modal}>
+                        
                         <div className={style.selectedItem}>
+                            
                             <h3> {this.props.pizza.name} </h3> 
                             <p>{this.props.pizza.description}</p>
                             <div  className={style.sizes}>{this.props.pizza.kainos.map((kaina, i) =>
@@ -71,10 +74,12 @@ import * as actions from '../../actions/bag';
                                
                                 
                             </div>
+                           
                             
                             <div className={style.imgBlock}>
                                 <img style={{width,padding}} src={this.props.pic} alt='pic'/>
                             </div>
+                            
                          </div>
                          
                     </React.Fragment>

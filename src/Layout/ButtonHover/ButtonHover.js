@@ -58,6 +58,7 @@ const mapStateToProps=(state)=>{
     return{
         pizzas:state.pizzas,
         bag:state.bag,
+        drinks:state.drinks,
     };
 };
 
