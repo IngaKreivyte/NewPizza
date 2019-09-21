@@ -1,18 +1,14 @@
-const dessertsItems =[
-    {
-        name:'Cheesecake',
-        price: 3,
-    },
-    {
-        name:'Šviesus mufinas su šokolado lašais',
-        price: 2,
-    },
-    {
-        name: 'Lavacake',
-         price: 3,
-    },
-]
+import * as types from '../actions/types';
 
-export default (state=dessertsItems)=>{
-    return state;
+
+
+
+export default (state=[], action)=>{
+    switch (action.type) {
+        
+        case types.FETCH_DESSERT:
+            return action.data;
+        default:
+            return state;
+    }
 }

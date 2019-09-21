@@ -16,6 +16,7 @@ export const USER_BAG='USER_BAG';
 export const ADD_ORDER='ADD_ORDER';
 export const FETCH_PIZZAS='FETCH_PIZZAS'
 export const FETCH_DRINK = 'FETCH_DRINK';
+export const FETCH_DESSERT='FETCH_DESSERT';
 
 
 

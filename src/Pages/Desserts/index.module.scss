@@ -1,62 +1,56 @@
-.itemsBlock{
+.Block{
     display: inline-block;
     width: 100%;
-    // margin:5px calc(( 100% - 1000px) / 2);
-    
-    .items {
+    .itemsBlock{
         display: inline-block;
-        width: 300px;
-        height: 300px;
-        text-align: center;
-        position: relative;
-        margin: 30px 0 30px 30px;
-        border: 1px solid transparent;
+        margin: 0 calc( 10% / 2 );
+        width: 90%;
+            .items {
+                display: inline-block;
+                float: left;
+                width: 350px;
+                height: 500px;
+                text-align: center;
+                position: relative;
+                border: 1px solid transparent;
+            }
+            p{
+                height: 80px;
+            }
+                h3{
+                    width: 100%;
+                    font-weight: 500;
+                    display: inline-block;
+                    margin: 10px 0 10px 0;
+                    text-align:center;
+                    font-size: 20px;
+                    height: 20px;
+                }
+                .price{
+                    display: inline-block;
+                    width: 100%;
+                    line-height: 25px;
+                    font-size: 18px;
+                }
+                .btn{
+                    display: inline-block;
+                    background-color: white;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    width:120px;
+                    color: orange;
+                    text-align: center;
+                    border: 1px solid orange;
+                    line-height: 40px;
+                    
+                }
+                img{
+                    width: 250px;
+                    height: auto;
+                    padding: 10px;
+                }
+                
+            
+        
     }
-    h4{
-        font-weight: 500;
-        display: inline-block;
-        float: left;
-        position: absolute;
-        bottom: 10px;
-        left: 10%;
-        margin: 0;
-    }
-    h3{
-        display: inline-block;
-        height: 50px;
-        width: 100%;
-    }
-    span{
-        display: inline-block;
-        float: right;
-        margin: 10px 10px;
-        padding: 0;
-        cursor: pointer;
-
-    }
-    img{
-        width: 70%;
-        height: 50%;
-    }
-    
-    .btn{
-        display: inline-block;
-        background-color: white;
-        line-height: 25px;
-        border-radius: 15px;
-        cursor: pointer;
-        width:100px;
-        text-align: center;
-        border: 1px solid grey;
-        position: absolute;
-        bottom: 5px;
-        right: 10px;
-    }
-    .items:hover{
-        border: 1px solid orange;
-    }
-
-    
-    
 }
-

@@ -14,6 +14,12 @@ class ButtonHover extends Component {
                 <div key={i} className={style.block} >
                     <img  src={item.pic} alt='pic'/>
                         <div className={style.topBlock}>
+                        {/* <section className={style.recycleBin}>
+                            <span className={style.sampah}>
+                                <span></span>
+                                <i></i>
+                            </span>
+                        </section> */}
                             <h3> {item.name} </h3>
                             <div className={style.size}>  {item.size} </div>
                             <div className={style.countmore}>

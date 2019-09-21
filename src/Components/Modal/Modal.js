@@ -43,7 +43,6 @@ import * as actions from '../../actions/bag';
                     <div className={style.modal}>
                         
                         <div className={style.selectedItem}>
-                            
                             <h3> {this.props.pizza.name} </h3> 
                             <p>{this.props.pizza.description}</p>
                             <div  className={style.sizes}>{this.props.pizza.kainos.map((kaina, i) =>

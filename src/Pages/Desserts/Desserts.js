@@ -1,21 +1,25 @@
 import{connect} from 'react-redux';
-import Dessert from '../../assets/images/Desserts.jpg';
 import style from '../Desserts/index.module.scss';
 import React, { Component } from 'react';
-import * as actions from '../../actions/bag';
+import * as actions from '../../actions/dessert';
 
 
 class Desserts extends Component {
 
+    componentDidMount(){
+        this.props.fetchDessert();
+    }
     render(props) {
         const showDesserts = this.props.desserts.map((dessert, i)=>{
             return <div className={style.items} key={i}>
+                        <img src={dessert.pic} alt="DessertPic"></img>
                         <h3>{dessert.name}</h3>
-                        <h4>{dessert.price} EUR</h4>
-                        <img src={Dessert} alt="DessertPic"></img>
+                        <p>{dessert.description}</p>
+                        <div className={style.price}>{dessert.price} &#8364;</div>
                             <div className={style.btn} onClick= {()=> this.props.addToBag(
                                     {name:dessert.name,
                                     price:dessert.price,
+                                    pic:dessert.pic,
                                     amount:1})}>
                                 Pirkti
                             </div>
@@ -23,8 +27,10 @@ class Desserts extends Component {
         });
             return (
                 <div>
-                    <div className={style.itemsBlock}>
+                    <div className={style.Block}>
+                        <div className={style.itemsBlock}>
                         {showDesserts}
+                        </div>
                     </div>
                 </div>
             )
