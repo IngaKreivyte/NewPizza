@@ -21,47 +21,47 @@ nav{
         background-color: rgb(228, 105, 57);   
 
     }}
-    .bagNav{
-        display:flex;
-        justify-content: space-between;
-        width: 40%;
-        margin: -20px 0 0 30%;
-        .bagNavblock {
-            display:flex;
-            position: relative;
-            span{
-                width: 150px;
-                position: absolute;
-                top:65%;
-                left: -50%;
-            }
-            .bagNavElement{
-                border: 1px solid black;
-                border-radius: 50%;
-                padding: 7px 14px;
-                height: 20px;
-                margin-top: 30px;
-            }
+    // .bagNav{
+    //     display:flex;
+    //     justify-content: space-between;
+    //     width: 40%;
+    //     margin: -20px 0 0 30%;
+    //     .bagNavblock {
+    //         display:flex;
+    //         position: relative;
+    //         span{
+    //             width: 150px;
+    //             position: absolute;
+    //             top:65%;
+    //             left: -50%;
+    //         }
+    //         .bagNavElement{
+    //             border: 1px solid black;
+    //             border-radius: 50%;
+    //             padding: 7px 14px;
+    //             height: 20px;
+    //             margin-top: 30px;
+    //         }
             
-            .bagNavElement::before{
-                border: 1px dashed lightgray;
-                width:100px;
-                content:'';
-                display:inline-block;
-                position: absolute;
-                top: 50px;
-                left: 60px;
-            }
-            .beforeLast::before{
-                content:'';
-                border: none;
-                display: none;
-            }
-        }
-    }
-    .bagbtn:hover{
-        background-color: rgb(228, 105, 57);   
-    }
+    //         .bagNavElement::before{
+    //             border: 1px dashed lightgray;
+    //             width:100px;
+    //             content:'';
+    //             display:inline-block;
+    //             position: absolute;
+    //             top: 50px;
+    //             left: 60px;
+    //         }
+    //         .beforeLast::before{
+    //             content:'';
+    //             border: none;
+    //             display: none;
+    //         }
+    //     }
+    // }
+    // .bagbtn:hover{
+    //     background-color: rgb(228, 105, 57);   
+    // }
         .active{
             color: #ff6900;
         }
@@ -86,7 +86,7 @@ nav{
     .btn:hover{
             background-color: orange;
         }
-    .rightSide{
+    .dublicate{
         margin-left: 80px;
         line-height: 40px;
         height: 40px;
@@ -101,32 +101,32 @@ nav{
         top:-20%;
         right: 10%;
     }
-    .dublicate{
-        color: white;
-        padding: 10px;
-        height: 30px;
-        border-radius: 5px;
-        text-align: center;
-        user-select: none;
-        background-color: transparent;
-        color: white;
-        width: 120px;
-        padding: 10px;
-        position: absolute;
-        top: 35%;
-        right: 10%;
-        z-index: 0.5;
+    // .dublicate{
+    //     color: white;
+    //     padding: 10px;
+    //     height: 30px;
+    //     border-radius: 5px;
+    //     text-align: center;
+    //     user-select: none;
+    //     background-color: transparent;
+    //     color: white;
+    //     width: 120px;
+    //     padding: 10px;
+    //     position: absolute;
+    //     top: 35%;
+    //     right: 10%;
+    //     z-index: 0.5;
 
     
     .showBag{
         z-index: 3;
         border-radius: 5px;
-        // background-color: white;
         color: black;
         min-height: 50px;
         width: 450px;
-        right: 0;
         position: absolute;
+        top:65%;
+        right: 10%;
         transition: 1s all;
         transform: scale(0) ;
         transform-origin: 100% 0%; 
@@ -138,14 +138,12 @@ nav{
         position: static;
         margin: 10px 20px 5px 10px;
     }    
-    }
-        .dublicate:hover > .showBag {
+    // }
+        .dublicate:hover + .showBag  {
             transform: scale(1);
-
           }
-          .dublicate:hover > .dublicate{
-            display: none;
-        
+          .showBag:hover {
+            transform: scale(1);
         }
           
     

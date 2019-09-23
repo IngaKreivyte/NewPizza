@@ -20,8 +20,8 @@ class Header extends Component {
             <div className={style.headerTop}>
                 <div className={style.headerTopBlock}>
                     <img src={pizza} alt="logo"></img>
-                    <h1> Dodo Pizza Vilnius </h1> 
-                    <p> Pristatymas per 60 minučių arba pica nemokamai. Skambutis telefonu 8 635 11 555</p>
+                    <h1>  Pizza Vilnius </h1> 
+                    <p> Pristatymas per 60 minučių arba pica nemokamai. Skambutis telefonu 8 6** ** ***</p>
                 </div>
                 <div className={style.auth}>
                    {!this.props.profile.name && <NavLink className={[style.link, style.login ].join(' ')} to='/login' > Prisijungti! </NavLink>}

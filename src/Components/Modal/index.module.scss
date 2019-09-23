@@ -104,11 +104,11 @@
         margin: 0;
         padding: 0;
         float: left;
-        display: inline-block;
+        display: flex;
         
         img{
-            height: auto;
-            margin: 10px;
+            margin: auto;
+            transition: 1s;
         }
     }
        

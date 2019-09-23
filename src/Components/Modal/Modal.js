@@ -30,9 +30,7 @@ import * as actions from '../../actions/bag';
          if(this.state.size==='small') var width = '200px';
          if(this.state.size==='medium') width = '300px'; 
          if(this.state.size==='large') width = '400px' ;
-         if(this.state.size==='small')  var padding = '120px';
-         if(this.state.size==='medium') padding = '100px'
-         if(this.state.size==='large') padding = '30px'
+        
           
         
          
@@ -76,7 +74,7 @@ import * as actions from '../../actions/bag';
                            
                             
                             <div className={style.imgBlock}>
-                                <img style={{width,padding}} src={this.props.pic} alt='pic'/>
+                                <img style={{width}} src={this.props.pic} alt='pic'/>
                             </div>
                             
                          </div>

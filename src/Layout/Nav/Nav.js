@@ -54,12 +54,14 @@ class Nav extends Component {
             <NavLink className={style.link} activeClassName={style.active} to='/užkandziai'> Užkandžiai </NavLink>
             <NavLink className={style.link} activeClassName={style.active} to='/akcijos'> akcijos </NavLink>
             <NavLink className={style.link} activeClassName={style.active} to='/kontaktai'> Kontaktai </NavLink>
-            <NavLink className={[style.link, style.rightSide, style.bagbtn ].join(' ')} to='/bag' 
+            <NavLink className={[style.link, style.dublicate, style.bagbtn ].join(' ')} to='/bag' 
             // onClick={()=>this.changeBagStatus()}
             >Krepšelis | {itemsInBag} 
+           
            </NavLink>
-           <div className={[style.dublicate ].join(' ')}>
-              <div className={style.showBag}><ButtonHover/></div></div>
+           <div className={style.showBag}><ButtonHover/></div>
+           {/* <div className={[style.dublicate ].join(' ')}> */}
+              {/* <div className={style.showBag}><ButtonHover/></div></div> */}
         {/* <div className={style.showBag}> <Bag hideButton/> </div>  */}
         
         </div>
