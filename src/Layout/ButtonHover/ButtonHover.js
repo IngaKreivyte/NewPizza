@@ -52,6 +52,7 @@ class ButtonHover extends Component {
                         </div>
                             <h1> Oj, tuščia!</h1>
                             <p>Pas mus pristatymas visada nemokamas, tačiau minimali užsakymo suma turi būti 7,95 €</p>
+                            
                     </div>
                 )
         }

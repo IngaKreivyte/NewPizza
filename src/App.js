@@ -15,6 +15,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import axios from 'axios';
 import jwt from 'jsonwebtoken';
 import {store} from './Store';
+import spiner from './Layout/Nav/Spiner/spiner';
 
 
 //login user on app load
@@ -48,6 +49,7 @@ function App() {
       <Route path='/DoneOrder' component={DoneOrder}/>
       <Route path='/customerData' component={customerData}/>
       <Route path='/CheckOut' component={CheckOut}/>
+      <Route path='/spiner' component={spiner}/>
       
       </Switch>
     </BrowserRouter>

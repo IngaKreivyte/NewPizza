@@ -30,13 +30,15 @@ class Customerdata extends Component {
                    <span ><Link to ='/bag' > X </Link></span>
                     <h2>Kur pristatyti?</h2>
                     <div className={style.Block}>
-                        <div onClick={this.active} className={style.blockItem}>
-                        <h5>Pristatymas</h5>
+                        <div className={style.tabs}>
+                            <div onClick={this.active} className={!this.state.active ? style.tab : style.active}>
+                            <h5>Pristatymas</h5>
+                            </div>
+                            <div  onClick={this.active} className={this.state.active ? style.tab : style.active}>
+                            <h5>Išsinešimui</h5>
+                            </div>
                         </div>
-                        <div  onClick={this.active} className={style.blockItem}>
-                        <h5>Išsinešimui</h5>
-                        </div>
-                        {this.props.profile.email && this.state.active &&<Pristatymas atsiemimas={this.state.atsiemimas} />}
+                        {this.props.profile.email && this.state.active && <Pristatymas atsiemimas={this.state.atsiemimas} />}
                         {!this.state.active && <Atsiemimas 
                         pasirinkimas ={this.state.pasirinkimas}/>}
                     </div>

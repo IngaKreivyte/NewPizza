@@ -20,6 +20,11 @@ class Pristatymas extends Component {
             this.setState({[e.target.name]:e.target.value})
             
         }
+        closeError=()=>{
+              this.setState({
+                errors:!this.state.errors,
+              })        
+        }
        onFormSubmit =(e)=>{
                e.preventDefault();
                const errors = {};
@@ -31,45 +36,62 @@ class Pristatymas extends Component {
                this.setState({
                        errors:{}, redirect:true
                })
+               
        }
      
     render() {        
         if( this.state.redirect) return <Redirect to='/checkOut'/>
         return (
-            <div>
+            <div className={style.delivery}>
                 <form onSubmit ={this.onFormSubmit} >
-                        {this.state.errors.gatve && <p>{this.state.errors.gatve}</p>}
+                        <div className={style.absolute}>
                 <input type="text"
                         size="50"
                         name='gatve'
                         placeholder='Gatve'
                         onChange={this.onInputChange}
                         value={this.state.gatve}/>
-                        {this.state.errors.namas && <p>{this.state.errors.namas}</p>}
+                         {this.state.errors.gatve && <div className={style.error}>{this.state.errors.gatve} <span onClick={()=>this.closeError()}> X</span></div>}
+                        </div>
+                        <div className={style.absolute}>
                 <input type="text"
                         value={this.state.namas}
                         onChange={this.onInputChange}
                         name='namas'
                         size="13"
                         placeholder='namas'/>
+                        
+                        {!this.state.errors.gatve && this.state.errors.namas && <div className={style.error}>{this.state.errors.namas} <span onClick={()=>this.closeError()}> X</span></div>}
+                        </div>
+                        <div className={style.absolute}>
                 <input type="text"
                         onChange={this.onInputChange}
                         size="13"
                         name='butas'
                         value={this.state.butas}
                         placeholder='butas'/>
+                        
+                        {/* {!this.state.errors.gatve && !this.state.errors.namas && this.state.errors.butas && <div className={style.error}>{this.state.errors.butas} <span onClick={()=>this.closeError()}> X</span></div>} */}
+                        </div>
+                        <div className={style.absolute}>
                 <input type="text"
                         size="13"
                         onChange={this.onInputChange}
                         value={this.state.duru_kodas}
                         name='duru_kodas'
-                        placeholder='durų_kodas'/>
+                        placeholder='durųkodas'/>
+                        
+                {/* {!this.state.errors.gatve && !this.state.errors.namas && !this.state.errors.butas && this.state.errors.duru_kodas && <div className={style.error}>{this.state.errors.duru_kodas} <span onClick={()=>this.closeError()}> X</span></div>} */}
+                        </div>
+                        <div className={style.absolute}>
                 <input type="text"
                         value={this.state.komentaras}
                         size="78"
                         onChange={this.onInputChange}
                         name='komentaras'
-                        placeholder='komentaras'/> <button className={style.btn} 
+                        placeholder='komentaras'/>
+                        </div> 
+                        <button className={style.btn} 
                     onClick={()=>{this.props.showAdress(this.state)}}> Patvirtinti adresą </button>
             </form>
             

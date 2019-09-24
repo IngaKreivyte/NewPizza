@@ -1,3 +1,6 @@
+@import '../../Sass/vars';
+@import '../../Sass//bottons';
+
 .Block{
     display: inline-block;
     width: 100%;
@@ -30,15 +33,9 @@
                     font-size: 18px;
                 }
                 .btn{
-                    display: inline-block;
-                    background-color: white;
-                    border-radius: 15px;
-                    cursor: pointer;
-                    width:120px;
-                    color: orange;
-                    text-align: center;
-                    border: 1px solid orange;
                     line-height: 40px;
+                    margin-top: 5px;
+                    @include btnPasirinkti;
                     
                 }
                 img{

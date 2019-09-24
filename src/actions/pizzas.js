@@ -4,12 +4,7 @@ import axios from 'axios';
 
 const url = 'https://server-pizza-api.herokuapp.com/api/pizza';
 
-// export const clearSingle =index=>{
-//     return{
-//         type: types.CLEAR_SINGLE,
-//         index
-//     };
-// };
+
 
 
 export const fetchPizzas = ()=>{

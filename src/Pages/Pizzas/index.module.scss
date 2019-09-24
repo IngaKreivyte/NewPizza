@@ -1,3 +1,5 @@
+@import '../../Sass//bottons';
+
 .Block{
     display: inline-block;
     width: 100%;
@@ -40,14 +42,7 @@
                         
                     }
                     .btn{
-                        display: inline-block;
-                        background-color: white;
-                        border-radius: 15px;
-                        cursor: pointer;
-                        width:100px;
-                        color: orange;
-                        text-align: center;
-                        border: 1px solid orange;
+                        @include btnPasirinkti;
                         float: right;
                         margin-right: 10px;
                         padding: 0 5px;

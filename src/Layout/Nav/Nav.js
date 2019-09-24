@@ -19,6 +19,7 @@ class Nav extends Component {
 // }
 
   render(props) {
+    
     const itemsInBag= this.props.bag.reduce((total, price) => total + price.amount, 0)
     return (
        
@@ -45,7 +46,8 @@ class Nav extends Component {
         {/* } */}
 
         {/* {!this.state.bagopen  && */}
-          <div>
+          <div className={style.row}>
+            
             <img src={pizza} alt="logo"></img>
             <NavLink className={style.link} activeClassName={style.active} to='/' exact> Home </NavLink>
             <NavLink className={style.link} activeClassName={style.active} to='/pizzas'> Picos </NavLink>
@@ -54,7 +56,7 @@ class Nav extends Component {
             <NavLink className={style.link} activeClassName={style.active} to='/užkandziai'> Užkandžiai </NavLink>
             <NavLink className={style.link} activeClassName={style.active} to='/akcijos'> akcijos </NavLink>
             <NavLink className={style.link} activeClassName={style.active} to='/kontaktai'> Kontaktai </NavLink>
-            <NavLink className={[style.link, style.dublicate, style.bagbtn ].join(' ')} to='/bag' 
+            <NavLink className={[style.link, style.btn, style.bagbtn ].join(' ')} to='/bag' 
             // onClick={()=>this.changeBagStatus()}
             >Krepšelis | {itemsInBag} 
            

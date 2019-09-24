@@ -1,38 +1,61 @@
-.btn{
-    display: inline-block;
-    background-color: white;
-    line-height: 25px;
-    border-radius: 15px;
-    cursor: pointer;
-    width:100px;
-    text-align: center;
-    border: 1px solid grey;
-    position: absolute;
-    bottom: 30px;
-    right: 45%;
+.delivery{
+    margin: 0;
+    padding-top: 10px;
+    .btn{
+        display: inline-block;
+        background-color: white;
+        line-height: 25px;
+        border-radius: 15px;
+        cursor: pointer;
+        width:100px;
+        text-align: center;
+        border: 1px solid grey;
+        position: absolute;
+        bottom: 30px;
+        right: 45%;
+        user-select: none;
+    }
+    .btn:hover{
+        background-color: orange;
+    }
+    form{
+        user-select: none;
+        width: 70%;
+        height: auto;
+        display: inline-block;
+        margin:  50px 25% 0 10%;
+        .absolute{
+            position: relative;
+            display: inline-block;
+            float: left;
+        .error{
+            color:white;
+            display: flex;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            border: 1px solid red;
+            border-radius: 15px;
+            background-color: red;
+            padding: 5px;
+            
+        }
+        span{
+            cursor: pointer;
+        }
+        input{
+            display: block;
+            position: relative;
+            justify-content: center;
+            margin-top: 10px;
+            float: left;
+            line-height: 20px;
+            size: 20px;
+            padding: 10px;
+            border-radius: 10px;
+    
+        }
+    
+    }
 }
-.btn:hover{
-    background-color: orange;
-}
-form{
-    width: 70%;
-    display: inline-block;
-    margin:  0 25% 0 5%;
-}
-.error{
-    color:red;
-    position:absolute;
-    bottom:25px;
-    left:40%;
-}
-input{
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    float: left;
-    line-height: 20px;
-    size: 20px;
-    padding: 10px;
-    border-radius: 10px;
-
 }

@@ -1,9 +1,11 @@
 .container{
     display:inline-block;
     width: 90%;
+    height: 200px;
     background-color: white;
     border-radius: 15px;
     position: relative;
+    overflow: auto;
 
     .block{
         display: inline-block;

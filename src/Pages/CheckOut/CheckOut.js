@@ -20,6 +20,7 @@ class CheckOut extends Component {
             return(
                 
                     <div key={i} className={style.item }>
+                         <img src={item.pic} alt='pic'/>
                         <h3> {item.name}</h3> 
                         <span className={style.amountBlock}>
                                 <div className={style.h3}> {item.totalPrice} X  {item.amount} EUR</div> 
@@ -34,7 +35,6 @@ class CheckOut extends Component {
             <div className={style.container}>
                 <div className={style.bothSides}>
                     <div className={style.toTheRightSide}>
-                        <h2> Jūsų užsakymas </h2>
                         <div className = {style.userBlock}>
                             <span> Vardas: </span>
                             <h3>{this.props.checkOut.user.name}</h3>
@@ -53,23 +53,30 @@ class CheckOut extends Component {
                             <div className={style.delivery}> 
                                 <span>Gatvė:</span>  <h3>{this.props.checkOut.address.gatve}</h3>
                                 <span>Namas:</span>  <h3>{this.props.checkOut.address.namas}</h3>
-                                <span>Butas:</span>  <h3>{this.props.checkOut.address.butas}</h3>
-                                <div className={style.deliveryblock}>
+                               { this.props.checkOut.address.butas && <span>Butas:</span> && <h3>{this.props.checkOut.address.butas}</h3>}
+                               {this.props.checkOut.address.komentaras && <div className={style.deliveryblock}>
                                     <span>Komentaras:</span> <span>{this.props.checkOut.address.komentaras}</span>
                                 </div>
+                               }
                             </div>
                         }
                     </div>
                     <div className={style.toTheleftSide}>
-                        <h2>  krepselis: </h2>
+                        <h2>  Jūsų užsakymas: </h2>
                         {bagItems}
                         <h3> viso: {totalAmount} </h3>
                     </div>
                 </div>
                 <button className={style.btn} onClick={()=>{this.props.addOrder(this.props.checkOut); this.redirectstatuschange();} }> 
                    Patvirtinti užsakymą 
-                </button>    
+                   
+                
+                <div className={style.birdcontainer}>
+  <div className={style.bird}></div>
+</div>
+</button>   
             </div>
+
         );
     } else {
         return null;
