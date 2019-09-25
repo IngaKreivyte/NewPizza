@@ -31,8 +31,6 @@ import * as actions from '../../actions/bag';
          if(this.state.size==='medium') width = '300px'; 
          if(this.state.size==='large') width = '400px' ;
         
-          
-        
          
                 return (
                     <React.Fragment>

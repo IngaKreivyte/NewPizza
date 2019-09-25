@@ -33,23 +33,27 @@ class Bag extends Component {
         const itemsInBag= this.props.bag.reduce((total, price) => total + price.amount, 0)
         const totalAmount = this.props.bag.reduce((total, price) => total + price.totalPrice, 0)
                 return(
-                
                     <div className={style.container}> 
                         {shoppingItems}
                         <div className={style.total}>
                             <h3> viso prekių : {'  ' + itemsInBag}</h3>
                             <h3> viso suma : { '  ' + totalAmount}</h3>
                         </div>
-                        {!this.props.hideButton  && <div><Link className={style.btn} to ='/'> Grįžti į Meniu</Link></div>}
-                        {!this.props.hideButton && <div   onClick={()=>{this.props.userBag(this.props.bag)}}>
-                            <Link className={style.btn} to ='/customerData' > Toliau </Link></div>}
-                        
+                         <div>
+                             <Link className={style.btn} to ='/'> Grįžti į Meniu</Link>
+                        </div>
+                        <div onClick={()=>{this.props.userBag(this.props.bag)}}>
+                            <Link className={style.btn} to ='/customerData' > Toliau </Link>
+                        </div>
                     </div>
                 );
         } else {
                 return(
                     <div className={style.container}>
                         <h1> Pridėkite ką nors iš meniu</h1>
+                        <div>
+                            <Link className={style.btn1} to ='/'> Grįžti į Meniu</Link>
+                        </div>
                     </div>
                 )
         }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Home from './Pages/Home/Home';
 import Header from './Layout/Header/Header';
@@ -15,8 +15,8 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import axios from 'axios';
 import jwt from 'jsonwebtoken';
 import {store} from './Store';
-import spiner from './Layout/Nav/Spiner/spiner';
-
+import spiner from './Layout/Spiner/spiner';
+import NewNav from './Layout/NewNav/NewNav';
 
 //login user on app load
 let token = localStorage.getItem('abc123');
@@ -32,28 +32,57 @@ if(token){
     user,
   })
 }
+ 
 
+const AppRoute = ({ component: Component, layout: Layout, ...rest }) => (
+  <Route {...rest} render={props => (
+    <Layout>
+      <Component {...props} />
+    </Layout>
+  )} />
+)
 
-function App() {
-  return (
-    <BrowserRouter>
+const HomeLayout = props => (
+  <div>
     <Header/>
+    {props.children}
+  </div>
+)
+
+
+
+
+
+class App extends Component { 
+  render() {
+    const BagLayout = props => (
+      <div>
+        <NewNav />
+        {props.children}
+      </div>
+    )
+    return (
+      <BrowserRouter>
       <Switch>
-      <Route exact path='/' component={Home}/> 
-      <Route exact path='/pizzas' component={Pizzas}/> 
-      <Route exact path='/desertai' component={Desserts}/> 
-      <Route exact path='/gerimai' component={Drinks}/> 
-      <Route exact path='/bag' component={Bag}/> 
-      <Route path='/SignUp' component={SignUp}/>
-      <Route path='/login' component={Login}/>
-      <Route path='/DoneOrder' component={DoneOrder}/>
-      <Route path='/customerData' component={customerData}/>
-      <Route path='/CheckOut' component={CheckOut}/>
-      <Route path='/spiner' component={spiner}/>
+      <AppRoute exact path='/'  layout={ HomeLayout } component={Home}/> 
+      <AppRoute exact path='/pizzas' layout={ HomeLayout }  component={Pizzas}/> 
+      <AppRoute exact path='/desertai' layout={ HomeLayout }  component={Desserts}/> 
+      <AppRoute exact path='/gerimai' layout={ HomeLayout }  component={Drinks}/> 
+      <AppRoute exact path='/bag' layout={ BagLayout }   component={Bag }/> 
+      <AppRoute path='/SignUp' layout={ HomeLayout }  component={SignUp}/>
+      <AppRoute path='/login' layout={ HomeLayout }  component={Login}/>
+      <AppRoute path='/DoneOrder'  layout={ BagLayout } component={DoneOrder}/>
+      <AppRoute path='/customerData'  layout={ BagLayout } component={customerData}/>
+      <AppRoute path='/CheckOut'layout={ BagLayout }  component={CheckOut}/>
+      <AppRoute path='/spiner' layout={ HomeLayout }  component={spiner}/>
       
       </Switch>
     </BrowserRouter>
-  );
+    );
+  }
 }
+
+
+
 
 export default App;

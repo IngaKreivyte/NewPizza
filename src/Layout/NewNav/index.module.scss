@@ -1,0 +1,103 @@
+.container{
+    width: 100%;
+    border-bottom: 1px solid grey;
+    display: inline-block;
+    height: 150px;
+    .leftRow{
+       width: 30%;
+       height: 100%;
+       float: left;
+       display: flex;
+       justify-content: center;
+       *{
+           margin: 20px 0;
+           display: inline-block;
+           float: left;
+           height: 40px;
+       }
+        img{
+            width: 35px;
+            height: 40px;
+            float: left;
+            
+        }  
+}
+    .bagNav{
+        display:flex;
+        justify-content: space-around;
+        width: 50%;
+        height: inherit;
+        margin: 0 calc(( 100% - 30%) / 2);
+        
+        .bagNavblock {
+            display:flex;
+            position: relative;
+            width: 30%;
+            
+            
+            span{
+                width: 150px;
+                position: absolute;
+                top:65%;
+            }
+            .bagNavElement{
+                border: 1px solid black;
+                border-radius: 50%;
+                padding: 7px 14px;
+                height: 20px;
+                margin-top: 50px;
+            }
+            .bagNavElement::before{
+                border: 1px dashed lightgray;
+                width:100px;
+                content:'';
+                display:inline-block;
+                position: absolute;
+                top: 65px;
+                left: 60px;
+            }
+            .beforeLast::before{
+                content:'';
+                border: none;
+                display: none;
+            }
+        }
+    
+    }
+    .bagNavblockActive {
+        display:flex;
+        position: relative;
+        width: 30%;
+        *{
+            font-weight: bolder;
+            size: 15px;
+            color: red
+        }
+        span{
+            width: 150px;
+            position: absolute;
+            top:65%;
+        }
+        .bagNavElement{
+            border: 1px solid black;
+            border-radius: 50%;
+            padding: 7px 14px;
+            height: 20px;
+            margin-top: 50px;
+        }
+        .bagNavElement::before{
+            border: 1px dashed lightgray;
+            width:100px;
+            content:'';
+            display:inline-block;
+            position: absolute;
+            top: 65px;
+            left: 60px;
+        }
+        .beforeLast::before{
+            content:'';
+            border: none;
+            display: none;
+        }
+    }    
+}

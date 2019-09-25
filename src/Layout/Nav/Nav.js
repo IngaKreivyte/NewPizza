@@ -6,48 +6,21 @@ import React, { Component } from 'react';
 import * as actions from '../../actions/auth';
 import ButtonHover from '../ButtonHover/ButtonHover';
 import {withRouter} from 'react-router-dom';
+
+
 class Nav extends Component {
   state={
-    bagopen:false,
     logout:false,
     
   }
-  changeBagStatus=()=>{
-    this.setState({
-        bagopen:!this.state.bagopen,
-    })
-}
 
-  render(props) {
+  render() {
     
     const itemsInBag= this.props.bag.reduce((total, price) => total + price.amount, 0)
     return (
-       
        <React.Fragment>
-         
       <nav> 
-        { this.state.bagopen  && 
-         <div className={style.bagNav}>
-          <div className={style.bagNavblock}>
-              <div className={style.bagNavElement} >1</div>
-              <span>Krepšelis</span>
-          </div>
-          <div className={style.bagNavblock}>
-              <div className={style.bagNavElement}>2</div>
-              <span>Užsakymas</span>
-          </div>
-          <div className={style.bagNavblock}>
-          <span>Užsakymas priimtas</span>
-              <div className={[style.bagNavElement, style.beforeLast ].join(' ')}>3</div>
-        </div>
-      
-              
-        </div> 
-        }
-
-        {!this.state.bagopen  &&
           <div className={style.row}>
-            
             <img src={pizza} alt="logo"></img>
             <NavLink className={style.link} activeClassName={style.active} to='/' exact> Home </NavLink>
             <NavLink className={style.link} activeClassName={style.active} to='/pizzas'> Picos </NavLink>
@@ -57,16 +30,13 @@ class Nav extends Component {
             <NavLink className={style.link} activeClassName={style.active} to='/akcijos'> akcijos </NavLink>
             <NavLink className={style.link} activeClassName={style.active} to='/kontaktai'> Kontaktai </NavLink>
             <NavLink className={[style.link, style.btn, style.bagbtn ].join(' ')} to='/bag' 
-            onClick={()=>this.changeBagStatus()}
             >Krepšelis | {itemsInBag} 
            
            </NavLink>
            <div className={style.showBag}><ButtonHover/></div>
         
         </div>
-        }    
       </nav>  
-      
       </React.Fragment>
     );
   }

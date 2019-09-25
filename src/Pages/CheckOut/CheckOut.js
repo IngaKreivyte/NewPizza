@@ -69,7 +69,6 @@ class CheckOut extends Component {
                 </div>
                 <button className={style.btn} onClick={()=>{this.props.addOrder(this.props.checkOut); this.redirectstatuschange();} }> 
                    Patvirtinti užsakymą 
-                   
                 
                 <div className={style.birdcontainer}>
   <div className={style.bird}></div>

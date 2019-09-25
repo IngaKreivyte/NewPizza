@@ -8,47 +8,7 @@ nav{
     border-bottom: 1px solid lightgray;
     
     background-color: white;
-    .bagNav{
-        display:flex;
-        justify-content: space-between;
-        width: 40%;
-        margin: -20px 0 0 30%;
-        .bagNavblock {
-            display:flex;
-            position: relative;
-            span{
-                width: 150px;
-                position: absolute;
-                top:65%;
-                left: -50%;
-            }
-            .bagNavElement{
-                border: 1px solid black;
-                border-radius: 50%;
-                padding: 7px 14px;
-                height: 20px;
-                margin-top: 30px;
-            }
-            
-            .bagNavElement::before{
-                border: 1px dashed lightgray;
-                width:100px;
-                content:'';
-                display:inline-block;
-                position: absolute;
-                top: 50px;
-                left: 60px;
-            }
-            .beforeLast::before{
-                content:'';
-                border: none;
-                display: none;
-            }
-        }
-    }
-    .bagbtn:hover{
-        background-color: rgb(228, 105, 57);   
-    }
+    
     .row{
         width: 90%;
         margin: 0 5%;
