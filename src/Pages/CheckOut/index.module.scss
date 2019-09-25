@@ -95,24 +95,4 @@
     
          
     
-    
-    .bird {
-        background-image: url('../../assets/images/hummingbird.png');
-        background-size: auto 100%;
-        width: 100%;
-        height: 60px;
-        will-change: background-position;
-        animation: fly-cycle infinite 10s;
-      }
-      @keyframes fly-cycle {
-        100% {
-        background-position: 900px 0;
-        animation-name: fly-cycle;
-        animation-timing-function: steps(10);
-        animation-iteration-count: infinite;
-        animation-duration: 1s;
-        animation-delay: 0.5s;
-        }
-        } 
-      }
-    }
+    }}

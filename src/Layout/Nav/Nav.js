@@ -8,15 +8,15 @@ import ButtonHover from '../ButtonHover/ButtonHover';
 import {withRouter} from 'react-router-dom';
 class Nav extends Component {
   state={
-    // bagopen:false,
+    bagopen:false,
     logout:false,
     
   }
-//   changeBagStatus=()=>{
-//     this.setState({
-//         bagopen:!this.state.bagopen,
-//     })
-// }
+  changeBagStatus=()=>{
+    this.setState({
+        bagopen:!this.state.bagopen,
+    })
+}
 
   render(props) {
     
@@ -26,8 +26,8 @@ class Nav extends Component {
        <React.Fragment>
          
       <nav> 
-        {/* { this.state.bagopen  &&  */}
-        {/* <div className={style.bagNav}>
+        { this.state.bagopen  && 
+         <div className={style.bagNav}>
           <div className={style.bagNavblock}>
               <div className={style.bagNavElement} >1</div>
               <span>Krepšelis</span>
@@ -42,10 +42,10 @@ class Nav extends Component {
         </div>
       
               
-        </div> */}
-        {/* } */}
+        </div> 
+        }
 
-        {/* {!this.state.bagopen  && */}
+        {!this.state.bagopen  &&
           <div className={style.row}>
             
             <img src={pizza} alt="logo"></img>
@@ -57,17 +57,14 @@ class Nav extends Component {
             <NavLink className={style.link} activeClassName={style.active} to='/akcijos'> akcijos </NavLink>
             <NavLink className={style.link} activeClassName={style.active} to='/kontaktai'> Kontaktai </NavLink>
             <NavLink className={[style.link, style.btn, style.bagbtn ].join(' ')} to='/bag' 
-            // onClick={()=>this.changeBagStatus()}
+            onClick={()=>this.changeBagStatus()}
             >Krepšelis | {itemsInBag} 
            
            </NavLink>
            <div className={style.showBag}><ButtonHover/></div>
-           {/* <div className={[style.dublicate ].join(' ')}> */}
-              {/* <div className={style.showBag}><ButtonHover/></div></div> */}
-        {/* <div className={style.showBag}> <Bag hideButton/> </div>  */}
         
         </div>
-        {/* } */}    
+        }    
       </nav>  
       
       </React.Fragment>
