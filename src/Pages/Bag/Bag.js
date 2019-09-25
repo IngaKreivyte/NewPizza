@@ -23,7 +23,7 @@ class Bag extends Component {
                        {/* {item.size && <span> size: {item.size} </span>}  */} 
                        {/* galima rasyti ir toki patikrinima  kai yra size, prideti toki span*/}
                        <div>  {item.size} </div>
-                        <div > {item.totalPrice} EUR </div>   
+                        <div > {item.totalPrice} &#8364; </div>   
                         <div  onClick={()=> this.props.findUnique(item, 1)} className={style.plusMinus}> + </div>
                         <div> {item.amount} </div>
                         <div  onClick={()=>this.props.findUnique(item, -1)}className={style.plusMinus}> - </div>
@@ -36,8 +36,8 @@ class Bag extends Component {
                     <div className={style.container}> 
                         {shoppingItems}
                         <div className={style.total}>
-                            <h3> viso prekių : {'  ' + itemsInBag}</h3>
-                            <h3> viso suma : { '  ' + totalAmount}</h3>
+                            <h3> viso prekių : {'  ' + itemsInBag} &#8364;</h3>
+                            <h3> viso suma : { '  ' + totalAmount} &#8364;</h3>
                         </div>
                          <div>
                              <Link className={style.btn} to ='/'> Grįžti į Meniu</Link>

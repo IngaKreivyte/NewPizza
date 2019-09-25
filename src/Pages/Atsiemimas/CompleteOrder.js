@@ -29,7 +29,7 @@ choosePickUp=(e)=>{
                                 value= 'Antakalnio g. 41'
                                 onChange={this.choosePickUp} />
                         <div>
-                         Antakalnio g., 41
+                        <span>Antakalnio g., 41</span> 
                         <span> Pr - Kt: 09:00 — 23:00 </span>
                         <span> Pn - Š: 09:00 — 00:00</span>
                         <span> S : 09:00 — 23:00</span>
@@ -43,7 +43,7 @@ choosePickUp=(e)=>{
                                 value='Savanorių pr. 1, Helios City'
                                 onChange={this.choosePickUp} />
                         <div>
-                         Savanorių pr. 1
+                        <span>Savanorių pr. 1</span> 
                         <span> Pr - Kt: 09:00 — 23:00 </span>
                         <span> Pn - Š: 09:00 — 00:00</span>
                         <span> S : 09:00 — 23:00</span>

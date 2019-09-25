@@ -23,7 +23,7 @@ class CheckOut extends Component {
                          <img src={item.pic} alt='pic'/>
                         <h3> {item.name}</h3> 
                         <span className={style.amountBlock}>
-                                <div className={style.h3}> {item.totalPrice} X  {item.amount} EUR</div> 
+                                <div className={style.h3}> {item.totalPrice} X  {item.amount} &#8364;</div> 
                         </span>
                     </div>
                    
@@ -43,13 +43,13 @@ class CheckOut extends Component {
                             <span> Tel.nr.: </span>
                             <h3>{this.props.checkOut.user.phone}</h3>
                         </div>
-                        {this.props.checkOut.adresspickUp && 
+                        {!this.props.checkOut.address && this.props.checkOut.adresspickUp && 
                             <div className={style.delivery}> 
                                 <span>Delivery at:</span> 
                                 <h3>{this.props.checkOut.adresspickUp}</h3>  
                             </div>
                         }
-                        {this.props.checkOut.address &&
+                        {!this.props.checkOut.adresspickUp && this.props.checkOut.address &&
                             <div className={style.delivery}> 
                                 <span>Gatvė:</span>  <h3>{this.props.checkOut.address.gatve}</h3>
                                 <span>Namas:</span>  <h3>{this.props.checkOut.address.namas}</h3>
@@ -64,7 +64,7 @@ class CheckOut extends Component {
                     <div className={style.toTheleftSide}>
                         <h2>  Jūsų užsakymas: </h2>
                         {bagItems}
-                        <h3> viso: {totalAmount} </h3>
+                        <h3> viso: {totalAmount} &#8364; </h3>
                     </div>
                 </div>
                 <button className={style.btn} onClick={()=>{this.props.addOrder(this.props.checkOut); this.redirectstatuschange();} }> 

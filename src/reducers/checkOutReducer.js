@@ -15,8 +15,7 @@ export default (state={}, action)=>{
             case types.USER_BAG:
                 return {...state, bag: action.item}
                 case types.ADD_ORDER: 
-                // return []
-            return {...state, bag:[]}
+            return {...state, bag:''}
             case types.LOG_OUT:
             return [];
         default:

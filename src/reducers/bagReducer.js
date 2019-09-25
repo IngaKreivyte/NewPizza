@@ -1,10 +1,9 @@
 import * as types from '../actions/types';
 
-const currentState=[
-];
 
 
-export default (state=currentState, action)=>{
+
+export default (state=[], action)=>{
     switch (action.type) {
         case types.ADD_TO_BAG:
                 let dublicate = false;

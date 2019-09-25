@@ -26,8 +26,6 @@ class Nav extends Component {
             <NavLink className={style.link} activeClassName={style.active} to='/pizzas'> Picos </NavLink>
             <NavLink className={style.link} activeClassName={style.active} to='/desertai'> Desertai </NavLink>
             <NavLink className={style.link} activeClassName={style.active} to='/gerimai'> Gėrimai </NavLink>
-            <NavLink className={style.link} activeClassName={style.active} to='/užkandziai'> Užkandžiai </NavLink>
-            <NavLink className={style.link} activeClassName={style.active} to='/akcijos'> akcijos </NavLink>
             <NavLink className={style.link} activeClassName={style.active} to='/kontaktai'> Kontaktai </NavLink>
             <NavLink className={[style.link, style.btn, style.bagbtn ].join(' ')} to='/bag' 
             >Krepšelis | {itemsInBag} 

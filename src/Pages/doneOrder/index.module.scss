@@ -1,3 +1,5 @@
+@import '../../Sass/bottons';
+
 .doneOrder{
     display: inline-block;
     margin: 50px calc(20% / 2 );
@@ -5,5 +7,9 @@
     height: 100%;
     *{
         text-align: center;
+    }
+    .btn1{
+        @include btnPasirinkti;
+        padding: 5px;
     }
 }
