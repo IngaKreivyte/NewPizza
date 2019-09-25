@@ -25,13 +25,33 @@
         span{
             width: 50%;
         }
-        h3{
-            margin: 0;
-            padding: 0;
-            width: 30%; 
-            border: 1px solid grey;
-            border-radius: 5px;
+        .nameBlock{
+            width: 50%;
+            
+            h3{
+                width: 30%; 
+                border: 1px solid grey;
+                border-radius: 5px;
+                margin: 0;
+                padding: 0;
+                line-height: 35px;
+            }
+            span{
+                width: 10%;
+                @include btn;
+                margin: 0;
+                float: left;
+                line-height: 35px;
+                border: 1px solid orangered;
+            }
         }
+        // h3{
+        //     margin: 0;
+        //     padding: 0;
+        //     width: 30%; 
+        //     border: 1px solid grey;
+        //     border-radius: 5px;
+        // }
         h4{
             width: 100%;
         }
@@ -93,9 +113,4 @@
     .btn{
         @include btn;
         border:none;
-    
-
-    
-         
-    
     }}

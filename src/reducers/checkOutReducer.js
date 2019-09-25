@@ -18,6 +18,8 @@ export default (state={}, action)=>{
             return {...state, bag:''}
             case types.LOG_OUT:
             return [];
+            case types.CLEAN_ORDER_DATA:
+                return [];
         default:
             return state;
     }

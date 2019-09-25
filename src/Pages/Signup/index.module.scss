@@ -19,10 +19,11 @@
         background: #fff;
         padding-top: 30px;
         padding-bottom: 30px;
-        margin: 10px 450px;
+        margin: 0 calc(( 100% - 600px) / 2 );
         
     }
     input{
+        padding: 5px;
         font-size: 12px;
         display: block;
         line-height: 15px;

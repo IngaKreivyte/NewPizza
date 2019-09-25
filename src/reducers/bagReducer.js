@@ -45,7 +45,8 @@ export default (state=[], action)=>{
                      else return object
                           
                     })
-
+                    case types.CLEAN_ORDER_DATA:
+                            return [];
         default:
             return state;
     }

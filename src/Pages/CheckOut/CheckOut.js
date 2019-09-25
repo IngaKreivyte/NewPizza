@@ -37,16 +37,25 @@ class CheckOut extends Component {
                     <div className={style.toTheRightSide}>
                         <div className = {style.userBlock}>
                             <span> Vardas: </span>
-                            <h3>{this.props.checkOut.user.name}</h3>
+                            <div className={style.nameBlock}>
+                                <h3>{this.props.checkOut.user.name}</h3>
+                                <span >edit</span>
+                            </div>
                         </div>
                         <div className = {style.userBlock}>
                             <span> Tel.nr.: </span>
-                            <h3>{this.props.checkOut.user.phone}</h3>
+                            <div className={style.nameBlock}>
+                                <h3>{this.props.checkOut.user.phone}</h3>
+                                <span >edit</span>
+                            </div>
                         </div>
                         {!this.props.checkOut.address && this.props.checkOut.adresspickUp && 
                             <div className={style.delivery}> 
                                 <span>Delivery at:</span> 
-                                <h3>{this.props.checkOut.adresspickUp}</h3>  
+                                <div className={style.nameBlock}>
+                                    <h3>{this.props.checkOut.adresspickUp}</h3>  
+                                    <span >edit</span>
+                                </div>
                             </div>
                         }
                         {!this.props.checkOut.adresspickUp && this.props.checkOut.address &&

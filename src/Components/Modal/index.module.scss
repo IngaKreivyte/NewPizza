@@ -31,31 +31,31 @@
             width:100%;
             margin:10% 0;
             word-break: keep-all;
-        }
+    }
 }
 
         .sizes{
             display: inline-block;
-            width: 97%;
+            width: 100%;
             float: left;
             cursor: pointer;
             border-radius: 15px;
             background-color: rgb(233, 232, 232);
-            height: 42px;
+            height: 45px;
             padding-right: 1px;
         *{
-            width: 32.4%;
-            border-radius: 5px;
+            width: 32%;
+            border-radius: 15px;
+            border: 1px solid white;
             line-height: 20px;
-            margin: 1px 0 0px 2px;
+            margin: 2px 0 0px 2px;
             padding: 8px 0 12px;
             display: inline-block;
             float: left;
-            
         }
-        
             .selectSize{
                 background-color: rgb(233, 232, 232);
+                border: 1px solid  rgb(233, 232, 232);
             }
             .selectedSize{
                 background-color: white;

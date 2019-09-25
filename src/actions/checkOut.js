@@ -18,3 +18,9 @@ export const addOrder =(checkOut)=>{
         }
     }
 };
+export const cleanOrderData = (checkOut)=>{
+    return{
+        type:types.CLEAN_ORDER_DATA,
+        checkOut:checkOut,
+    }
+}
