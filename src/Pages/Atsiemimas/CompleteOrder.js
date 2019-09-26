@@ -52,7 +52,7 @@ choosePickUp=(e)=>{
                         
                     {this.state.error !=='' && <h4 className={style.error}> {this.state.error} </h4>}
                     {this.state.pickUp!== '' && <Link to ='/checkOut' >  <button className={style.btn} 
-                    onClick={()=>{this.props.showDeliveryStatus(this.state.pickUp)}}> pasirinkti</button> </Link>
+                    onClick={()=>{this.props.showDeliveryStatus(this.state.pickUp)}}> Pasirinkti</button> </Link>
                    }
                     </form>    
                 </div>

@@ -89,10 +89,11 @@ class Pristatymas extends Component {
                         size="78"
                         onChange={this.onInputChange}
                         name='komentaras'
-                        placeholder='komentaras'/>
-                        </div> 
+                        placeholder='komentaras'
+                />
+                </div> 
                         <button className={style.btn} 
-                    onClick={()=>{this.props.showAdress(this.state)}}> Patvirtinti adresą </button>
+                                onClick={()=>{this.props.showAdress(this.state)}}> Patvirtinti adresą </button>
             </form>
             
             </div>

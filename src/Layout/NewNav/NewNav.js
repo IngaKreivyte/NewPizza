@@ -20,11 +20,11 @@ class NewNav extends Component {
                     <div className={style.bagNavElement} >1</div>
                     <span>Krepšelis</span>
                 </div>
-               <div className= { this.props.checkOut.adresspickUp || this.props.checkOut.address ? style.bagNavblockActive:style.bagNavblock}>
+               <div className= { this.props.checkOut.address ? style.bagNavblockActive:style.bagNavblock}>
                     <div className={style.bagNavElement} >2</div>
                     <span>Užsakymas</span>
                 </div>
-                <div className= { (this.props.checkOut.adresspickUp || this.props.checkOut.address) && !this.props.checkOut.bag ?style.bagNavblockActive:style.bagNavblock}>
+                <div className= { this.props.checkOut.address && !this.props.checkOut.bag ?style.bagNavblockActive:style.bagNavblock}>
                 <span>Užsakymas priimtas</span>
                     <div className={[style.bagNavElement, style.beforeLast ].join(' ')}>3</div>
                 </div>       

@@ -3,14 +3,25 @@ import{connect} from 'react-redux';
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom';
 import * as actions from '../../actions/checkOut';
+import {Link} from 'react-router-dom';
 
 class CheckOut extends Component {
     state={
         redirect:false,
+        name:this.props.profile.name,
+        number:this.props.checkOut.user.phone,
     }
     redirectstatuschange=()=>{
         this.setState({redirect:!this.state.redirect})
     }
+    onInputChange=(e)=>{   
+        this.setState({[e.target.name]:e.target.value})
+    }
+    onFormSubmit =(e)=>{
+        e.preventDefault()
+    }
+    
+
     render() {
         if(this.state.redirect){
             return <Redirect to ='/DoneOrder'/>}
@@ -38,37 +49,51 @@ class CheckOut extends Component {
                         <div className = {style.userBlock}>
                             <span> Vardas: </span>
                             <div className={style.nameBlock}>
-                                <h3>{this.props.checkOut.user.name}</h3>
-                                <span >edit</span>
+                                <form onSubmit ={this.onFormSubmit}>
+                            <input onChange={this.onInputChange}
+                                type='text'
+                                name='name'
+                                placeholder='name'
+                                value={this.state.name} />
+                                <button onClick={()=>{this.props.changeName(this.state)}} >save</button>
+                                </form>
                             </div>
                         </div>
                         <div className = {style.userBlock}>
                             <span> Tel.nr.: </span>
                             <div className={style.nameBlock}>
-                                <h3>{this.props.checkOut.user.phone}</h3>
-                                <span >edit</span>
+                            <form onSubmit ={this.onFormSubmit}>
+                            <input 
+                                type='text' 
+                                name='number' 
+                                value={this.state.number}
+                                placeholder='number'
+                                onChange={this.onInputChange} />
+                                <button  onClick={()=>{this.props.changeName(this.state)}}>save</button>
+                                </form>
                             </div>
+
                         </div>
-                        {!this.props.checkOut.address && this.props.checkOut.adresspickUp && 
+                        { this.props.checkOut.address.adresspickUp && 
                             <div className={style.delivery}> 
                                 <span>Delivery at:</span> 
-                                <div className={style.nameBlock}>
-                                    <h3>{this.props.checkOut.adresspickUp}</h3>  
-                                    <span >edit</span>
-                                </div>
-                            </div>
-                        }
-                        {!this.props.checkOut.adresspickUp && this.props.checkOut.address &&
+                                    <h3>{this.props.checkOut.address.adresspickUp}</h3>  
+                            </div> }
+                        { !this.props.checkOut.address.adresspickUp && this.props.checkOut.address &&
                             <div className={style.delivery}> 
                                 <span>Gatvė:</span>  <h3>{this.props.checkOut.address.gatve}</h3>
                                 <span>Namas:</span>  <h3>{this.props.checkOut.address.namas}</h3>
-                               { this.props.checkOut.address.butas && <span>Butas:</span> && <h3>{this.props.checkOut.address.butas}</h3>}
-                               {this.props.checkOut.address.komentaras && <div className={style.deliveryblock}>
-                                    <span>Komentaras:</span> <span>{this.props.checkOut.address.komentaras}</span>
-                                </div>
-                               }
-                            </div>
-                        }
+                            { this.props.checkOut.address.butas &&  
+                            <div className={style.delivery}> 
+                               <span>Butas:</span> 
+                               <h3>{this.props.checkOut.address.butas}</h3>
+                            </div>}
+                               {this.props.checkOut.address.komentaras &&
+                                 <div className={style.deliveryblock}>
+                                    <span>Komentaras:</span> 
+                                    <span>{this.props.checkOut.address.komentaras}</span>
+                                </div> }
+                            </div> }
                     </div>
                     <div className={style.toTheleftSide}>
                         <h2>  Jūsų užsakymas: </h2>
@@ -77,12 +102,8 @@ class CheckOut extends Component {
                     </div>
                 </div>
                 <button className={style.btn} onClick={()=>{this.props.addOrder(this.props.checkOut); this.redirectstatuschange();} }> 
-                   Patvirtinti užsakymą 
-                
-                <div className={style.birdcontainer}>
-  <div className={style.bird}></div>
-</div>
-</button>   
+                   Patvirtinti užsakymą </button>   
+<Link className={style.btn} to ='/customerData' > Grįžti </Link>
             </div>
 
         );

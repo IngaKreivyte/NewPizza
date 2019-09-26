@@ -1,6 +1,7 @@
 import{connect} from 'react-redux';
 import style from './index.module.scss';
-import * as actions from '../../actions/drink';
+import {fetchDrink} from '../../actions/drink';
+import {addToBag} from '../../actions/bag';
 
 import React, { Component } from 'react';
 
@@ -45,4 +46,4 @@ const mapStateToProps=(state)=>{
 
 
 
-export default connect(mapStateToProps, actions)(Drinks);
+export default connect(mapStateToProps,{fetchDrink, addToBag})(Drinks);

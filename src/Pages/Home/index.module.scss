@@ -1,3 +1,5 @@
+
+@import '../../Sass/vars';
 .container{
     display: inline-block;
     width: 100%;
@@ -5,20 +7,21 @@
         width: 100%;
         display: inline-block;
         text-align: center;
-        font-weight: bolder;
-        font-size: 50px;
-        color: rgb(247, 85, 27);
+        font-weight: bold;
+        font-size: 80px;
+        color: $basicOrangecolor;
         text-transform: uppercase;
         font-family: Arial, Helvetica, sans-serif;
     }
         .welcome:before{
         content: "";
-        animation: animate infinite 10s;
+        animation: animate infinite 2s;
         }
         @keyframes animate{
             0% {
                 content: "Welcome";
                 opacity: 1;  
+                color: $secondColor;
             }
             30% {
                 content: "Welcome";
@@ -34,6 +37,7 @@
        };
        img{
         width: 100%;
+        height: auto;
        }
     
 }

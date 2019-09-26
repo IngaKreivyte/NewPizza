@@ -24,3 +24,10 @@ export const cleanOrderData = (checkOut)=>{
         checkOut:checkOut,
     }
 }
+export const changeName = (state)=>{
+    return{
+        type:types.CHANGE_NAME,
+        name:state.name,
+        number:state.number,
+    }
+}

@@ -1,7 +1,8 @@
 import{connect} from 'react-redux';
 import style from '../Desserts/index.module.scss';
 import React, { Component } from 'react';
-import * as actions from '../../actions/dessert';
+import {fetchDessert} from '../../actions/dessert';
+import {addToBag} from '../../actions/bag';
 
 
 class Desserts extends Component {
@@ -46,4 +47,4 @@ const mapStateToProps=(state)=>{
     }
 };
 
-export default connect(mapStateToProps, actions)(Desserts);
+export default connect(mapStateToProps, {fetchDessert, addToBag})(Desserts);

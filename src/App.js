@@ -7,6 +7,7 @@ import Desserts from './Pages/Desserts/Desserts';
 import Drinks from './Pages/Drinks/Drinks';
 import Bag from './Pages/Bag/Bag';
 import SignUp from './Pages/Signup/SignUp';
+import Kontaktai from './Pages/Kontaktai/Kontaktai';
 import Login from './Pages/Login/Login';
 import CheckOut from './Pages/CheckOut/CheckOut';
 import customerData from './Pages/Customerdata/Customerdata';
@@ -65,16 +66,17 @@ class App extends Component {
       <BrowserRouter>
       <Switch>
       <AppRoute exact path='/'  layout={ HomeLayout } component={Home}/> 
-      <AppRoute exact path='/pizzas' layout={ HomeLayout }  component={Pizzas}/> 
-      <AppRoute exact path='/desertai' layout={ HomeLayout }  component={Desserts}/> 
-      <AppRoute exact path='/gerimai' layout={ HomeLayout }  component={Drinks}/> 
-      <AppRoute exact path='/bag' layout={ BagLayout }   component={Bag }/> 
+      <AppRoute path='/pizzas' layout={ HomeLayout }  component={Pizzas}/> 
+      <AppRoute path='/desertai' layout={ HomeLayout }  component={Desserts}/> 
+      <AppRoute path='/gerimai' layout={ HomeLayout }  component={Drinks}/> 
+      <AppRoute path='/bag' layout={ BagLayout }   component={Bag }/> 
       <AppRoute path='/SignUp' layout={ HomeLayout }  component={SignUp}/>
       <AppRoute path='/login' layout={ HomeLayout }  component={Login}/>
       <AppRoute path='/DoneOrder'  layout={ BagLayout } component={DoneOrder}/>
       <AppRoute path='/customerData'  layout={ BagLayout } component={customerData}/>
       <AppRoute path='/CheckOut'layout={ BagLayout }  component={CheckOut}/>
       <AppRoute path='/spiner' layout={ HomeLayout }  component={spiner}/>
+      <AppRoute path='/kontaktai' layout={ HomeLayout }  component={Kontaktai}/>
       
       </Switch>
     </BrowserRouter>

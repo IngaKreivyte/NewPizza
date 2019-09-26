@@ -18,6 +18,7 @@ export const FETCH_PIZZAS='FETCH_PIZZAS'
 export const FETCH_DRINK = 'FETCH_DRINK';
 export const FETCH_DESSERT='FETCH_DESSERT';
 export const CLEAN_ORDER_DATA='CLEAN_ORDER_DATA';
+export const CHANGE_NAME='CHANGE_NAME';
 
 
 
