@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-// import { Map } from 'google-maps-react';
+import Map from '../Map/Map';
+import style from './index.module.scss';
+
+
+ 
 
 class Kontaktai extends Component {
     render() {
         return (
-            <div>
+            <div className={style.container}>
                 Mes esame čia :)
-                {/* <Map
-          google={this.props.google}
-          zoom={8}
-          initialCenter={{ lat: 47.444, lng: -122.176}}
-        /> */}
+                 <Map/>
             </div>
         );
     }
 }
 
 export default Kontaktai;
+
+  
