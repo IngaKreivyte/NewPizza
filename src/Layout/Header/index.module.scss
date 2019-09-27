@@ -5,6 +5,9 @@
     .headerTopBlock{
         width: 1200px;
         margin: 0 calc(( 100% - 1200px) / 2);
+        .scroll{
+            margin-bottom: 100px;
+        }
         *{
             float: left;
             margin-left:10px;

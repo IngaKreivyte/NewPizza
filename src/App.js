@@ -77,7 +77,6 @@ class App extends Component {
       <AppRoute path='/CheckOut'layout={ BagLayout }  component={CheckOut}/>
       <AppRoute path='/spiner' layout={ HomeLayout }  component={spiner}/>
       <AppRoute path='/kontaktai' layout={ HomeLayout }  component={Kontaktai}/>
-      
       </Switch>
     </BrowserRouter>
     );

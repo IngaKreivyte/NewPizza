@@ -1,4 +1,3 @@
-import {NavLink} from "react-router-dom";
 import style from './index.module.scss';
 import pizza from '../../assets/images/dodo.png';
 import { connect } from 'react-redux';
@@ -6,6 +5,7 @@ import React, { Component } from 'react';
 import * as actions from '../../actions/auth';
 import ButtonHover from '../ButtonHover/ButtonHover';
 import {withRouter} from 'react-router-dom';
+import { HashLink as NavLink } from 'react-router-hash-link';
 
 
 class Nav extends Component {
@@ -22,15 +22,12 @@ class Nav extends Component {
       <nav> 
           <div className={style.row}>
             <img src={pizza} alt="logo"></img>
-            <NavLink className={style.link} activeClassName={style.active} to='/' exact> Home </NavLink>
-            <NavLink className={style.link} activeClassName={style.active} to='/pizzas'> Picos </NavLink>
-            <NavLink className={style.link} activeClassName={style.active} to='/desertai'> Desertai </NavLink>
-            <NavLink className={style.link} activeClassName={style.active} to='/gerimai'> Gėrimai </NavLink>
-            <NavLink className={style.link} activeClassName={style.active} to='/kontaktai'> Kontaktai </NavLink>
-            <NavLink className={[style.link, style.btn, style.bagbtn ].join(' ')} to='/bag' 
-            >Krepšelis | {itemsInBag} 
-           
-           </NavLink>
+            <NavLink className={style.link}  smooth to='#/' exact='true'> Home </NavLink>
+            <NavLink className={style.link} smooth to='/#pizzas'> Picos </NavLink>
+            <NavLink className={style.link} smooth to='/#desertai'> Desertai </NavLink>
+            <NavLink className={style.link} smooth to='/#gerimai'> Gėrimai </NavLink>
+            <NavLink className={style.link} to='/kontaktai'> Kontaktai </NavLink>
+            <NavLink className={[style.link, style.btn, style.bagbtn ].join(' ')} to='/bag' >Krepšelis | {itemsInBag} </NavLink>
            <div className={style.showBag}><ButtonHover/></div>
         
         </div>

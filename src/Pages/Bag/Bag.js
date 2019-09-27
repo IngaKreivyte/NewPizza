@@ -9,8 +9,11 @@ class Bag extends Component {
         bag:this.props.bag,
     }
     componentDidMount() {
-        this.setState({bag: JSON.parse(localStorage.getItem('myCart'))} )
+        this.setState({bag: JSON.parse(localStorage.getItem('myCart'))} );
+       let local = JSON.parse(localStorage.getItem('myCart'));
+        // this.props.addToBag({local});
        };
+       
 
     render() {
         if(this.props.bag.length!==0 && this.props.bag)  {

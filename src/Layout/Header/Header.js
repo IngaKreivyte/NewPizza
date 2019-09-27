@@ -19,6 +19,7 @@ class Header extends Component {
             <React.Fragment>
             <div className={style.headerTop}>
                 <div className={style.headerTopBlock}>
+                <div className={style.scroll} id='/'/>
                     <img src={pizza} alt="logo"></img>
                     <h1>  Pizza Vilnius </h1> 
                     <p> Pristatymas per 60 minučių arba pica nemokamai. Skambutis telefonu 8 6** ** ***</p>

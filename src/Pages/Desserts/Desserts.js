@@ -3,6 +3,7 @@ import style from '../Desserts/index.module.scss';
 import React, { Component } from 'react';
 import {fetchDessert} from '../../actions/dessert';
 import {addToBag} from '../../actions/bag';
+import Spiner from '../../Layout/Spiner/spiner';
 
 
 class Desserts extends Component {
@@ -30,6 +31,8 @@ class Desserts extends Component {
                 <div>
                     <div className={style.Block}>
                         <div className={style.itemsBlock}>
+                        {!this.props.desserts.length && <Spiner/>}
+                        <h1>Desertai</h1>
                         {showDesserts}
                         </div>
                     </div>

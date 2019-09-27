@@ -2,6 +2,7 @@ import{connect} from 'react-redux';
 import style from './index.module.scss';
 import {fetchDrink} from '../../actions/drink';
 import {addToBag} from '../../actions/bag';
+import Spiner from '../../Layout/Spiner/spiner';
 
 import React, { Component } from 'react';
 
@@ -28,6 +29,8 @@ class Drinks extends Component {
             return (
                 <div className={style.Block}>
                     <div className={style.itemsBlock}>
+                        {!this.props.drinks.length && <Spiner/>}
+                        <h1>Gėrimai</h1>
                         {showDrinks}
                     </div>
             </div>

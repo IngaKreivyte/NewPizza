@@ -9,9 +9,8 @@ import * as actions from '../../actions/bag';
     class Modal extends Component {
         state={
             size:'small',
-            price:[],
+            price:'',
             name:[],
-            // pic:'https://dodopizza-a.akamaihd.net/site-static/dist/269b833ebb31d7e40775.svg',
         };
        
         showSize =(size)=>{
@@ -55,16 +54,14 @@ import * as actions from '../../actions/bag';
                                 <div className={style.block} >
                                      <h3>{this.state.price}</h3> 
                                      <h3> EUR</h3>
-                                    { this.state.price>0 &&  <div onClick= {()=> this.props.addToBag( {
+                                    {this.state.price!=='' && <div onClick= {()=> this.props.addToBag( {
                                         name:this.state.name, 
                                         pic:this.props.pic, 
                                         size:this.state.size,  
                                         amount:1, 
-                                        price:this.state.price})
-                                    }
-                                    className={style.btn}>
-                                   Pirkti  
-                                </div>}
+                                        price:this.state.price})}className={style.btn}> Pirkti
+                                    </div>}
+                                { this.state.price==='' && <div className={style.btn}>Pirkti</div>}
                                 </div>
                                
                                 

@@ -3,26 +3,21 @@
  
 nav{
     width: 100%;
-    min-height: 80px;
-    
+    height: 50px;
     border-bottom: 1px solid lightgray;
-    
     background-color: white;
-    
-    .row{
+        .row{
         width: 90%;
         margin: 0 5%;
         display: flex;
         justify-content: space-between;
         text-align: center;
         position: relative;
-       
-    *{
-        margin-bottom: 10px;
-    }
+        height: inherit;
+    
     .link{
         text-decoration: none;
-        margin: 25px 0 0 0;
+        margin: 10px 0 0 0;
         user-select: none;
         font-weight: 500;
         color: black;
@@ -40,7 +35,7 @@ nav{
     img{
             width: 35px;
             height: 40px;
-            margin: 15px 0 0 15px;
+            margin: 5px 0 0 15px;
     }
     .btn{
         @include btn; 
@@ -49,6 +44,7 @@ nav{
     
     .btn{
         @include btn;
+        margin: 10px 0 0 0;
     }
    
 

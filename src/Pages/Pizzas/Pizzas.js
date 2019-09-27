@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import{connect} from 'react-redux';
 import style from './index.module.scss';
-// import pica from '../../assets/images/pizza.jpg';
 import Modal from '../../Components/Modal/Modal';
 import * as actions from '../../actions/pizzas';
+import Spiner from '../../Layout/Spiner/spiner';
 
 
 class Pizzas extends Component {
@@ -31,7 +31,6 @@ class Pizzas extends Component {
     render (props) {
         const showItems = this.props.pizzas.map((pizza, i)=>{
             return <div className={style.items} key={i}>
-                        {/* <span onClick = {()=>{this.props.clearSingle(i)}}> X </span> */}
                         <h3>{pizza.name}</h3>
                         <p>{pizza.description}</p>
                         {pizza.kainos.filter(pizza=>pizza.size ==='small').map((pic,i)=>
@@ -59,6 +58,8 @@ class Pizzas extends Component {
                            />
                     <div className={style.Block}>
                         <div className={style.itemsBlock}>
+                        {!this.props.pizzas.length && <Spiner/>}
+                            <h1>Picos</h1>
                             {showItems}
                         </div>
                     </div>
