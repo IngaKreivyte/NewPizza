@@ -22,7 +22,8 @@ class Desserts extends Component {
                                     {name:dessert.name,
                                     price:dessert.price,
                                     pic:dessert.pic,
-                                    amount:1})}>
+                                    amount:1})}
+                                    >
                                 Pirkti
                             </div>
                    </div>

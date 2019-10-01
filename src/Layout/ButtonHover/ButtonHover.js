@@ -7,9 +7,25 @@ import emty from '../../assets/images/emty.png';
 
 class ButtonHover extends Component {
     
+//     componentWillMount() {
+//         let bag = localStorage.getItem('myCart');
+//         let newBag = JSON.parse(bag);
+//         console.log(newBag);
+//     if(newBag!==0){
+//         let newbagItems= newBag.filter(item=>item.amount>0).map(item=>{
+//             return (
+//                 this.props.addToBag({name:item.name,pic:item.pic, amount:item.amount, price:item.price})
+//             )
+//         })
+//         console.log(newbagItems);
+//     }
+// }
     render() {
+        
         if(this.props.bag.length!==0 && this.props.bag)  {
-        const shoppingItems =this.props.bag.map((item,i)=>{
+            localStorage.setItem('myCart', JSON.stringify(this.props.bag));   
+            const shoppingItems =this.props.bag.map((item,i)=>{
+           
                 return(
                 <div key={i} className={style.block} >
                     <img  src={item.pic} alt='pic'/>

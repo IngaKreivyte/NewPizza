@@ -18,6 +18,8 @@ import jwt from 'jsonwebtoken';
 import {store} from './Store';
 import spiner from './Layout/Spiner/spiner';
 import NewNav from './Layout/NewNav/NewNav';
+import * as actions from '../src/actions/bag';
+import{connect} from 'react-redux';
 
 //login user on app load
 let token = localStorage.getItem('abc123');
@@ -55,6 +57,25 @@ const HomeLayout = props => (
 
 
 class App extends Component { 
+
+  componentDidMount(){
+    console.log('adsfd');
+    
+    if(localStorage.getItem('myCart')){
+      let  bag = JSON.parse(localStorage.getItem('myCart'));
+      console.log(bag);
+      
+      if(bag.length>0){
+        console.log(bag)
+        let newbagItems= bag.filter(item=>item.amount>0).map(item=>{
+                      return (
+                          this.props.addToBag({name:item.name,pic:item.pic, amount:item.amount, price:item.price})
+                      )
+                  })
+                  console.log(newbagItems);
+              }
+      }
+  }
   render() {
     const BagLayout = props => (
       <div>
@@ -86,4 +107,4 @@ class App extends Component {
 
 
 
-export default App;
+export default  connect (null, actions)(App)

@@ -5,20 +5,14 @@ import * as actions from '../../actions/bag';
 import {Link} from 'react-router-dom';
 
 class Bag extends Component {
-    state={
-        bag:this.props.bag,
-    }
-    componentDidMount() {
-        this.setState({bag: JSON.parse(localStorage.getItem('myCart'))} );
-       let local = JSON.parse(localStorage.getItem('myCart'));
-        // this.props.addToBag({local});
-       };
-       
-
+   
+    
     render() {
+        
+        
         if(this.props.bag.length!==0 && this.props.bag)  {
         const shoppingItems =this.props.bag.map((item,i)=>{
-            localStorage.setItem('myCart', JSON.stringify(this.props.bag))
+            
                 return(
                 <div key={i} className={style.block} >
                         <h3> {item.name} </h3>
