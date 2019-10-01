@@ -22,7 +22,7 @@ class Drinks extends Component {
             });
         setTimeout(() => {
             this.setState({addedItem: false, name: ''});
-        }, 1000);
+        }, 800);
     };
     render(props) {
 

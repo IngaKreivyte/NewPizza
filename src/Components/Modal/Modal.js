@@ -21,8 +21,8 @@ import ShowAddedItem from '../../Components/ShowAddedItem/ShowAddedItem';
                 addedItem:!this.state.addedItem
                 });
             setTimeout(() => {
-                this.setState({addedItem: this.state.addedItem, name: this.state.name});
-            }, 1000);
+                this.setState({addedItem: false, name: ''});
+            }, 800);
         };
         showSize =(size)=>{
             this.setState({size:size})
