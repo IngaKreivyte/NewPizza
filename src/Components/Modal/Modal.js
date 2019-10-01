@@ -5,14 +5,25 @@ import PropTypes from 'prop-types';
 import style from './index.module.scss';
 import{connect} from 'react-redux';
 import * as actions from '../../actions/bag';
+import ShowAddedItem from '../../Components/ShowAddedItem/ShowAddedItem';
 
     class Modal extends Component {
         state={
             size:'small',
             price:'',
             name:[],
+            addedItem:false,
+            changes:true,
         };
-       
+        toggleShowAddedItem = (x) => {
+            this.setState({
+                name:x,
+                addedItem:!this.state.addedItem
+                });
+            setTimeout(() => {
+                this.setState({addedItem: this.state.addedItem, name: this.state.name});
+            }, 1000);
+        };
         showSize =(size)=>{
             this.setState({size:size})
         }
@@ -54,20 +65,22 @@ import * as actions from '../../actions/bag';
                                 <div className={style.block} >
                                      <h3>{this.state.price}</h3> 
                                      <h3> EUR</h3>
-                                    {this.state.price!=='' && <div onClick= {()=> this.props.addToBag( {
+                                    {this.state.price!=='' && <div onClick= {()=>{ this.props.addToBag( {
                                         name:this.state.name, 
                                         pic:this.props.pic, 
                                         size:this.state.size,  
                                         amount:1, 
-                                        price:this.state.price})}className={style.btn}> Pirkti
+                                        price:this.state.price});
+                                        this.toggleShowAddedItem(this.state.name)}}className={style.btn}> Pirkti
                                     </div>}
                                 { this.state.price==='' && <div className={style.btn}>Pirkti</div>}
+                                
                                 </div>
-                               
+                                
                                 
                             </div>
                            
-                            
+                            {this.state.addedItem && <ShowAddedItem name={this.state.name} changes={this.state.changes}/>}
                             <div className={style.imgBlock}>
                                 <img style={{width}} src={this.props.pic} alt='pic'/>
                             </div>

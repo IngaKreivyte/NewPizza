@@ -3,7 +3,7 @@
 
 .Block{
     display: inline-block;
-    width: 100%;
+    width: auto;
     .itemsBlock{
         display: inline-block;
         margin: 0 calc( 10% / 2 );
@@ -48,4 +48,21 @@
         
     }
 }
+@media screen and (max-width: 736px) {
+    body{
+        width: 100% !important;
+        margin:0 0 !important;
     
+        background-color: red;
+    
+    .Block {
+      background-color: olive;
+      margin:0 0 !important;
+      width: inherit;
+      *{
+        font-size:15px;
+        text-align: center;
+      }
+    }
+
+}}

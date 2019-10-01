@@ -57,22 +57,20 @@ const HomeLayout = props => (
 
 
 class App extends Component { 
+  _isMounted = false;
 
   componentDidMount(){
-    console.log('adsfd');
-    
+    this._isMounted = true;
     if(localStorage.getItem('myCart')){
       let  bag = JSON.parse(localStorage.getItem('myCart'));
-      console.log(bag);
+     
       
       if(bag.length>0){
-        console.log(bag)
-        let newbagItems= bag.filter(item=>item.amount>0).map(item=>{
+         bag.map(item=>{
                       return (
-                          this.props.addToBag({name:item.name,pic:item.pic, amount:item.amount, price:item.price})
+                          this.props.addToBag({name:item.name,pic:item.pic, amount:item.amount, price:item.price, size:item.size})
                       )
                   })
-                  console.log(newbagItems);
               }
       }
   }

@@ -12,6 +12,7 @@ class Pizzas extends Component {
         pizza: '',
         pic:'https://dodopizza-a.akamaihd.net/site-static/dist/269b833ebb31d7e40775.svg',
     }
+    
     componentDidMount(){
         this.props.fetchPizzas();
     }
