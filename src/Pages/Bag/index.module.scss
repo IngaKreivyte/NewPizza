@@ -4,30 +4,58 @@
     display:inline-block;
     width: 90%;
     margin: 0 calc((100% - 90% ) /2 );
-    text-align: center;
     margin-top: 40px;
 }
 .block{
-    display: block;
-    min-height: 100px;
-        h3{
-            display: inline-block;
-            width: 30%;
-        }
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    *{
+        float: left;
+        padding: 10px;
+        width: 70px;
+    }
+    h3{
+        width: 200px;
+    }
+    .size{
+        width: 80px;
+    }
+        
         img{
             display: inline-block;
-            width: 7%;
-            height: 7%;
-            float: left;
+            width: 9%;
+            height: auto;
         }
     
-}
-.block *{
-    display: inline-block;
-    line-height: 20px;
-    width: 100px;
-    margin-left: 20px;
-}
+        .counterBlock{
+            display: inline-block;
+            width: 250px;
+            float: left;
+            z-index: 1;
+            .plusMinus{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: orange;
+            font-weight: 400;
+            font-size: 40px;
+            cursor: pointer;
+            padding-top: 10px;
+            z-index: 0.5;
+            }
+            .plusMinus:hover{
+                background-color: orangered;
+            }
+            span{
+                padding: 0;
+                margin: -20px -2px;
+                z-index: 3;
+            }
+        }
+        }
+
 .total{
     display: inline-block;
     float: right;
@@ -45,7 +73,6 @@
 }
 .btn{
     @include btn;
-    
     float: left;
 }
 
@@ -53,20 +80,8 @@
 background-color: orangered
 }
 
-.plusMinus{
- width: 50px;
- height: 40px;
- border-radius: 50%;
- background-color: orange;
- font-weight: 400;
- font-size: 40px;
- cursor: pointer;
- padding-top: 10px;
-}
-.plusMinus:hover{
-    background-color: orangered;
-}
 .btn1{
     @include btnPasirinkti;
     padding: 5px;
 }
+

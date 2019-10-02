@@ -12,18 +12,19 @@ class Bag extends Component {
         
         if(this.props.bag.length!==0 && this.props.bag)  {
         const shoppingItems =this.props.bag.map((item,i)=>{
-            
-                return(
+            return(
                 <div key={i} className={style.block} >
-                        <h3> {item.name} </h3>
                         <img  src={item.pic} alt='pic'/>
+                        <h3> {item.name} </h3>
                        {/* {item.size && <span> size: {item.size} </span>}  */} 
                        {/* galima rasyti ir toki patikrinima  kai yra size, prideti toki span*/}
-                       <div>  {item.size} </div>
+                       <div className={style.size}>  {item.size} </div>
                         <div > {item.totalPrice} &#8364; </div>   
-                        <div  onClick={()=> this.props.findUnique(item, 1)} className={style.plusMinus}> + </div>
-                        <div> {item.amount} </div>
-                        <div  onClick={()=>this.props.findUnique(item, -1)}className={style.plusMinus}> - </div>
+                        <div className={style.counterBlock}>
+                            <div  onClick={()=> this.props.findUnique(item, 1)} className={style.plusMinus}><span>+</span>  </div>
+                            <div> {item.amount} </div>
+                            <div  onClick={()=>this.props.findUnique(item, -1)} className={style.plusMinus}> <span>-</span> </div>
+                        </div>
                 </div>
                 );
         });
