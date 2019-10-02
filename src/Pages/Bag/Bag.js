@@ -19,10 +19,10 @@ class Bag extends Component {
                        {/* {item.size && <span> size: {item.size} </span>}  */} 
                        {/* galima rasyti ir toki patikrinima  kai yra size, prideti toki span*/}
                        <div className={style.size}>  {item.size} </div>
-                        <div > {item.totalPrice} &#8364; </div>   
+                        <div className={style.totalPrice} > {item.totalPrice} &#8364; </div>   
                         <div className={style.counterBlock}>
                             <div  onClick={()=> this.props.findUnique(item, 1)} className={style.plusMinus}><span>+</span>  </div>
-                            <div> {item.amount} </div>
+                            <div className={style.amount}> {item.amount} </div>
                             <div  onClick={()=>this.props.findUnique(item, -1)} className={style.plusMinus}> <span>-</span> </div>
                         </div>
                 </div>

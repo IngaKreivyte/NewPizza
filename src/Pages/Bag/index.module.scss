@@ -48,6 +48,9 @@
             .plusMinus:hover{
                 background-color: orangered;
             }
+            .amount{
+                padding: 0 10px;
+            }
             span{
                 padding: 0;
                 margin: -20px -2px;
@@ -85,3 +88,101 @@ background-color: orangered
     padding: 5px;
 }
 
+
+@media screen and (max-width: 360px) {
+
+    .container{
+        display:inline-block;
+        width: 100%;
+        margin: 40px 0 0 0;
+    }
+    .block{
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        *{
+            float: left;
+            padding: 10px;
+            width: 14%;
+            height: 50px;
+        }
+        h3{
+            width: 80px;
+            font-size: 15px;
+            height: auto;
+        }
+        .size{
+            width: 20%;
+            font-size: 15px;
+        }
+        .totalPrice{
+            font-size: 15px;
+            width: 15%;
+        }
+            
+            img{
+                width: 15%;
+                height: 50px;
+            }
+        
+            .counterBlock{
+                display: inline-block;
+                width: 100px;
+                float: left;
+                z-index: 1;
+                .plusMinus{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: orange;
+                font-weight: 400;
+                font-size: 40px;
+                cursor: pointer;
+                padding-top: 10px;
+                z-index: 0.5;
+                }
+                .plusMinus:hover{
+                    background-color: orangered;
+                }
+                .amount{
+                    padding-top: 1px;
+                    font-size: 12px;
+                }
+                span{
+                    padding: 0;
+                    margin: -22px -8px;
+                    z-index: 3;
+                    font-size: 28px;
+                }
+            }
+            }
+    
+    .total{
+        display: inline-block;
+        float: right;
+        width: 100%;
+        border-bottom: 1px solid grey;
+    }
+    .total *{
+        display: inline-block;
+        text-align: right;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        float: left;
+        
+    }
+    .btn{
+        @include btn;
+        float: left;
+    }
+    
+    .btn:hover{
+    background-color: orangered
+    }
+    
+    .btn1{
+        @include btnPasirinkti;
+        padding: 5px;
+    }
+}
