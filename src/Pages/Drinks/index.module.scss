@@ -3,15 +3,17 @@
 
 .Block{
     display: inline-block;
-    width: auto;
+    width: 100%;
+    text-align: center;
     .itemsBlock{
         display: inline-block;
-        margin: 0 calc( 10% / 2 );
-        width: 90%;
+        margin: 20px calc( 5% / 2 );
+        width: 95%;
+        text-align: center;
             .items {
                 display: inline-block;
                 float: left;
-                width: 210px;
+                width: 250px;
                 height: 350px;
                 text-align: center;
                 position: relative;
@@ -49,20 +51,23 @@
     }
 }
 @media screen and (max-width: 736px) {
-    body{
-        width: 100% !important;
-        margin:0 0 !important;
     
-        background-color: red;
     
     .Block {
       background-color: olive;
       margin:0 0 !important;
-      width: inherit;
+      width: 100%;
       *{
         font-size:15px;
         text-align: center;
       }
+      .itemsBlock{
+        width: auto;
+        .items{
+            width: 200px;
+        }
+      }
+      
     }
 
-}}
+}

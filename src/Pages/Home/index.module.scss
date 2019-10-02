@@ -3,27 +3,22 @@
 .container{
     display: inline-block;
     width: 100%;
+    margin:0;
     
-    .scroll{
-        margin-bottom: 100px;
-    }
-    .scroll{
-        background-color: red;
-        min-width: 100px;
-    }
     .welcome{
         width: 100%;
+        margin:0;
         display: inline-block;
         text-align: center;
         font-weight: bold;
-        font-size: 80px;
+        font-size: 40px;
         color: $basicOrangecolor;
         text-transform: uppercase;
         font-family: Arial, Helvetica, sans-serif;
     }
         .welcome:before{
         content: "";
-        animation: animate infinite 2s;
+        animation: animate infinite 5s;
         }
         @keyframes animate{
             0% {

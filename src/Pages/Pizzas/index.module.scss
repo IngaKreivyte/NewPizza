@@ -3,13 +3,15 @@
 .Block{
     display: inline-block;
     width: 100%;
+    text-align: center;
     .itemsBlock{
         display: inline-block;
-        margin: 20px calc( 10% / 2 );
-        width: 90%;
+        margin: 20px calc( 5% / 2 );
+        width: 95%;
+        text-align: center;
             .items {
                 display: inline-block;
-                width: 300px;
+               
                 height: 500px;
                 text-align: center;
                 position: relative;
@@ -50,6 +52,7 @@
                     }
                 }
             p{
+                padding-top: 10px;
                 text-align:left;
                 width: 95%;
                 display: inline-block;

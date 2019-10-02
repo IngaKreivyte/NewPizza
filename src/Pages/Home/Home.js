@@ -16,25 +16,22 @@ const handleOnDragStart = e => e.preventDefault()
 
 const Home = (props) => {
     return (
-        <React.Fragment>
             <div className={style.container}>
-                <h1 className={style.welcome}> </h1> 
+                <div className={style.welcome}> </div> 
                 <AliceCarousel
-                mouseDragEnabled 
-                buttonsDisabled 
-                duration={1500}
-                autoPlay={true} >
+                    mouseDragEnabled 
+                    buttonsDisabled 
+                    duration={1500}
+                    autoPlay={true} >
                     <img src={main} alt="logo" onDragStart={handleOnDragStart} className="yours-custom-class" />
                     <img src={secondimg} alt="logo" onDragStart={handleOnDragStart} className="yours-custom-class" />
                     <img src={thirdimg} alt="logo"onDragStart={handleOnDragStart} className="yours-custom-class" />
                 </AliceCarousel>
-                {/* <div className={style.pic}><img src={main} alt="logo"></img></div> */}
                 <div className={style.scroll} id='pizzas'/><Pizzas/>
                <div className={style.scroll} id='desertai'/><Desserts/>
                <div className={style.scroll} id='gerimai'/><Drinks/>
-                <ScrollUpButton style={{outline: 'none', width:70}}   ToggledStyle={{outline: 'none'}}/>
+                {/* <ScrollUpButton style={{outline: 'none', width:70 }}   ToggledStyle={{outline: 'none'}}/> */}
             </div>
-        </React.Fragment>
     );
 };
 
