@@ -2,13 +2,13 @@
 @import '../../Sass//bottons';
 
 .Block{
-    display: inline-block;
+    // display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    text-align: center;
+    height: auto;
     .itemsBlock{
         display: inline-block;
-        margin: 20px calc( 5% / 2 );
-        width: 95%;
         text-align: center;
             .items {
                 display: inline-block;
@@ -51,23 +51,18 @@
     }
 }
 @media screen and (max-width: 736px) {
-    
-    
-    .Block {
-      background-color: olive;
-      margin:0 0 !important;
-      width: 100%;
-      *{
-        font-size:15px;
-        text-align: center;
-      }
-      .itemsBlock{
-        width: auto;
-        .items{
-            width: 200px;
+    .Block{
+        width: 90%;
+        margin: 0 5%;
+        .itemsBlock{
+            .items {
+                display: inline-block;
+                float: left;
+                width: 50%;
+                height: 350px;
+                text-align: center;
+                position: relative;
+            }
         }
-      }
-      
-    }
-
+    } 
 }
