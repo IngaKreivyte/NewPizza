@@ -2,8 +2,8 @@
 
 .container{
     display:inline-block;
-    width: 90%;
-    margin: 0 calc((100% - 90% ) /2 );
+    width: 70%;
+    margin: 0 calc((100% - 70% ) /2 );
     margin-top: 40px;
 }
 .block{
@@ -15,12 +15,18 @@
         float: left;
         padding: 10px;
         width: 70px;
+        margin-left: 20px;
+        
     }
     h3{
+        
         width: 200px;
     }
     .size{
         width: 80px;
+    }
+    .totalPrice{
+       
     }
         
         img{
@@ -30,10 +36,12 @@
         }
     
         .counterBlock{
-            display: inline-block;
-            width: 250px;
-            float: left;
-            z-index: 1;
+            display: flex;
+            justify-content: space-evenly;
+            width: 350px;
+            flex-wrap:wrap;
+            margin: 0;
+           padding: 0!important;
             .plusMinus{
             width: 40px;
             height: 40px;
@@ -41,20 +49,19 @@
             background-color: orange;
             font-weight: 400;
             font-size: 40px;
+            margin: 0;
             cursor: pointer;
-            padding-top: 10px;
-            z-index: 0.5;
             }
             .plusMinus:hover{
                 background-color: orangered;
             }
             .amount{
-                padding: 0 10px;
+               
+                font-size:15px;
             }
             span{
                 padding: 0;
                 margin: -20px -2px;
-                z-index: 3;
             }
         }
         }
@@ -89,35 +96,73 @@ background-color: orangered
 }
 
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 736px) {
 
     .container{
         display:inline-block;
-        width: 100%;
-        margin: 40px 0 0 0;
+        width: 90%;
+        margin: 0 calc((100% - 90% ) /2 );
+        margin-top: 40px;
     }
     .block{
-        display: inline-block;
-        margin: 0;
-        padding: 0;
+       
         *{
             float: left;
             padding: 10px;
-            width: 14%;
-            height: 50px;
         }
         h3{
-            width: 80px;
-            font-size: 15px;
+            
+            width: 150px;
+        }
+        .size{
+            width:60px;
+        }
+            .counterBlock{
+                width: 200px;
+               
+                .plusMinus{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: orange;
+                font-weight: 400;
+                font-size: 40px;
+                margin: 0;
+                }
+            }
+        }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    .container{
+       width: 100%;
+       margin: 0;
+    }
+    .block{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    *{
+        margin: 0;
+    }
+        
+        h3{
+            width: 70px;
+            font-size: 12px;
             height: auto;
         }
         .size{
-            width: 20%;
+            width: 18%;
             font-size: 15px;
+            font-size: 12px;
         }
         .totalPrice{
             font-size: 15px;
-            width: 15%;
+            width: 17%;
+            font-size: 12px;
         }
             
             img{
@@ -126,33 +171,36 @@ background-color: orangered
             }
         
             .counterBlock{
-                display: inline-block;
-                width: 100px;
-                float: left;
-                z-index: 1;
+            display: flex;
+            justify-content: space-around;
+            width: 110px;
+            flex-wrap:wrap;
+            padding: 0 !important;
+            margin-top: 10px !important;
                 .plusMinus{
-                width: 20px;
-                height: 20px;
+                width: 10px;
+                height: 10px;
                 border-radius: 50%;
                 background-color: orange;
-                font-weight: 400;
-                font-size: 40px;
+                font-weight: 300;
+                font-size: 15px;
                 cursor: pointer;
                 padding-top: 10px;
                 z-index: 0.5;
                 }
-                .plusMinus:hover{
-                    background-color: orangered;
-                }
                 .amount{
                     padding-top: 1px;
                     font-size: 12px;
+                    padding: 0;
+                    margin: 0;
+                    width: auto;
                 }
                 span{
                     padding: 0;
                     margin: -22px -8px;
-                    z-index: 3;
                     font-size: 28px;
+                    width: 10px;
+                    height: auto;
                 }
             }
             }
@@ -162,6 +210,7 @@ background-color: orangered
         float: right;
         width: 100%;
         border-bottom: 1px solid grey;
+        
     }
     .total *{
         display: inline-block;
@@ -170,19 +219,24 @@ background-color: orangered
         padding: 0;
         margin: 0;
         float: left;
-        
-    }
-    .btn{
-        @include btn;
-        float: left;
+        font-size: 15px;
+    }    
+    
+    .btnBlock{
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        *{
+            font-size: 13px;
+            padding: 0;
+        }
+        .btn1{
+            @include btnPasirinkti;
+            
+            
+        }
     }
     
-    .btn:hover{
-    background-color: orangered
-    }
-    
-    .btn1{
-        @include btnPasirinkti;
-        padding: 5px;
-    }
 }

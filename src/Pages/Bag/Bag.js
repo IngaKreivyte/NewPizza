@@ -37,11 +37,13 @@ class Bag extends Component {
                             <h3> viso prekių : {'  ' + itemsInBag} &#8364;</h3>
                             <h3> viso suma : { '  ' + totalAmount} &#8364;</h3>
                         </div>
-                         <div>
-                             <Link className={style.btn} to ='/'> Grįžti į Meniu</Link>
-                        </div>
-                        <div onClick={()=>{this.props.userBag(this.props.bag)}}>
-                            <Link className={style.btn} to ='/customerData' > Toliau </Link>
+                        <div className={style.btnBlock}>
+                            <div>
+                                <Link className={style.btn} to ='/'> Grįžti į Meniu</Link>
+                            </div>
+                            <div onClick={()=>{this.props.userBag(this.props.bag)}}>
+                                <Link className={style.btn} to ='/customerData' > Toliau </Link>
+                            </div>
                         </div>
                     </div>
                 );
