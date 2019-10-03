@@ -44,7 +44,7 @@ class Drinks extends Component {
             return (
                 <div className={style.Block}>
                     <div className={style.itemsBlock}>
-                        {!this.props.drinks.length && <Spiner/>}
+                        {this.props.drinks.length && <Spiner/>}
                         {this.state.addedItem && <ShowAddedItem name={this.state.name} />}
                         <h1>Gėrimai</h1>
                         {showDrinks}

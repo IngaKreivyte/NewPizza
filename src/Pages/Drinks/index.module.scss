@@ -3,19 +3,22 @@
 
 .Block{
     // display: inline-block;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+    display: inline-block;
+    width: 90%;
+    margin: 0 5% 10px;
+    text-align: center;
     height: auto;
-    h1{
-        width: 100%;
-        font-size: 28px;
-    }
     .itemsBlock{
-        display: inline-block;
+        display: flex;
+        flex-wrap: wrap;
         text-align: center;
-        
-        
+        height: auto;
+        position: relative;
+        h1{
+            width: 100%;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
             .items {
                 display: inline-block;
                 float: left;

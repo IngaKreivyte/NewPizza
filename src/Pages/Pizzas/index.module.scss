@@ -9,6 +9,7 @@
     h1{
         width: 100%;
         font-size: 28px;
+        margin-bottom: 20px;
 
     }
     *{
@@ -19,6 +20,7 @@
         flex-wrap: wrap;
         text-align: center;
         height: auto;
+        position: relative;
        
             .items {
                 display: inline-block;
