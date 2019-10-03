@@ -165,15 +165,18 @@
         display: inline-block;
         height: auto;
         .leftRow{
+
+            
            width: 100%;
            height: auto;
            float: left;
            display: flex;
            justify-content: center;
            *{
-               margin: 20px 0;
-               display: inline-block;
-               float: left;
+            margin: 10px 0 10px 10px;
+            display: inline-block;
+            float: left;
+            width: 70%;
            }
             img{
                 width: 35px;

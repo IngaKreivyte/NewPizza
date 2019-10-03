@@ -42,17 +42,14 @@
             position: absolute;
             
         }
-        
-        
-        .logOut{
+        .btn{
             top: 0;
             right: 20px;
+            font-size: 15px;
+            padding: 0px;
+            line-height: 30px;
         }
-        .login{
-           
-            top: 0;
-            right: 150px;
-        }
+        
         *:hover{
             background-color: rgb(228, 105, 57);   
         }
@@ -73,4 +70,22 @@
             margin-left: 20px;
         }
     }
+}
+
+@media screen and (max-width: 420px) {
+    .headerTop{
+        .headerTopBlock{
+            *{
+                font-size: 14px;
+                float: left;
+                margin: 10px 0 5px 0 ;
+            }
+            p{
+                width: 100%;
+                text-align: center;
+                margin: 10px 0 ;
+            }   
+        }
+    }
+            
 }

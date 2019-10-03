@@ -22,7 +22,7 @@ class Nav extends Component {
       <nav> 
           <div className={style.row}>
             <img src={pizza} alt="logo"></img>
-            <NavLink className={style.link}  smooth to='#/' exact='true'> Home </NavLink>
+            <NavLink className={style.link}  smooth to='#/' exact='true'> Naujienos </NavLink>
             <NavLink className={style.link} smooth to='/#pizzas'> Picos </NavLink>
             <NavLink className={style.link} smooth to='/#desertai'> Desertai </NavLink>
             <NavLink className={style.link} smooth to='/#gerimai'> Gėrimai </NavLink>

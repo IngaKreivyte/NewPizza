@@ -7,9 +7,15 @@
     flex-wrap: wrap;
     width: 100%;
     height: auto;
+    h1{
+        width: 100%;
+        font-size: 28px;
+    }
     .itemsBlock{
         display: inline-block;
         text-align: center;
+        
+        
             .items {
                 display: inline-block;
                 float: left;

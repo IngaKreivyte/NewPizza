@@ -25,9 +25,9 @@ class Header extends Component {
                     <p> Pristatymas per 60 minučių arba pica nemokamai. Skambutis telefonu 8 6** ** ***</p>
                 </div>
                 <div className={style.auth}>
-                   {!this.props.profile.name && <NavLink className={[style.link, style.login ].join(' ')} to='/login' > Prisijungti! </NavLink>}
+                   {!this.props.profile.name && <NavLink className={[style.link, style.btn ].join(' ')} to='/login' > Prisijungti! </NavLink>}
                     {this.props.profile.name && <span onClick={()=>this.props.logOut(this.props.history)} 
-                    className={[style.link, style.logOut ].join(' ')}>Log Out</span>}
+                    className={[style.link, style.btn ].join(' ')}>Log Out</span>}
                 </div>
                {this.props.profile.name && <div className={style.profileName}>
                     <div>Sveiki, atvykę,</div>
