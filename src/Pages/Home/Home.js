@@ -8,7 +8,7 @@ import thirdimg from '../../assets/images/thirdmain.jpeg';
 import Pizzas from '../Pizzas/Pizzas';
 import Drinks from '../Drinks/Drinks';
 import Desserts from '../Desserts/Desserts';
-import ScrollUpButton from "react-scroll-up-button";
+// import ScrollUpButton from "react-scroll-up-button";
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 
