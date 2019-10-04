@@ -34,7 +34,7 @@ class Bag extends Component {
                     <div className={style.container}> 
                         {shoppingItems}
                         <div className={style.total}>
-                            <h3> viso prekių : {'  ' + itemsInBag} &#8364;</h3>
+                            <h3> viso prekių : {'  ' + itemsInBag} </h3>
                             <h3> viso suma : { '  ' + totalAmount} &#8364;</h3>
                         </div>
                         <div className={style.btnBlock}>

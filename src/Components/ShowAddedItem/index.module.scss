@@ -8,3 +8,20 @@
     padding: 10px;
     font-size: 16px !important;
 }
+@media screen and (max-width: 420px) {
+    .showAddedItem {
+        position: fixed;
+        top: 25%;
+        right: 50px;
+        // bottom: 50px;
+        background: lightgrey;
+        border-radius: 10px;
+        padding: 0;
+        font-size: 16px !important;
+        height: auto;
+        line-height: 25px;
+        font-size: 12px !important;
+        padding: 1%;
+        z-index: 3;
+    }
+}

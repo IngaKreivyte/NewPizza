@@ -7,7 +7,7 @@ class ShowAddedItem extends Component {
         if(this.props.changes) var top = '70%';
         return (
             <span className={style.showAddedItem} style={{top}}>
-            pridėta į krepšelį: {this.props.name} 
+            Pridėta į krepšelį: {this.props.name} 
             </span>
         );
     }
