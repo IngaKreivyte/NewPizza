@@ -23,7 +23,7 @@ const LogIn = (props) => {
                         onChange={props.onInputChange}/>
                 <button >Log in</button>
                 <p>Nesate prisiregistravę? </p>
-                <p><Link to ='/signUp' className={style.signUp}> Registruokitės! </Link></p>
+                <p><Link to ='/signUp'   className={style.signUp}> Registruokitės! </Link></p>
             </form>
         </div>
     );

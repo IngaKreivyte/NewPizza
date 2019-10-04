@@ -49,7 +49,7 @@
             }
             .bagNavElement::before{
                 border: 1px dashed lightgray;
-                width:150px;
+                width:100px;
                 content:'';
                 display:inline-block;
                 position: absolute;
@@ -87,7 +87,7 @@
         }
         .bagNavElement::before{
             border: 1px dashed black;
-            width:150px;
+            width:100px;
             content:'';
             display:inline-block;
             position: absolute;

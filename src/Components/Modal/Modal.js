@@ -65,7 +65,7 @@ import ShowAddedItem from '../../Components/ShowAddedItem/ShowAddedItem';
                                 <div className={style.block} >
                                      <h3>{this.state.price}</h3> 
                                     { this.state.price!=='' && <h3> EUR</h3>}
-                                    {this.state.price!=='' && <div onClick= {()=>{ this.props.addToBag( {
+                                    {this.state.price!=='' && this.state.name!=='' && <div onClick= {()=>{ this.props.addToBag( {
                                         name:this.state.name, 
                                         pic:this.props.pic, 
                                         size:this.state.size,  

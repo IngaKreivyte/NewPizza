@@ -63,11 +63,12 @@
         font-size: 25px;
         *{
             display: inline-block;
-            margin-left: 40%;
+           width: 100%;
+           text-align: center;
         }
+        
         .name{
             font-weight: 500;
-            margin-left: 20px;
         }
     }
 }

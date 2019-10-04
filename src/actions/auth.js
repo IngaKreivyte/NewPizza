@@ -75,7 +75,7 @@ export const LogIn = (e, user, history)=>{
         if(Object.keys(errors).length>0){ //ar reikia >0???
             return {
                 type:types.LOG_IN_ERROR,
-                errors
+                errors,
             }
         }
         //2.

@@ -22,7 +22,7 @@ choosePickUp=(e)=>{
                 <div  className={style.addressBlock}>
                     <form >
                         <div className={style.firstForm}>
-                        <label htmlFor='adress1'> Antakalnio g. 41</label> 
+                        <label htmlFor='adress1' className={style.label} > Antakalnio g. 41</label> 
                         <input type="radio" 
                                 id='adress1' 
                                 name='adress' 
@@ -36,7 +36,7 @@ choosePickUp=(e)=>{
                         </div>
                         </div>
                         <div className={style.firstForm}>
-                        <label htmlFor='adress2'> Savanorių pr. 1, Helios City</label>
+                        <label className={style.label} htmlFor='adress2'> Savanorių pr. 1, Helios City</label>
                         <input type="radio"
                                 id='adress2' 
                                 name='adress' 
