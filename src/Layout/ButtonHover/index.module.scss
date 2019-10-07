@@ -33,42 +33,44 @@
                 padding: 0;
             }
              h3{
-                 
+               
                 line-height: 20px; 
              }
              .size{
-                 
-                line-height: 5px; 
+                 margin: 5px 0;
+                line-height: 10px; 
              }
                 
                 .countmore{
                     display: inline-block;
                     float: left;
                     width: 100%;
-                    margin-left: 40px;
+                    padding-top: 10px;
             
                     *{
                         display: inline-block;
                         float: left;  
-                        width: 13%;  
+                        width: 20%;  
                     } 
                     .cost{
                         display: inline-block;
-                       margin-left: 10px;
-                        width: 70px;
+                        margin-left: 10px;
+                        width: 30%;
                     }  
-                }
+                
                 .plusMinus{
-                    font-size: 35px;
-                    border-radius: 50%;
+                    font-size:80px;
+                    border-radius: 5px;
                     background-color: white;
                     border: 1px solid orange;
                     cursor: pointer;
                     color:orange;
                     margin:0;
                     padding: 0;
-                    line-height: 25px;
+                    width: 8%;
+
                 }
+            }
                 
                 span{
                     padding-bottom: 5px;
@@ -80,6 +82,7 @@
                 }
                 .plusMinus:hover{
                     background-color: orangered;
+                    color: white;
                 }
                
         }

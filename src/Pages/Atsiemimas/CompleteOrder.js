@@ -15,6 +15,7 @@ choosePickUp=(e)=>{
         pickUp:e.target.value
     })
 }
+
     render() {        
         return (
 

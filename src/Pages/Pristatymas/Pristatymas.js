@@ -14,7 +14,10 @@ class Pristatymas extends Component {
                 duru_kodas:'',
                 komentaras:'',
                 redirect:false,
+                
+
        }
+       
         onInputChange=(e)=>{
         
             this.setState({[e.target.name]:e.target.value})

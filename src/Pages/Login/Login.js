@@ -10,18 +10,18 @@ const LogIn = (props) => {
         <div className={style.login}>
             <h1>Log In</h1>
             <form onSubmit={(e)=>props.LogIn(e, auth ,props.history )}>
-                {props.auth.errors.email && <p> {props.auth.errors.email}</p>}
+                {props.auth.LoginErrors.email && <p> {props.auth.LoginErrors.email}</p>}
                 <input type="text"
                         name='email'
                         value={props.password}
-                        placeholder='Email'
+                        placeholder='el. pašto adresas'
                         onChange={props.onInputChange}/>
-                {props.auth.errors.password && <p> {props.auth.errors.password}</p>}
+                {props.auth.LoginErrors.password && <p> {props.auth.LoginErrors.password}</p>}
                 <input type="password"
                         name='password'
-                        placeholder=' Password'
+                        placeholder='slaptažodis'
                         onChange={props.onInputChange}/>
-                <button >Log in</button>
+                <button >Prisijungti</button>
                 <p>Nesate prisiregistravę? </p>
                 <p><Link to ='/signUp'   className={style.signUp}> Registruokitės! </Link></p>
             </form>

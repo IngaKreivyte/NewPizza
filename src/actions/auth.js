@@ -69,13 +69,13 @@ export const signUp=(e, user, history )=>{
 export const LogIn = (e, user, history)=>{
     //componentdidMount ir componentwillmount-isvalyti state
     e.preventDefault();
-        const errors ={};
-        if(!user.email) errors.email = 'missing email';
-        if(!user.password) errors.password = 'missing password';
-        if(Object.keys(errors).length>0){ //ar reikia >0???
+        const LoginErrors ={};
+        if(!user.email) LoginErrors.email = 'missing email';
+        if(!user.password) LoginErrors.password = 'missing password';
+        if(Object.keys(LoginErrors).length>0){ //ar reikia >0???
             return {
                 type:types.LOG_IN_ERROR,
-                errors,
+                LoginErrors,
             }
         }
         //2.
@@ -101,7 +101,7 @@ export const LogIn = (e, user, history)=>{
                 console.log(e.response);
                 dispatch({
                     type:types.LOG_IN_ERROR,
-                    errors:{email:'invalid email or password'}
+                    LoginErrors:{email:'invalid email or password'}
                 })
                 
             }
