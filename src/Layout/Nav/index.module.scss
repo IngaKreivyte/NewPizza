@@ -102,7 +102,7 @@ nav{
         .link{
             padding: 0;
             height: auto;
-            user-select: none;
+            -webkit-touch-callout: none;
             line-height: 20px;
             font-size: 12px;
             margin: 0px 0 0 0;
