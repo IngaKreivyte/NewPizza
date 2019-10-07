@@ -34,33 +34,35 @@
     }
 }
 
-        .sizes{
-            display: inline-block;
-            width: 100%;
-            float: left;
-            cursor: pointer;
-            border-radius: 15px;
-            background-color: rgb(233, 232, 232);
-            height: 45px;
-            padding-right: 1px;
-        *{
-            width: 32%;
-            border-radius: 15px;
-            border: 1px solid white;
-            line-height: 20px;
-            margin: 2px 0 0px 2px;
-            padding: 8px 0 12px;
-            display: inline-block;
-            float: left;
-        }
-            .selectSize{
-                background-color: rgb(233, 232, 232);
-                border: 1px solid  rgb(233, 232, 232);
-            }
-            .selectedSize{
-                background-color: white;
-            }  
+.sizes{
+    display: inline-block;
+    width: 99%;
+    margin: auto 0.5%;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(233, 232, 232);
+    height: auto;
+    padding-right: 1px;
+    
+*{
+    width: 30%;
+    border-radius: 5px;
+    border: 1px solid white;
+    line-height: 20px;
+    margin: 2% 1.5%;
+    display: inline-block;
+    height: auto;
+}
+
+    .selectSize{
+        background-color: rgb(233, 232, 232);
+        border: 1px solid  rgb(233, 232, 232);
     }
+    .selectedSize{
+        background-color: white;
+        
+    }  
+}
 
         
     
@@ -179,7 +181,7 @@
                 .sizes{
                     display: inline-block;
                     width: 99%;
-                    float: left;
+                    margin: auto 0.5%;
                     cursor: pointer;
                     border-radius: 5px;
                     background-color: rgb(233, 232, 232);
@@ -191,9 +193,8 @@
                     border-radius: 5px;
                     border: 1px solid white;
                     line-height: 10px;
-                    margin: 2px 0 2px 3%;
+                    margin: 2% 1.5%;
                     display: inline-block;
-                    float: left;
                     font-size: 12px;
                     height: auto;
                 }

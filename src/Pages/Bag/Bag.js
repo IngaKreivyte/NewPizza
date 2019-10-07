@@ -21,9 +21,9 @@ class Bag extends Component {
                        <div className={style.size}>  {item.size} </div>
                         <div className={style.totalPrice} > {item.totalPrice} &#8364; </div>   
                         <div className={style.counterBlock}>
-                            <div  onClick={()=> this.props.findUnique(item, 1)} className={style.plusMinus}><span>+</span>  </div>
+                            <div  onClick={()=> this.props.findUnique(item, 1)} className={style.plusMinus}><span> &#43; </span>  </div>
                             <div className={style.amount}> {item.amount} </div>
-                            <div  onClick={()=>this.props.findUnique(item, -1)} className={style.plusMinus}> <span className={style.minus}>-</span> </div>
+                            <div  onClick={()=>this.props.findUnique(item, -1)} className={style.plusMinus}> <span className={style.minus}> &#800;</span> </div>
                         </div>
                 </div>
                 );

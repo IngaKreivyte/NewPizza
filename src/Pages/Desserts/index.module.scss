@@ -35,7 +35,7 @@
                     text-align:left;
                     width: 100%;
                     display: inline-block;
-                    height: 120px;
+                    height: 90px;
                     word-break: keep-all;
                     color: rgb(160, 155, 155);
                 }
@@ -55,10 +55,10 @@
                     font-size: 15px;
                 }
                 .btn{
-                    padding: 0;
-                    line-height: 40px;
                     @include btnPasirinkti;
-                    
+                    margin-top:5px;
+                    padding: 0;
+                    line-height: 30px; 
                 }
                 img{
                     width: 200px;
@@ -70,3 +70,21 @@
         
     }
 }
+
+
+@media screen and (max-width: 420px) {
+        .Block{
+            .itemsBlock{
+                .items{
+                    .btn{
+                        line-height: 20px;
+                        margin-top: 5px;
+                        @include btnPasirinkti;
+                    }
+                }
+            }
+        }
+    
+}
+
+                    

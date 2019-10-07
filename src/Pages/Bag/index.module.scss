@@ -41,33 +41,31 @@
             width: 350px;
             height: auto;
             flex-wrap:wrap;
+            font-size: auto;
             margin: 0;
            padding: 0!important;
-            .plusMinus{
-            width: 40px;
-            height: 40px;
+           .plusMinus{
             border-radius: 5px;
-            border: 1px solid $basicOrangecolor;
-            margin: 0;
+            background-color: white;
+            border: 1px solid orange;
             cursor: pointer;
-            }
-            .plusMinus:hover{
-                background-color: orangered;
-            }
-            .amount{
-                font-size:15px;
-            }
-            span{
-                padding: 0;
-                margin: -18px -25px;
-                font-size: 45px;
-                text-align: center;
-            }
-            .minus{
-                margin: -22px -25px;
-            }
+            color:orange;
+            margin:0;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            
         }
+        span{
+            padding: 0;
+            margin: 7px  0 0 10px;
+            
+        }   
+        .minus{
+            margin: 0  0 0 15px;
         }
+    }
+}
 
 
 .total{
@@ -124,37 +122,38 @@ background-color: orangered
         .size{
             width:60px;
         }
-            .counterBlock{
-                width: 200px;
-               
-                .plusMinus{
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                background-color: orange;
-                font-weight: 400;
-                font-size: 40px;
-                margin: 0;
-                }
-            }
-        }
-        .total{
-            display: inline-block;
-            width: 80%;
-            margin: 0 10%;
-            border-bottom: 1px solid grey;
+        .counterBlock{
+            display: flex;
+            justify-content: space-evenly;
+            width: 160px;
+            height: auto;
+            flex-wrap:wrap;
+            font-size: auto;
+            margin: 0;
+           padding: 0!important;
+           .plusMinus{
+            border-radius: 5px;
+            background-color: white;
+            border: 1px solid orange;
+            cursor: pointer;
+            color:orange;
+            margin:0;
+            padding: 0;
+            width: 30px;
+            height: 30px;
             
         }
-        .total *{
-            display: inline-block;
-            text-align: left;
-            width: 100%;
+        span{
             padding: 0;
-            margin: 0;
-            font-size: 15px;
-        }    
+            margin: 7px  0 0 10px;
+            
+        }   
+        .minus{
+            margin: 0  0 0 15px;
+        }
+    }
+    }
 }
-
 @media screen and (max-width: 420px) {
 
     .container{
@@ -203,42 +202,38 @@ background-color: orangered
                 width: 15%;
                 height: 50px;
             }
-        
             .counterBlock{
-            display: flex;
-            justify-content: space-around;
-            width: 110px;
-            flex-wrap:wrap;
-            padding: 0 !important;
-            margin-top: 10px !important;
-                .plusMinus{
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background-color: orange;
-                font-weight: 300;
-                font-size: 12px;
+                display: flex;
+                justify-content: space-evenly;
+                width: 130px;
+                height: auto;
+                flex-wrap:wrap;
+                font-size: auto;
+               .plusMinus{
+                border-radius: 5px;
+                background-color: white;
+                border: 1px solid orange;
                 cursor: pointer;
-                padding-top: 10px;
-                z-index: 0.5;
-                }
-                .amount{
-                    padding-top: 1px;
-                    font-size: 10px;
-                    padding: 0;
-                    margin: 0;
-                    width: auto;
-                }
-                span{
-                    padding: 0;
-                    margin: -11px -4px;
-                    font-size: 15px;
-                    width: 10px;
-                    height: auto;
-                    text-align: center;
-                }
+                color:orange;
+                width: 20px;
+                height: 20px !important;
+                margin-top: 10px;
             }
+            .amount{
+                width: 20%;
             }
+            span{
+                padding: 0;
+                width: 20px;
+                margin: 2px 0 0 4px;
+                height: 20px;
+            }   
+            
+            .minus{
+                margin: -6px 0 0 8px;
+            }
+        }
+    }
     
     .total{
         display: inline-block;

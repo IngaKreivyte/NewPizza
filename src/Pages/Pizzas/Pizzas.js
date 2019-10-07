@@ -32,10 +32,11 @@ class Pizzas extends Component {
     render (props) {
         const showItems = this.props.pizzas.map((pizza, i)=>{
             return <div className={style.items} key={i}>
+                 {pizza.kainos.filter(pizza=>pizza.size ==='small').map((pic,i)=>
+                        <img  key ={i} src={pic.pic} alt="pic"/>)}
                         <h3>{pizza.name}</h3>
                         <p>{pizza.description}</p>
-                        {pizza.kainos.filter(pizza=>pizza.size ==='small').map((pic,i)=>
-                        <img  key ={i} src={pic.pic} alt="pic"/>)}
+                       
                         <div className={style.priceContainer}>{pizza.kainos.filter(pizza=>pizza.size==='small').map((kaina, i) =>
                              <div className={style.price} key={i}>
                                  Nuo {kaina.price} &#8364;

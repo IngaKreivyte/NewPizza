@@ -43,10 +43,10 @@
                     font-size: 18px;
                 }
                 .btn{
-                    line-height: 40px;
-                    margin-top: 5px;
                     @include btnPasirinkti;
-                    
+                    margin-top:5px;
+                    padding: 0;
+                    line-height: 30px; 
                 }
                 img{
                     width: 150px;
@@ -73,4 +73,27 @@
             }
         }
     } 
+}
+
+@media screen and (max-width: 420px) {
+    .Block{
+        width: 90%;
+        margin: 0 5%;
+        .itemsBlock{
+            .items {
+                display: inline-block;
+                float: left;
+                width: 50%;
+                height: 350px;
+                text-align: center;
+                position: relative;
+                .btn{
+                    line-height: 20px;
+                    margin-top: 5px;
+                    @include btnPasirinkti;
+                }
+            }
+        }
+    } 
+
 }
