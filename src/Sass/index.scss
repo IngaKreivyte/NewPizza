@@ -8,7 +8,7 @@ body * {
     vertical-align: top;
     box-sizing: border-box;
     font-size: 15px;
-    font-family: 'Times New Roman, Times, serif';
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 @mixin no-select {
     -webkit-touch-callout: none;
@@ -21,4 +21,8 @@ body * {
     -ms-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    &:focus{
+     outline:none;
+    }
   }

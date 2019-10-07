@@ -58,11 +58,8 @@
         }
         span{
             padding: 0;
-            margin: 7px  0 0 10px;
+            margin: 5px  0 0 10px;
             
-        }   
-        .minus{
-            margin: 0  0 0 15px;
         }
     }
 }
@@ -145,12 +142,10 @@ background-color: orangered
         }
         span{
             padding: 0;
-            margin: 7px  0 0 10px;
+            margin: 5px  0 0 10px;
             
         }   
-        .minus{
-            margin: 0  0 0 15px;
-        }
+        
     }
     }
 }
@@ -205,7 +200,7 @@ background-color: orangered
             .counterBlock{
                 display: flex;
                 justify-content: space-evenly;
-                width: 130px;
+                width: 110px;
                 height: auto;
                 flex-wrap:wrap;
                 font-size: auto;
@@ -225,13 +220,10 @@ background-color: orangered
             span{
                 padding: 0;
                 width: 20px;
-                margin: 2px 0 0 4px;
+                margin: 1px 0 0 4px;
                 height: 20px;
             }   
             
-            .minus{
-                margin: -6px 0 0 8px;
-            }
         }
     }
     

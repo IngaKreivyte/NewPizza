@@ -140,6 +140,11 @@
                     top: 65px;
                     left: 60px;
                 }
+                .beforeLast::before{
+                    content:'';
+                    border: none;
+                    display: none;
+                }
                 
             }
         
