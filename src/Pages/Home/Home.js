@@ -18,11 +18,7 @@ const Home = (props) => {
     return (
             <div className={style.container}>
                 <div className={style.welcome}> </div> 
-                <AliceCarousel
-                    mouseDragEnabled 
-                    buttonsDisabled 
-                    duration={1500}
-                    autoPlay={true} >
+                <AliceCarousel  mouseDragEnabled   buttonsDisabled   duration={1500}  autoPlay={true} >
                     <img src={main} alt="logo" onDragStart={handleOnDragStart} className="yours-custom-class" />
                     <img src={secondimg} alt="logo" onDragStart={handleOnDragStart} className="yours-custom-class" />
                     <img src={thirdimg} alt="logo"onDragStart={handleOnDragStart} className="yours-custom-class" />

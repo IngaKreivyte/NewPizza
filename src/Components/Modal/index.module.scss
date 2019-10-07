@@ -112,7 +112,7 @@
         }
     }
        
-    @media screen and (max-width: 736px) {
+    @media screen and (max-width: 770px) {
         .modal{
             position: fixed;
             left: 50%;
@@ -123,7 +123,7 @@
             text-align: center;
             z-index: 3;
             background-color: white;
-            width: 700px;
+            width: 600px;
             height: 500px;
         }
         
@@ -136,7 +136,12 @@
                 padding: 0;
                 float: left;
                 display: flex;
+            
+                *{
+                    width: 210px !important;
+                }
             }
+            
     }
     @media screen and (max-width: 420px) {
         .modal{
