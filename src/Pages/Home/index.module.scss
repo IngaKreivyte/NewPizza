@@ -6,7 +6,7 @@
     margin:0;
     z-index:2;
     .scroll{
-        margin-bottom: 100px;
+        margin-bottom: 100px !important;
     }
     .scroll{
       
@@ -77,4 +77,19 @@
         background-color: red;
     }
     
+}
+
+@media screen and (max-width: 420px){
+.container{
+    display: inline-block;
+    width: 100%;
+    margin:0;
+    .scroll{
+        margin-bottom: 130px !important;
+    }
+    .scroll{
+      
+        width: 10px;
+    }
+}
 }
