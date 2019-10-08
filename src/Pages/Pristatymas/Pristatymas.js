@@ -51,7 +51,7 @@ class Pristatymas extends Component {
                 <input type="text"
                         size="50"
                         name='gatve'
-                        placeholder='Gatve'
+                        placeholder='Gatvė'
                         onChange={this.onInputChange}
                         value={this.state.gatve}/>
                          {this.state.errors.gatve && <div className={style.error}>{this.state.errors.gatve} <span onClick={()=>this.closeError()}> X</span></div>}
@@ -61,7 +61,7 @@ class Pristatymas extends Component {
                         value={this.state.namas}
                         onChange={this.onInputChange}
                         name='namas'
-                        size="13"
+                        size="15"
                         placeholder='namas'/>
                         
                         {!this.state.errors.gatve && this.state.errors.namas && <div className={style.error}>{this.state.errors.namas} <span onClick={()=>this.closeError()}> X</span></div>}
@@ -69,7 +69,7 @@ class Pristatymas extends Component {
                         <div className={style.absolute}>
                 <input type="text"
                         onChange={this.onInputChange}
-                        size="13"
+                        size="15"
                         name='butas'
                         value={this.state.butas}
                         placeholder='butas'/>
@@ -78,11 +78,11 @@ class Pristatymas extends Component {
                         </div>
                         <div className={style.absolute}>
                 <input type="text"
-                        size="13"
+                        size="14"
                         onChange={this.onInputChange}
                         value={this.state.duru_kodas}
                         name='duru_kodas'
-                        placeholder='durųkodas'/>
+                        placeholder='durų kodas'/>
                         
                 {/* {!this.state.errors.gatve && !this.state.errors.namas && !this.state.errors.butas && this.state.errors.duru_kodas && <div className={style.error}>{this.state.errors.duru_kodas} <span onClick={()=>this.closeError()}> X</span></div>} */}
                         </div>

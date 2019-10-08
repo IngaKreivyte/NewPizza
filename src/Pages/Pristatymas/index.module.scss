@@ -14,6 +14,9 @@
         bottom: 0;
         right: 45%;
         user-select: none;
+        &:focus{
+            outline:none;
+        }
     }
     .btn:hover{
         background-color: orange;
@@ -49,11 +52,14 @@
             justify-content: center;
             margin-top: 10px;
             float: left;
-            line-height: 20px;
-            size: 20px;
-            padding: 10px;
-            border-radius: 10px;
+            line-height: 15px;
+            // size: 20px;
+            padding: 5px;
+            border-radius: 15px;
             width: 100%;
+            &:focus{
+                outline:none;
+            }
         }
     
     }
@@ -111,7 +117,7 @@
                 padding: 2px;
                 margin-top: 5px;
                 line-height: 10px;
-                width: 100% ;
+                width: 100% !important ;
                 } 
             }
         }

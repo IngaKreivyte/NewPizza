@@ -16,6 +16,8 @@
     text-decoration: none;
     &:hover{
         background-color:$secondColor;
+    }&:focus{
+        outline:none;
     }
 }
 @mixin btnPasirinkti{
@@ -33,6 +35,9 @@
     &:hover{
         background-color:$basicOrangecolor;
         color: white;
+    }
+    &:focus{
+        outline:none;
     }
     
 }

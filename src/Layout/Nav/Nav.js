@@ -6,6 +6,7 @@ import * as actions from '../../actions/auth';
 import ButtonHover from '../ButtonHover/ButtonHover';
 import {withRouter} from 'react-router-dom';
 import { HashLink as NavLink } from 'react-router-hash-link';
+import Burger from '../../Layout/Burger/Burger';
 
 
 class Nav extends Component {
@@ -29,9 +30,11 @@ class Nav extends Component {
             {/* <NavLink className={style.link} to='/kontaktai'> Kontaktai </NavLink> */}
             <NavLink className={[style.link, style.btn,  ].join(' ')} to='/bag' >Krepšelis | {itemsInBag} </NavLink>
            <div className={style.showBag}><ButtonHover/></div>
-        
         </div>
-      </nav>  
+       
+      </nav> 
+      
+      <Burger/>
       </React.Fragment>
     );
   }
