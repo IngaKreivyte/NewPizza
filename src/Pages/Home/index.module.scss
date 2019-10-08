@@ -4,12 +4,10 @@
     display: inline-block;
     width: 100%;
     margin:0;
-    z-index:2;
+    height: auto;
     .scroll{
         margin-bottom: 100px !important;
-    }
-    .scroll{
-      
+        height: 10px !important;
         width: 10px;
     }
     .welcome{
@@ -83,12 +81,11 @@
 .container{
     display: inline-block;
     width: 100%;
+    height: auto;
     margin:0;
     .scroll{
         margin-bottom: 130px !important;
-    }
-    .scroll{
-      
+        height: 10px !important;
         width: 10px;
     }
 }

@@ -104,77 +104,14 @@
     } 
 }
 @media screen and (max-width: 420px) {
-   
-    
-
-
-//     .Block{
-    
-    
-//     *{
-//         padding: 5px 5px;
-//     }
-//     .itemsBlock{
-        
-       
-//             .items {
-//                 display: inline-block;
-//                 height: 600px;
-//                 width: 293px;
-//                 text-align: center;
-//                 position: relative;
-//                 border: 1px solid transparent;
-//                 margin:0 auto;
-            
-            
-//             h3{
-//                 width: 100%;
-//                 font-weight: 500;
-//                 display: inline-block;
-//                 margin: 0;
-//                 text-align:left;
-//             }
-//                 .priceContainer{
-//                     position: absolute;
-//                     bottom: 25%;
-//                     left: 0%;
-//                     *{
-//                         display: inline-block;
-//                         float: left;
-//                         line-height: 20px;
-//                         font-size: 14px;
-//                         margin: 0;
-//                         padding: 0;
-                        
-//                     }
-//                     .btn{
-//                         @include btnPasirinkti;
-//                         float: right;
-//                         margin-right: 10px;
-//                         padding: 0 !important;
-//                         font-size: 14px;
-                        
-//                     }
-//                 }
-//                 p{
-//                     width: 100%;
-//                     height: 135px;
-//                     line-height: 20px;
-//                     display: inline-block;
-//                     word-break: keep-all;
-//                     color: rgb(160, 155, 155);
-//                 }
-           
-            
-//         }
-//     }
-    
-// }
 .Block{
     display: inline-block;
     width: 100%;
     text-align: center;
     height: auto;
+    margin:0;
+    padding: 0;
+
     h1{
         width: 100%;
         font-size: 28px;
@@ -190,15 +127,18 @@
         text-align: center;
         height: auto;
         position: relative;
+        margin:0;
+        padding: 0;
+        width: 100%;
        
             .items {
                 display: inline-block;
                 height: auto;
-                width: 293px;
+                width: 100%;
                 text-align: center;
                 position: relative;
                 border: 1px solid transparent;
-                margin:0 auto;
+                margin:0;
                 img{
                     object-fit: contain;
                     object-position: -30px 0;

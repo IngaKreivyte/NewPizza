@@ -23,7 +23,7 @@ const Home = (props) => {
                     <img src={secondimg} alt="logo" onDragStart={handleOnDragStart} className="yours-custom-class" />
                     <img src={thirdimg} alt="logo"onDragStart={handleOnDragStart} className="yours-custom-class" />
                 </AliceCarousel>
-                <div className={style.scroll} id='pizzas'/><Pizzas/>
+                <div className={style.scroll}  id='pizzas'/><Pizzas/>
                <div className={style.scroll} id='desertai'/><Desserts/>
                <div className={style.scroll} id='gerimai'/><Drinks/>
                 {/* <ScrollUpButton style={{outline: 'none', width:70 }}   ToggledStyle={{outline: 'none'}}/> */}
