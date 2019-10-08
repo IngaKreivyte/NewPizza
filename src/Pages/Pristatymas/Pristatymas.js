@@ -62,7 +62,8 @@ class Pristatymas extends Component {
                         onChange={this.onInputChange}
                         name='namas'
                         size="15"
-                        placeholder='namas'/>
+                        placeholder='namas'
+                        className={style.input}/>
                         
                         {!this.state.errors.gatve && this.state.errors.namas && <div className={style.error}>{this.state.errors.namas} <span onClick={()=>this.closeError()}> X</span></div>}
                         </div>
@@ -72,17 +73,19 @@ class Pristatymas extends Component {
                         size="15"
                         name='butas'
                         value={this.state.butas}
-                        placeholder='butas'/>
+                        placeholder='butas'
+                        className={style.input}/>
                         
                         {/* {!this.state.errors.gatve && !this.state.errors.namas && this.state.errors.butas && <div className={style.error}>{this.state.errors.butas} <span onClick={()=>this.closeError()}> X</span></div>} */}
                         </div>
                         <div className={style.absolute}>
                 <input type="text"
-                        size="14"
+                        size="15"
                         onChange={this.onInputChange}
                         value={this.state.duru_kodas}
                         name='duru_kodas'
-                        placeholder='durų kodas'/>
+                        placeholder='durų kodas'
+                        className={style.input}/>
                         
                 {/* {!this.state.errors.gatve && !this.state.errors.namas && !this.state.errors.butas && this.state.errors.duru_kodas && <div className={style.error}>{this.state.errors.duru_kodas} <span onClick={()=>this.closeError()}> X</span></div>} */}
                         </div>

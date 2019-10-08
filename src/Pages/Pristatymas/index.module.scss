@@ -114,11 +114,15 @@
             .absolute{
                 
                 input{
-                padding: 2px;
+                padding: 5px;
                 margin-top: 5px;
                 line-height: 10px;
-                width: 100% !important ;
+                width: 100%;
+               
                 } 
+                .input{
+                    width: 145%;
+                }
             }
         }
         

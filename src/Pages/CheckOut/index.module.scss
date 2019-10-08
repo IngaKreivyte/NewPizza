@@ -222,104 +222,252 @@
             }}
     }
     @media screen and (max-width: 420px) {
+        // .container{
+        //     width: 100%;
+        //     height: auto;
+        //     display: inline-block;
+        //     position: relative;
+            
+        //     .bothSides{
+        //         width: 100%;
+        //         border-bottom: 1px solid grey;
+        //         display: flex;
+        //         position: relative;
+        //     .toTheRightSide{
+        //         display: inline-block;
+        //         float: left;
+        //         width: 100%;
+                
+                
+        //          * {
+        //             width: 100%;
+        //             display: inline-block;
+        //             float: left;
+        //             text-align: center;
+        //             font-size: 15px;
+        //         }
+                
+        //         span{
+        //             width: 50%;
+        //         }
+        //         .nameBlock{
+        //             width: 100%;
+                    
+        //         input{
+        //                 width: 30%; 
+        //                 border: 1px solid grey;
+        //                 border-radius: 5px;
+        //                 margin: 0;
+        //                 padding: 0;
+        //                 line-height: 35px;
+        //                 font-size: 15px;
+        //             }
+                   
+        //         }
+                
+                
+        //          .delivery{
+        //             display: inline-block;
+        //             margin: 20px 0;
+        //             width: 100%;
+                 
+        //         span{
+        //             width: 100%;
+        //             float: left;
+        //             display: inline-block;
+        //         }
+        //         h3{
+        //             width: 100%;
+        //             margin: 5px 0;
+        //             float: left;
+        //             display: inline-block;
+        //             border: none;
+        //         }
+        //         }
+        //         .deliveryblock{
+                    
+        //             width: 80%;
+        //             *{
+        //                 float: left;
+        //                 width: 50%;
+        //                 display: inline-block;
+        //             }
+                    
+        //         }
+        //         .userBlock{
+        //             display: inline-block;
+        //             margin: 20px 0;
+        //         }
+        //     }
+        //     .toTheleftSide{
+        //         display: inline-block;
+        //         float: left;
+        //         width: 100%;
+        //          * {
+        //             display: inline-block;
+        //             text-align: center;
+        //             font-size: 16px;
+        //         }
+                
+        //         .h3{
+        //             margin-top:0;
+        //             font-size: 15px;
+        //         }
+         
+        //     }
+            
+        //     }
+        //     .btn{
+        //         @include btn;
+        //         border:none;
+        //         width: 150px;
+        //     }}
         .container{
             width: 100%;
-            height: auto;
             display: inline-block;
-            position: relative;
+            float: left;
             
             .bothSides{
+                display: inline-block;
+                float: left;
                 width: 100%;
                 border-bottom: 1px solid grey;
-                display: flex;
-                position: relative;
-            .toTheRightSide{
-                display: inline-block;
-                float: left;
-                width: 100%;
+                height: auto;
                 
-                
-                 * {
-                    width: 100%;
+                .toTheRightSide{
                     display: inline-block;
                     float: left;
-                    text-align: center;
-                    font-size: 15px;
-                }
-                
-                span{
-                    width: 50%;
-                }
-                .nameBlock{
                     width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    * {
+                        width: 100%;
+                        display: inline-block;
+                        float: left;
+                        text-align: left;
+                        font-size: 12px !important;
+                        padding: 0px;
+                    }
+                    .userBlock{
+                        display: inline-block;
+                        margin: 10px 0;
+                        span{
+                            padding-top: 10px;
+                            width: 20%;
+                            float: left;
+                            margin-left: 10%;
+                            height: 30px;
+                        }
+                        .nameBlock{
+                            width: 50%;
+                            float: left;
+                            height: 30px;
+                            margin-right: 20%;
+                            
+                        input{
+                                width: 60%; 
+                                border-bottom: 1px solid grey;
+                                border-radius: 5px;
+                                margin: 0;
+                                padding: 0;
+                                height: 30px;
+                            }
+                            button{
+                                width: 38%; 
+                                border-radius: 5px;
+                                margin-right: 2%;
+                                padding: 0;
+                                height: 30px;
+                            }
+                        }    
+                    }
                     
-                input{
-                        width: 30%; 
-                        border: 1px solid grey;
-                        border-radius: 5px;
+                    .delivery{
+                        display: inline-block;
+                        margin: 10px 0;
+                        width: 100%;
+                     
+                        span{
+                            padding-top: 10px;
+                            width: 20%;
+                            float: left;
+                            height: 30px;
+                            margin: 0 0 0 10%;
+                        }
+                    h3{
+                        width: 50%;
+                        height: 30px;
+                        float: left;
+                        display: inline-block;
+                        border: none;
+                        margin: 0 20% 0 0%;
+                        padding-top: 10px;
+                    }
+                    }
+                    .deliveryblock{
+                        
+                        width: 80%;
+                        *{
+                            float: left;
+                            width: 50%;
+                            display: inline-block;
+                        }
+                        
+                    }
+                    
+                }
+                .toTheleftSide{
+                    display: inline-block;
+                    float: left;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    border-bottom: 1px solid grey;
+                    * {
+                        width: 100%;
+                        display: inline-block;
+                        float: left;
+                        text-align: left;
+                        font-size: 12px !important;
+                        padding-top: 10px;
+                    }
+                    h2{
+                        margin: 5px 0;
+                        text-align: center;
+                    }
+                    
+                    img{
+                        width: 10%;
+                        height: 30%;
+                        margin-left: 10%;
+                    }
+                    h3{
+                        width: 40%;
+                        float: left;
+                        margin: 0;
+                        text-align: left;
+                    }
+                    .amountBlock{
+                        width: 40%;
+                        float: left;
                         margin: 0;
                         padding: 0;
-                        line-height: 35px;
-                        font-size: 15px;
                     }
-                   
-                }
-                
-                
-                 .delivery{
-                    display: inline-block;
-                    margin: 20px 0;
-                    width: 100%;
-                 
-                span{
-                    width: 100%;
-                    float: left;
-                    display: inline-block;
-                }
-                h3{
-                    width: 100%;
-                    margin: 5px 0;
-                    float: left;
-                    display: inline-block;
-                    border: none;
-                }
-                }
-                .deliveryblock{
-                    
-                    width: 80%;
-                    *{
-                        float: left;
-                        width: 50%;
-                        display: inline-block;
+                    .total{
+                        width: 90%;
+                        margin-left: 10%;
                     }
+            
                     
+                    .item{
+                        width: 100%;
+                        *{
+                            float: left;
+                        }
+                    } 
                 }
-                .userBlock{
-                    display: inline-block;
-                    margin: 20px 0;
-                }
-            }
-            .toTheleftSide{
-                display: inline-block;
-                float: left;
-                width: 100%;
-                 * {
-                    display: inline-block;
-                    text-align: center;
-                    font-size: 16px;
-                }
-                
-                .h3{
-                    margin-top:0;
-                    font-size: 15px;
-                }
-         
-            }
             
             }
-            .btn{
-                @include btn;
-                border:none;
-                width: 150px;
-            }}
+        }
+           
     }

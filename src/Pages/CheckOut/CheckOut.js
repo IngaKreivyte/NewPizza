@@ -55,7 +55,7 @@ class CheckOut extends Component {
                                 name='name'
                                 placeholder='name'
                                 value={this.state.name} />
-                                <button onClick={()=>{this.props.changeName(this.state)}} >save</button>
+                                <button onClick={()=>{this.props.changeName(this.state)}}>išsaugoti</button>
                                 </form>
                             </div>
                         </div>
@@ -69,14 +69,14 @@ class CheckOut extends Component {
                                 value={this.state.number}
                                 placeholder='number'
                                 onChange={this.onInputChange} />
-                                <button  onClick={()=>{this.props.changeName(this.state)}}>save</button>
+                                <button  onClick={()=>{this.props.changeName(this.state)}}>išsaugoti</button>
                                 </form>
                             </div>
 
                         </div>
                         { this.props.checkOut.address.adresspickUp && 
                             <div className={style.delivery}> 
-                                <span>Delivery at:</span> 
+                                <span>Pristatyti:</span> 
                                     <h3>{this.props.checkOut.address.adresspickUp}</h3>  
                             </div> }
                         { !this.props.checkOut.address.adresspickUp && this.props.checkOut.address &&
@@ -98,7 +98,7 @@ class CheckOut extends Component {
                     <div className={style.toTheleftSide}>
                         <h2>  Jūsų užsakymas: </h2>
                         {bagItems}
-                        <h3> viso: {totalAmount} &#8364; </h3>
+                        <h3 className={style.total}> viso: {totalAmount} &#8364; </h3>
                     </div>
                 </div>
                 <button className={style.btn} onClick={()=>{this.props.addOrder(this.props.checkOut); this.redirectstatuschange();} }> 

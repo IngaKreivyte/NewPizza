@@ -10,6 +10,13 @@ body * {
     font-size: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+@media screen and (max-width: 420px){
+    body,
+    body * {
+        
+        font-size: 12px;
+    }
+}
 @mixin no-select {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
