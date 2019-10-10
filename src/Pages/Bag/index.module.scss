@@ -9,8 +9,10 @@
 .block{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 80%;
     height: auto;
+    margin: 0 10%;
+
     *{
         float: left;
         padding: 10px;
@@ -20,13 +22,13 @@
     }
     h3{
         
-        width: 200px;
+        width: 250px;
     }
-    .size{
-        width: 80px;
-    }
-    .totalPrice{
-       
+    
+    span{
+        padding: 0;
+        margin: 0;
+        float: right;
     }
         
         img{
@@ -58,7 +60,8 @@
         }
         span{
             padding: 0;
-            margin: 5px  0 0 10px;
+            margin: 10px  0 0 10px;
+            float: none;
             
         }
     }
@@ -96,14 +99,23 @@ background-color: orangered
     @include btnPasirinkti;
     padding: 5px;
 }
+@media screen and (max-width: 1038px) {
 
+    .container{
+        display:inline-block;
+        width:90%;
+        margin: 0 5%;
+        margin-top: 40px;
+    }
+    
+}
 
 @media screen and (max-width: 770px) {
 
     .container{
         display:inline-block;
-        width: 90%;
-        margin: 0 calc((100% - 90% ) /2 );
+        width: 100%;
+        margin: 0;
         margin-top: 40px;
     }
     .block{
@@ -111,18 +123,23 @@ background-color: orangered
         *{
             float: left;
             padding: 10px;
+            margin-left: 0;
         }
         h3{
             
-            width: 150px;
+            width: 250px;
         }
-        .size{
-            width:60px;
+        img{
+            width: 20%;
+            height: 80px;
+        }
+        .totalPrice{
+            width: 60px;
         }
         .counterBlock{
             display: flex;
             justify-content: space-evenly;
-            width: 160px;
+            width: 140px;
             height: auto;
             flex-wrap:wrap;
             font-size: auto;
@@ -136,16 +153,18 @@ background-color: orangered
             color:orange;
             margin:0;
             padding: 0;
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             
         }
         span{
             padding: 0;
-            margin: 5px  0 0 10px;
+            margin: 3px  0 0 8px;
             
         }   
-        
+        .amount{
+            width: 30px !important;
+        }   
     }
     }
 }
@@ -155,8 +174,8 @@ background-color: orangered
        width: 100%;
        margin: 0;
        h1{
-           margin-top: 10px;
-        text-align: center;
+            margin-top: 10px;
+            text-align: center;
         }
         .btn1{
         @include btnPasirinkti;
@@ -173,23 +192,21 @@ background-color: orangered
     flex-wrap: wrap;
     width: 100%;
     height: auto;
+    margin: 0;
     *{
         margin: 0;
     }
         
         h3{
-            width: 70px;
+            width: 150px;
             font-size: 12px;
             height: auto;
+            padding-left: 0;
         }
-        .size{
-            width: 18%;
-            font-size: 15px;
-            font-size: 12px;
-        }
+        
         .totalPrice{
             font-size: 15px;
-            width: 17%;
+            width: 15%;
             font-size: 12px;
         }
             
@@ -200,7 +217,7 @@ background-color: orangered
             .counterBlock{
                 display: flex;
                 justify-content: space-evenly;
-                width: 110px;
+                width: 88px;
                 height: auto;
                 flex-wrap:wrap;
                 font-size: auto;

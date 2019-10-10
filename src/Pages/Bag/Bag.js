@@ -15,10 +15,9 @@ class Bag extends Component {
             return(
                 <div key={i} className={style.block} >
                         <img  src={item.pic} alt='pic'/>
-                        <h3> {item.name} </h3>
-                       {/* {item.size && <span> size: {item.size} </span>}  */} 
+                        <h3>  {item.size &&  <span>({item.size})</span> }   {item.name} </h3>
                        {/* galima rasyti ir toki patikrinima  kai yra size, prideti toki span*/}
-                       <div className={style.size}>  {item.size} </div>
+                       {/* <div className={style.size}>  {item.size} </div> */}
                         <div className={style.totalPrice} > {item.totalPrice} &#8364; </div>   
                         <div className={style.counterBlock}>
                             <div  onClick={()=> this.props.findUnique(item, 1)} className={style.plusMinus}><span> &#43; </span>  </div>
