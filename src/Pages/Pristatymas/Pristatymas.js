@@ -32,7 +32,7 @@ class Pristatymas extends Component {
                e.preventDefault();
                const errors = {};
                if(!this.state.gatve) errors.gatve ='įrašykite gatvės pavadinimą';
-               if(!this.state.namas) errors.namas ='ups, namo nr?';
+               if(!this.state.namas) errors.namas ='namo nr?';
                if(Object.keys(errors).length!==0){
                        return this.setState({errors})
                }
