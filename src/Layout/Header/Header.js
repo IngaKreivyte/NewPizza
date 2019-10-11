@@ -30,7 +30,7 @@ class Header extends Component {
                     className={[style.link, style.btn ].join(' ')}>Log Out</span>}
                 </div>
                {this.props.profile.name && <div className={style.profileName}>
-                    <div className={style.welcomeBack}>Sveiki, atvykę,</div>
+                    <div className={style.welcomeBack}>Sveiki atvykę,</div>
                     <div className={style.name}>{this.props.profile.name} !</div> 
                 </div>}
             </div>
