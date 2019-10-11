@@ -1,18 +1,23 @@
 @import '../../Sass/bottons';
 .headerTop{
-    width:100%;
-    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    background-color: white;
     .headerTopBlock{
         width: 90%;
+        height: 100px;
         margin: 2% 5%;
-        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        position: relative;
         .scroll{
             margin-bottom: 100px;
+            padding: 0;
         }
         *{
             float: left;
             text-align: center;
-            height: 100%;
             padding: 10px 0;
         }
         p{
@@ -32,8 +37,12 @@
    
     .auth{
         width: 90%;
-        margin: 0 5%;
         height: 30px;
+        margin: 2% 5%;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+        position: relative;
         *{
             @include btn;
             padding: 2px;
@@ -45,9 +54,6 @@
             padding: 0;
             user-select: none;
             font-weight: 500;
-            display: inline-block;
-            float: right;
-            position: relative !important;
             font-size: 15px;
             line-height: 30px;
             margin: 0;
@@ -80,19 +86,6 @@
 }
 
 @media screen and (max-width: 420px) {
-    .headerTop{
-        .headerTopBlock{
-            *{
-                font-size: 14px;
-                float: left;
-                margin: 10px 0 5px 0 ;
-            }
-            p{
-                width: 100%;
-                text-align: center;
-                margin: 10px 0 ;
-            }   
-        }
-    }
+
             
 }

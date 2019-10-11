@@ -12,12 +12,14 @@
     width: 90%;
     height: auto;
     margin: 2% 5%;
+    display: flex;
+    justify-content: space-evenly;
+                
 
     *{
         float: left;
         padding: 30px 10px;
-        width: 70px;
-        margin-left: 20px;
+        width: 60px;
         
     }
     h3{
@@ -32,8 +34,7 @@
     }
         
         img{
-            display: inline-block;
-            width: 9%;
+            width: 10%;
             height: auto;
             padding: 0;
         }
@@ -115,106 +116,3 @@ background-color: orangered
     padding: 5px;
 }
 
-
-@media screen and (max-width: 770px) {
-
-    .container{
-        
-    }
-    .block{
-        *{
-            margin: 0 ;
-        }
-        h3{
-            
-            width: 30%;
-        }
-        
-            img{
-                display: inline-block;
-                width: 15%;
-                height: auto;
-                padding: 0;
-            }
-        
-            .counterBlock{
-                display: flex;
-                justify-content: space-evenly;
-                width: 30%;
-                height: auto;
-                flex-wrap:wrap;
-                font-size: auto;
-                margin: 0;
-                *{
-                    padding: 30px 10px;
-                }
-              
-        }
-    }
-    
-   
-}
-@media screen and (max-width: 420px) {
-
-   .container{
-        
-    }
-    .block{
-      *{
-          margin: 0;
-          padding: 0;
-          text-align: center;
-      }
-        h3{
-            text-align: left;
-            width: 30%;
-        }
-        
-            img{
-                display: inline-block;
-                width: 13%;
-                height: 40px;
-                padding: 0;
-            }
-        
-            .counterBlock{
-                display: flex;
-                justify-content: space-evenly;
-                width: 30%;
-                height: auto;
-                flex-wrap:wrap;
-                font-size: auto;
-                margin: 0;
-                *{
-                    padding: 30px 10px;
-                }
-                .plusMinus{
-                    padding: 0;
-                    border-radius: 5px;
-                    background-color: white;
-                    border: 1px solid orange;
-                    cursor: pointer;
-                    color:orange;
-                    margin:0;
-                    width: 20px;
-                    height: 20px;
-                    &:hover{
-                        background-color: $secondColor;
-                    }
-                }
-                .amount{
-                    width: 20px;
-                    height: 20px;
-                    margin:0;
-                }
-                span{
-                    padding: 0;
-                    margin: 0;
-                    font-weight: 800;
-                    float: none;
-                    
-                }
-              
-        }
-    }
-}

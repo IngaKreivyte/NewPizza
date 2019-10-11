@@ -15,7 +15,7 @@ class Bag extends Component {
             return(
                 <div key={i} className={style.block} >
                         <img  src={item.pic} alt='pic'/>
-                        <h3>  {item.size &&  <span>({item.size})</span> }   {item.name} </h3>
+                        <h3>    {item.name} {item.size &&  <span>({item.size})</span> }  </h3>
                        {/* galima rasyti ir toki patikrinima  kai yra size, prideti toki span*/}
                        {/* <div className={style.size}>  {item.size} </div> */}
                         <div className={style.totalPrice} > {item.totalPrice} &#8364; </div>   
