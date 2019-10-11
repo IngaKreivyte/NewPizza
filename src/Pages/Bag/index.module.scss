@@ -1,28 +1,28 @@
 @import '../../Sass//bottons';
+@import '../../Sass//index.scss';
 
 .container{
     display:inline-block;
     width: 90%;
-    margin: 0 calc((100% - 90% ) /2 );
-    margin-top: 40px;
+    margin: 20px 5%;
 }
 .block{
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 90%;
     height: auto;
-    margin: 0 10%;
+    margin: 2% 5%;
 
     *{
         float: left;
-        padding: 10px;
+        padding: 30px 10px;
         width: 70px;
         margin-left: 20px;
         
     }
     h3{
         
-        width: 250px;
+        width: 30%;
     }
     
     span{
@@ -35,32 +35,44 @@
             display: inline-block;
             width: 9%;
             height: auto;
+            padding: 0;
         }
     
         .counterBlock{
             display: flex;
             justify-content: space-evenly;
-            width: 350px;
+            width: 35%;
             height: auto;
             flex-wrap:wrap;
             font-size: auto;
             margin: 0;
-           padding: 0!important;
+            *{
+                padding: 30px 10px;
+            }
            .plusMinus{
+            padding: 0;
             border-radius: 5px;
             background-color: white;
             border: 1px solid orange;
             cursor: pointer;
             color:orange;
             margin:0;
-            padding: 0;
-            width: 30px;
-            height: 30px;
-            
+            width: 20px;
+            height: 20px;
+            &:hover{
+                background-color: $secondColor;
+            }
+        }
+        .amount{
+            width: 20px;
+            height: 20px;
+            margin:0;
+            padding: 5px;
         }
         span{
             padding: 0;
-            margin: 10px  0 0 10px;
+            margin: 5px  0 0 5px;
+            font-weight: 800;
             float: none;
             
         }
@@ -71,6 +83,9 @@
 .total{
     display: inline-block;
     width: 100%;
+    width: 90%;
+    height: auto;
+    margin: 2% 5%;
     border-bottom: 1px solid grey;
     
 
@@ -99,180 +114,107 @@ background-color: orangered
     @include btnPasirinkti;
     padding: 5px;
 }
-@media screen and (max-width: 1038px) {
 
-    .container{
-        display:inline-block;
-        width:90%;
-        margin: 0 5%;
-        margin-top: 40px;
-    }
-    
-}
 
 @media screen and (max-width: 770px) {
 
     .container{
-        display:inline-block;
-        width: 100%;
-        margin: 0;
-        margin-top: 40px;
+        
     }
     .block{
-       
         *{
-            float: left;
-            padding: 10px;
-            margin-left: 0;
+            margin: 0 ;
         }
         h3{
             
-            width: 250px;
-        }
-        img{
-            width: 20%;
-            height: 80px;
-        }
-        .totalPrice{
-            width: 60px;
-        }
-        .counterBlock{
-            display: flex;
-            justify-content: space-evenly;
-            width: 140px;
-            height: auto;
-            flex-wrap:wrap;
-            font-size: auto;
-            margin: 0;
-           padding: 0!important;
-           .plusMinus{
-            border-radius: 5px;
-            background-color: white;
-            border: 1px solid orange;
-            cursor: pointer;
-            color:orange;
-            margin:0;
-            padding: 0;
-            width: 25px;
-            height: 25px;
-            
-        }
-        span{
-            padding: 0;
-            margin: 3px  0 0 8px;
-            
-        }   
-        .amount{
-            width: 30px !important;
-        }   
-    }
-    }
-}
-@media screen and (max-width: 420px) {
-
-    .container{
-       width: 100%;
-       margin: 0;
-       h1{
-            margin-top: 10px;
-            text-align: center;
-        }
-        .btn1{
-        @include btnPasirinkti;
-        padding: 2px;
-        font-size: 12px;
-        width: 100px;
-        text-align: center;
-        margin-top: 5px;
-        margin: 5px calc(( 100% - 100px ) / 2 );
-        }
-    
-    .block{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    *{
-        margin: 0;
-    }
-        
-        h3{
-            width: 150px;
-            font-size: 12px;
-            height: auto;
-            padding-left: 0;
+            width: 30%;
         }
         
-        .totalPrice{
-            font-size: 15px;
-            width: 15%;
-            font-size: 12px;
-        }
-            
             img{
+                display: inline-block;
                 width: 15%;
-                height: 50px;
+                height: auto;
+                padding: 0;
             }
+        
             .counterBlock{
                 display: flex;
                 justify-content: space-evenly;
-                width: 88px;
+                width: 30%;
                 height: auto;
                 flex-wrap:wrap;
                 font-size: auto;
-               .plusMinus{
-                border-radius: 5px;
-                background-color: white;
-                border: 1px solid orange;
-                cursor: pointer;
-                color:orange;
-                width: 20px;
-                height: 20px !important;
-                margin-top: 10px;
-            }
-            .amount{
-                width: 20%;
-            }
-            span{
-                padding: 0;
-                width: 20px;
-                margin: 1px 0 0 4px;
-                height: 20px;
-            }   
-            
+                margin: 0;
+                *{
+                    padding: 30px 10px;
+                }
+              
         }
     }
     
-    .total{
-        display: inline-block;
-        width: 80%;
-        margin: 0 10%;
-        border-bottom: 1px solid grey;
+   
+}
+@media screen and (max-width: 420px) {
+
+   .container{
         
     }
-    .total *{
-        display: inline-block;
-        text-align: left;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        font-size: 12px;
-    }    
-    
-    .btnBlock{
-        display: inline-block;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        height: auto;
-        *{
-            font-size: 12px;
-            padding: 0;
+    .block{
+      *{
+          margin: 0;
+          padding: 0;
+          text-align: center;
+      }
+        h3{
+            text-align: left;
+            width: 30%;
         }
-       
+        
+            img{
+                display: inline-block;
+                width: 13%;
+                height: 40px;
+                padding: 0;
+            }
+        
+            .counterBlock{
+                display: flex;
+                justify-content: space-evenly;
+                width: 30%;
+                height: auto;
+                flex-wrap:wrap;
+                font-size: auto;
+                margin: 0;
+                *{
+                    padding: 30px 10px;
+                }
+                .plusMinus{
+                    padding: 0;
+                    border-radius: 5px;
+                    background-color: white;
+                    border: 1px solid orange;
+                    cursor: pointer;
+                    color:orange;
+                    margin:0;
+                    width: 20px;
+                    height: 20px;
+                    &:hover{
+                        background-color: $secondColor;
+                    }
+                }
+                .amount{
+                    width: 20px;
+                    height: 20px;
+                    margin:0;
+                }
+                span{
+                    padding: 0;
+                    margin: 0;
+                    font-weight: 800;
+                    float: none;
+                    
+                }
+              
+        }
     }
-    
-    
-}
 }
