@@ -25,17 +25,18 @@
     h3{
         
         width: 30%;
-    }
     
-    span{
-        padding: 0;
-        margin: 0;
-        float: right;
+    
+        span{
+            padding: 0;
+            margin-right: 30px;
+            float: right;
+        }
     }
         
         img{
             width: 10%;
-            height: 70px;
+            height: auto;
             padding: 0;
             margin: auto;
         }
@@ -103,8 +104,9 @@
 .btn{
     @include btn;
     float: left;
-    width: 120px;
+    width: auto;
     font-size: 15px;
+    padding: 5px !important;
     line-height: 25px;
 }
 
@@ -115,5 +117,6 @@ background-color: orangered
 .btn1{
     @include btnPasirinkti;
     padding: 5px;
+    width: auto;
 }
 
