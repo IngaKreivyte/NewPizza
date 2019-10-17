@@ -32,7 +32,7 @@ class CheckOut extends Component {
                 
                     <div key={i} className={style.item }>
                          <img src={item.pic} alt='pic'/>
-                        <h3> {item.name}({item.size})</h3> 
+                         <h3>  {item.name} {item.size &&  <span>({item.size})</span> }  </h3>
                         <span className={style.amountBlock}>
                                 <div className={style.h3}> {item.totalPrice} X  {item.amount} &#8364;</div> 
                         </span>
