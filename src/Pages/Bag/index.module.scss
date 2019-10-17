@@ -23,24 +23,18 @@
         
     }
     h3{
-        
         width: 30%;
-    
-    
         span{
+            width: 100%;
             padding: 0;
-            margin-right: 30px;
-            float: right;
         }
-    }
-        
+    } 
         img{
             width: 10%;
             height: auto;
-            padding: 0;
+            padding: 10px 0 !important;
             margin: auto;
         }
-    
         .counterBlock{
             display: flex;
             justify-content: space-evenly;
@@ -120,3 +114,11 @@ background-color: orangered
     width: auto;
 }
 
+@media screen and (max-width: 420px) {
+    img{
+        width: 10% !important;
+        height: auto;
+        padding: auto 0 !important;
+        margin: auto 0 !important;
+    }
+}

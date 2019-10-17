@@ -43,8 +43,9 @@ nav{
         }
     img{
             width: 35px;
-            height: auto;
-            margin: 5px 0 0 15px;
+            height: inherit;
+            padding: 1px 0;
+            margin: 0px 0 0px 15px !important;
     }
     
     .showBag{

@@ -61,9 +61,12 @@ background-color:white;
             top: 5px;
             left: 5px;
         } 
-
+.optionsBlock{
+    border: 1px solid $secondColor;
+    border-radius: 5px;
+    display: none;
+    width: 100%;
     .options {
-        border: 1px solid $secondColor;
         display: none;
         width: 100%;
         border-radius: 4px;
@@ -71,21 +74,27 @@ background-color:white;
         text-align:center;
         color:black;
         background-color:white;
-    }    
+    }
+}
+        
         .options * {
-            border-bottom: 1px solid $secondColor;
+            // border-bottom: 1px solid $secondColor;
+            border:none;
             cursor: pointer;
         }
-        .options *:hover {
+        .options:hover {
             background-color:$secondColor;
+        }
+        .active .optionsBlock{
+            display: inline-block;
         }
         .active  .options {
             display: inline-block;
         }
-        .active  .selected{
-            border: 2px solid $secondColor;
-        }
-        .active  .selected  .selector {
-            background-color: $secondColor;
-        }
+        // .active  .selected{
+        //     border: 2px solid $secondColor;
+        // }
+        // .active  .selected  .selector {
+        //     background-color: $secondColor;
+        // }
 }
