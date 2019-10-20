@@ -6,6 +6,7 @@ import Pizzas from './Pages/Pizzas/Pizzas';
 import Desserts from './Pages/Desserts/Desserts';
 import Drinks from './Pages/Drinks/Drinks';
 import Bag from './Pages/Bag/Bag';
+import Orders from './Pages/Orders/Orders';
 import SignUp from './Pages/Signup/SignUp';
 import Kontaktai from './Pages/Kontaktai/Kontaktai';
 import Login from './Pages/Login/Login';
@@ -87,7 +88,8 @@ class App extends Component {
       <AppRoute exact path='/'  layout={ HomeLayout } component={Home}/> 
       <AppRoute path='/pizzas' layout={ HomeLayout }  component={Pizzas}/> 
       <AppRoute path='/desertai' layout={ HomeLayout }  component={Desserts}/> 
-      <AppRoute path='/gerimai' layout={ HomeLayout }  component={Drinks}/> 
+      <AppRoute path='/gerimai' layout={ HomeLayout }  component={Drinks}/>
+      <AppRoute path='orders' layout={ HomeLayout }  component={Orders}/>  
       <AppRoute path='/bag' layout={ BagLayout }   component={Bag }/> 
       <AppRoute path='/SignUp' layout={ HomeLayout }  component={SignUp}/>
       <AppRoute path='/login' layout={ HomeLayout }  component={Login}/>

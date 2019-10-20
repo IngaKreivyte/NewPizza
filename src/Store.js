@@ -11,12 +11,14 @@ import bagReducer from './reducers/bagReducer';
 import authReducer from './reducers/authReducer';
 import profileReducer from './reducers/profileReducer';
 import checkOutReducer from './reducers/checkOutReducer';
+import ordersReducer from './reducers/ordersReducer';
 
 
 
 
 
 const rootReducer = combineReducers({
+    orders:ordersReducer,
     home:homeReducer,
     pizzas:pizzasReducer,
     desserts:dessertsReducer,

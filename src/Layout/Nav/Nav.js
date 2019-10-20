@@ -27,6 +27,7 @@ class Nav extends Component {
             <NavLink className={style.link} smooth to='/#pizzas'> Picos </NavLink>
             <NavLink className={style.link} smooth to='/#desertai'> Desertai </NavLink>
             <NavLink className={style.link} smooth to='/#gerimai'> Gėrimai </NavLink>
+            {this.props.profile.status ==='admin' && <NavLink className={style.link} smooth to='/#orders'> Orders </NavLink>}
             {/* <NavLink className={style.link} to='/kontaktai'> Kontaktai </NavLink> */}
             <NavLink className={[style.link, style.btn,  ].join(' ')} to='/bag' >Krepšelis | {itemsInBag} </NavLink>
            <div className={style.showBag}><ButtonHover/></div>

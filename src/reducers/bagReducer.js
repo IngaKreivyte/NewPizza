@@ -46,7 +46,9 @@ export default (state=[], action)=>{
                           
                     })
                     case types.CLEAN_ORDER_DATA:
-                            return [];
+                        return [];
+                    case types.LOG_OUT :
+                        return [];
         default:
             return state;
     }

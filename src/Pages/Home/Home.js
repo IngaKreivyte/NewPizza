@@ -7,6 +7,7 @@ import secondimg from '../../assets/images/secondmain.jpeg';
 import thirdimg from '../../assets/images/thirdmain.jpeg';
 import Pizzas from '../Pizzas/Pizzas';
 import Drinks from '../Drinks/Drinks';
+import Orders from '../Orders/Orders';
 import Desserts from '../Desserts/Desserts';
 // import ScrollUpButton from "react-scroll-up-button";
 import AliceCarousel from 'react-alice-carousel';
@@ -26,6 +27,7 @@ const Home = (props) => {
                 <div className={style.scroll}  id='pizzas'/><Pizzas/>
                <div className={style.scroll} id='desertai'/><Desserts/>
                <div className={style.scroll} id='gerimai'/><Drinks/>
+               <div className={style.scroll} id='orders'/><Orders/>
                 {/* <ScrollUpButton style={{outline: 'none', width:70 }}   ToggledStyle={{outline: 'none'}}/> */}
             </div>
     );

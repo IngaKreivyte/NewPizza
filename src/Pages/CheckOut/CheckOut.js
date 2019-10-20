@@ -9,7 +9,7 @@ class CheckOut extends Component {
     state={
         redirect:false,
         name:this.props.profile.name,
-        number:this.props.checkOut.user.phone,
+        number:this.props.profile.phone,
     }
     redirectstatuschange=()=>{
         this.setState({redirect:!this.state.redirect})
@@ -103,7 +103,7 @@ class CheckOut extends Component {
                 </div>
                 <button className={style.btn} onClick={()=>{this.props.addOrder(this.props.checkOut); this.redirectstatuschange();} }> 
                    Patvirtinti užsakymą </button>   
-<Link className={style.btn} to ='/customerData' > Grįžti </Link>
+                <Link className={style.btn} to ='/customerData' > Grįžti </Link>
             </div>
 
         );

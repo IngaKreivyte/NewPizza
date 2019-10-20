@@ -1,0 +1,36 @@
+.container{
+    width: 90%;
+    margin: 10px 5%;
+    display: inline-block;
+    
+    .items{
+        border:1px solid black;
+        border-radius: 5px;
+        width: auto;
+        height: auto;
+        margin: 10px;
+        padding: 15px 60px 15px 15px;
+        display: inline-block;
+        float: left;
+        position: relative;
+        
+        .active{
+            background-color: green;
+            color:white;
+            border-radius: 5px;
+            padding: 3px;
+            margin: 0;
+            height: auto;
+            width: 60px;
+            position: absolute;
+            bottom: 2%;
+            right: 2%;
+            cursor: pointer;
+        }
+            span{
+                width: 50%;
+            }
+       
+        
+    }
+}
