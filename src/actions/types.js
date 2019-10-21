@@ -19,6 +19,7 @@ export const FETCH_DRINK = 'FETCH_DRINK';
 export const FETCH_DESSERT='FETCH_DESSERT';
 export const CLEAN_ORDER_DATA='CLEAN_ORDER_DATA';
 export const CHANGE_NAME='CHANGE_NAME';
+export const CHANGE_STATUS='CHANGE_STATUS';
 
 // orders
 export const FETCH_ORDER='FETCH_ORDER';

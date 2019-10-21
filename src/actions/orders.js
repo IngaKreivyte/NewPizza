@@ -21,3 +21,22 @@ export const fetchOrders = ()=>{
         }
     }
 }
+
+export const changeStatus= order =>{
+    const { isActive,_id }= order;
+    return async function(dispatch){
+        
+        try{
+            await axios.put(url+'/' + _id, {_id:_id,isActive:!isActive,order:order})
+            // console.log(_id);
+            dispatch({
+                    type:types.CHANGE_STATUS,
+                    _id:_id,
+                    isActive:!isActive,
+                    order,
+            })
+        } catch(e){
+            console.log(e.response)
+        }
+    }
+}

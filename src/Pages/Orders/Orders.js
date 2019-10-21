@@ -5,28 +5,19 @@ import * as actions from '../../actions/orders';
 
 
 class Orders extends Component {
-    state={
-        isActive: true,
-        statusActive:'Active',
-        statusInactive:'Inactive',
-        status:'Active',
-    }
-    changestatusActive=()=>{
-        // this.setState({order:order,isActive:!this.state.isActive})
-        if(this.state.isActive){this.setState({status:this.state.statusActive})
-        } else {this.setState({status:this.state.statusInactive})   
-    }
-}
+    
+
     componentDidMount(){
         this.props.fetchOrders();
     }
     
     render(props) {
         const ordersList = this.props.orders.map((order,i)=>{
-
             return (
                 <div key={i} className={style.items}>
-                    <div id={i} onClick={(order)=>{this.setState({order:order,isActive:!this.state.isActive}); this.changestatusActive()}} className={style.active} style={{backgroundColor:this.state.status==='Active' ? '':'red'}}>{this.state.status}</div>
+                    <div id={i} onClick={()=>this.props.changeStatus(order)} className={style.active} style={{backgroundColor:order.isActive.toString()==='true' ? 'green':'red'}}>
+                        {order.isActive.toString()}
+                    </div>
                     {order.bag.map((item,i)=>
                             <div className={style.orderBlock} key={i}>
                                 <h2><span>Prekė: </span>{item.name}</h2>

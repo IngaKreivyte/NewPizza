@@ -21,7 +21,7 @@ export default (state={}, action)=>{
             case types.LOG_OUT:
             return [];
             case types.CLEAN_ORDER_DATA:
-                return [];
+                return{ user:{name:action.name, phone:action.number} }
         default:
             return state;
     }
