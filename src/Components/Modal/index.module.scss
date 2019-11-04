@@ -164,12 +164,11 @@
         }
         
         .selectedItem{
-            width: 50%;
+            width: 55%;
             float: right;
             display: inline-block;
             height: 100%;
             position: relative;
-            
             p{
                     width:100%;
                     margin:5% 0;
@@ -186,8 +185,7 @@
                     border-radius: 5px;
                     background-color: rgb(233, 232, 232);
                     height: auto;
-                    padding-right: 1px;
-                    
+                    padding-right: 1px; 
                 *{
                     width: 30%;
                     border-radius: 5px;
@@ -195,7 +193,7 @@
                     line-height: 10px;
                     margin: 2% 1.5%;
                     display: inline-block;
-                    font-size: 12px;
+                    font-size: 11px !important;
                     height: auto;
                 }
 
@@ -227,7 +225,7 @@
         
             
             .imgBlock{
-                width: 50%;
+                width: 45%;
                 height: 100%;
                 margin: 0;
                 padding: 0;

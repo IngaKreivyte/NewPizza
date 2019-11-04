@@ -29,6 +29,7 @@ class Burger extends Component {
             <NavLink onClick={()=>{ this.toggleDropdown(); this.setState({nameBurger:'Picos'})}} className={style.options} smooth to='/#pizzas'> Picos </NavLink>
             <NavLink  onClick={()=>{this.toggleDropdown(); this.setState({nameBurger:'Desertai'})}} className={style.options} smooth to='/#desertai' > Desertai </NavLink>
             <NavLink onClick={()=>{this.toggleDropdown(); this.setState({nameBurger:'Gėrimai'})}}  className={style.options} smooth to='/#gerimai' > Gėrimai </NavLink>
+            <NavLink onClick={()=>{this.toggleDropdown(); this.setState({nameBurger:'Orders'})}}  className={style.options} smooth to='/#orders' > Užsakymai </NavLink>
         </div>
       </div>
     );

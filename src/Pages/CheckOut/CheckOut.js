@@ -46,6 +46,7 @@ class CheckOut extends Component {
             <div className={style.container}>
                 <div className={style.bothSides}>
                     <div className={style.toTheRightSide}>
+                        <div>Užsakymas</div>
                         <div className = {style.userBlock}>
                             <span> Vardas: </span>
                             <div className={style.nameBlock}>
@@ -55,8 +56,8 @@ class CheckOut extends Component {
                                 name='name'
                                 placeholder='name'
                                 value={this.state.name} />
-                                <button onClick={()=>{this.props.changeName(this.state)}}>išsaugoti</button>
                                 </form>
+                                <button onClick={()=>{this.props.changeName(this.state)}}>išsaugoti</button>
                             </div>
                         </div>
                         <div className = {style.userBlock}>
