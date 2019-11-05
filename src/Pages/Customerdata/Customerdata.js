@@ -13,10 +13,6 @@ class Customerdata extends Component {
         active=()=>{
                 this.setState({active:!this.state.active})
         }
-
-
-        
-
     render() {
         if(!this.props.profile.email) return <Redirect to='login'/>
          
