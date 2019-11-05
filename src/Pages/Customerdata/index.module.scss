@@ -87,7 +87,11 @@
         background-color: white;
         width: 80%;
         height: 300px;
+        *{
+            size: 14px;
+        }
     }
+
 
 }
 @media screen and (max-width: 420px) {
