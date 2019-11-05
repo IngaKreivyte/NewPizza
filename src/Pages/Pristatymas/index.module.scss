@@ -10,10 +10,11 @@
         width:100px;
         text-align: center;
         border: 1px solid grey;
-        position: absolute;
-        bottom: 0;
-        right: 45%;
         user-select: none;
+        display: inline-block;
+            padding: 5px;
+            width: 140px;
+            margin:20px calc(( 100% - 140px ) / 2 );
         &:focus{
             outline:none;
         }
@@ -22,10 +23,10 @@
         background-color: orange;
     }
     form{
-        margin:5%;
+        margin:2%;
         padding: 0;
         user-select: none;
-        width: 90%;
+        width: 96%;
         height: auto;
         display: inline-block;
         
@@ -64,12 +65,11 @@
             input{
                 display: inline-block;
                 position: relative;
-                margin-top: 5px;
-                margin-left: 10px;
+                margin-top: 15px;
+                margin-left: 5px;
                 float: left;
-                line-height: 15px;
                 border-radius: 15px;
-                padding: 5px;
+                padding: 3px;
                 &:focus{
                     outline:none;
                 }
@@ -94,7 +94,7 @@
         form{
             .absolute{
                 .input{
-                width: 85% !important;
+                width: 182% !important;
                     
                 }
             }
@@ -102,9 +102,12 @@
         
        
         .btn{
+            display: inline-block;
             font-size: 12px;
             padding: 5px;
             width: 130px;
+            margin:10px calc(( 100% - 130px ) / 2 );
+            line-height: 15px;
         }
     }
 }
@@ -153,13 +156,12 @@
         }
         
         .btn{
+            display: inline-block;
             font-size: 12px;
             padding: 5px;
             width: 120px;
-            position: absolute;
+            margin:10px calc(( 100% - 120px ) / 2 );
             line-height: 15px;
-            bottom: 0;
-            right: 28%;
         }
     }
 }
